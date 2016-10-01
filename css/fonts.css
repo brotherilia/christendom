@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "forumregular";
+  src: url("../fonts/forum-regular.woff2") format("woff2"),
+       url("../fonts/forum-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
