@@ -1392,15 +1392,6 @@ img {
 .page-footer {
   height: 50px;
 }
-.chapter {
-  display: none;
-}
-.chapter__verse-number {
-  margin-right: 10px;
-
-  font-size: 14px;
-  color: #8e0303;
-}
 .mobile-nav {
   width: 100%;
   height: 100%;
@@ -1484,6 +1475,30 @@ img {
           transition-property: opacity, -webkit-transform;
           transition-property: transform, opacity;
           transition-property: transform, opacity, -webkit-transform;
+}
+.mobile-nav__link--chapter {
+  font-weight: bold;
+  font-size: 20px;
+  font-family: sans-serif;
+  color: #878a9d;
+
+  background-color: #676a7e;
+  border-radius: 50%;
+}
+.book__running-title {
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  font-family: sans-serif;
+  /* font-weight: bold; */
+  text-align: right;
+  color: #878a9d;
+}
+.book__verse-number {
+  margin-right: 10px;
+
+  font-size: 14px;
+  color: #8e0303;
 }
 /*
 

@@ -1,93 +1,132 @@
 $(document).ready(function(){
 
+  var toTopBtn = $("#top-btn");
+  var mainMenu = $("#main-menu");
+  var popupMenu = $("#popup-menu");
+  var menuOpenBtn = $("#menu-open-btn");
+  var menuCloseBtn = $("#menu-close-btn");
+  var contentsOpenBtn = $("#contents-open-btn");
+  var contents = $(".book__contents");
+  var chapterLink = $(".book__contents-link");
+  var runningTitle = $("#running-title");
+  var chapter = $(".book__chapter");
+  var chapterNav = $("#chapter-nav");
+  var prevChapterLink = $("#prev-btn");
+  var nextChapterLink = $("#next-btn");
+  var firstChapter = chapter.first();
+  var lastChapter = chapter.last();
+  var firstChapterIdx = chapter.index(firstChapter);
+  var lastChapterIdx = chapter.index(lastChapter);
+  var chapterIdx;
+  var currentChapter;
+  var currentChapterNumberMark = $("#current-chapter-number");
+
+  var setupChapter = function() {
+    chapter.hide();
+    prevChapterLink.text(chapterIdx);
+    nextChapterLink.text(chapterIdx + 2);
+    currentChapterNumberMark.text(chapterIdx + 1);
+    runningTitle.fadeIn(600);
+    if (chapterIdx == firstChapterIdx){
+      prevChapterLink.hide();
+      nextChapterLink.show();
+    }
+    else if (chapterIdx == lastChapterIdx){
+      nextChapterLink.hide();
+      prevChapterLink.show();
+    }
+    else {
+      prevChapterLink.show();
+      nextChapterLink.show();
+    }
+  }
+
+  var showChapter = function() {
+    currentChapter = chapter.eq(chapterIdx);
+    currentChapter.fadeIn(600);
+    $("html, body").animate({ scrollTop: 0 }, 0);
+  }
+
   // Плавная прокрутка страницы наверх
 
-  $("#top-btn").click(function(){
+  toTopBtn.click(function(){
     event.preventDefault();
     $("html, body").animate({ scrollTop: 0 }, 600);
-    return false;
   });
-
 
   // Открытие и закрытие главного меню
 
-  var openMainMenu = function() {
-    $("#main-menu").fadeOut();
-    $("#popup-menu").fadeIn();
-    return false;
-  }
-
-  var closeMainMenu = function() {
-    $("#popup-menu").fadeOut();
-    $("#main-menu").fadeIn();
-    return false;
-  }
-
-  $("#menu-open-btn").click(function(){
+  menuOpenBtn.click(function(){
     event.preventDefault();
-    $(openMainMenu);
+    mainMenu.fadeOut(600);
+    popupMenu.fadeIn(600);
   });
 
-  $("#menu-close-btn").click(function(){
+  menuCloseBtn.click(function(){
     event.preventDefault();
-    $(closeMainMenu);
+    popupMenu.fadeOut(600);
+    mainMenu.fadeIn(600);
   });
 
   $(window).scroll(function(){
     if ($(this).scrollTop() > 100) {
-      $(closeMainMenu);
+      popupMenu.fadeOut(600);
+      mainMenu.fadeIn(600);
     }
   });
 
   // Переходы между главами
 
-  var chapter = $(".chapter");
-  var firstChapter = chapter.first();
-  var lastChapter = chapter.last();
-  var firstChapterIdx = chapter.index(firstChapter);
-  var lastChapterIdx = chapter.index(lastChapter);
-  var firstChapterNumber = firstChapterIdx + 1;
-  var lastChapterNumber = lastChapterIdx + 1;
-  var chapterIdx = 0;
-  var currentChapter;
+  chapter.hide();
+  chapterNav.hide();
+  runningTitle.hide();
 
-  var hideCurrentChapter = function() {
-    currentChapter = chapter.eq(chapterIdx);
-    $(currentChapter).hide();
-  }
+  $(chapterLink).click(function(event){
+    event.preventDefault();
+    chapterIdx = chapterLink.index(this);
+    contents.hide();
+    chapterNav.show();
+    $(setupChapter);
+    $(showChapter);
+  });
 
-  var showPrevChapter = function() {
+  prevChapterLink.click(function(){
+    event.preventDefault();
     chapterIdx--;
-    currentChapter = chapter.eq(chapterIdx);
-    $(currentChapter).fadeIn(600);
-  }
+    $(setupChapter);
+    $(showChapter);
+  });
 
-  var showNextChapter = function() {
+  nextChapterLink.click(function(){
+    event.preventDefault();
     chapterIdx++;
-    currentChapter = chapter.eq(chapterIdx);
-    $(currentChapter).fadeIn(600);
-    $("#prev-btn").show();
-  }
-
-  $(firstChapter).show();
-  $("#prev-btn").hide();
-
-  $("#prev-btn").click(function(){
-    $(hideCurrentChapter);
-    $(showPrevChapter);
-    if (chapterIdx = 0){
-      $("#prev-btn").hide();
-    }
-    $("html, body").animate({ scrollTop: 0 }, 0);
+    $(setupChapter);
+    $(showChapter);
   });
 
-  $("#next-btn").click(function(){
-    $(hideCurrentChapter);
-    $(showNextChapter);
-    $("html, body").animate({ scrollTop: 0 }, 0);
+  contentsOpenBtn.click(function(){
+    event.preventDefault();
+    chapter.hide();
+    popupMenu.hide();
+    chapterNav.hide();
+    runningTitle.hide();
+    mainMenu.fadeIn(600);
+    contents.fadeIn(600);
   });
+
+
+
+
+
+
+
+
+
+
 
   // Перелистывание страниц
+
+/*
 
   var windowHeight = $(window).height() * 0.99;
 
@@ -106,6 +145,8 @@ $(document).ready(function(){
   $(chapter).on("swipeleft",function(event){
     $(nextPage);
   });
+
+*/
 
 
 });
