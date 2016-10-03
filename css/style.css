@@ -436,10 +436,8 @@ th {
 
 /***** CONCATENATION HERE! *****/
 /*
-@tablet-wide-widths: e("(min-width: 900px)");
-@desktop-widths: e("(min-width: 1200px)");
-@desktop-wide-widths: e("(min-width: 1600px)");
-
+@tablet-widths: e("(min-width: 701px)");
+@desktop-widths: e("(min-width: 1201px)");
  */
 /*
 @title-font-family: "Jura", Arial, sans-serif;
@@ -1362,11 +1360,11 @@ img {
   -ms-flex-direction: column;
       flex-direction: column;
   min-width: 320px;
-  max-width: 900px;
+  max-width: 1200px;
   min-height: 100vh;
   margin: 0 auto;
 
-  background: #878a9d url("../img/bg.png") no-repeat scroll top;
+  background: #878a9d url("../img/bg-mobile.png") no-repeat scroll top;
   background-size: contain;
 
   -webkit-box-direction: normal;
@@ -1394,7 +1392,10 @@ img {
 .page-footer {
   height: 50px;
 }
-.book__verse-number {
+.chapter {
+  display: none;
+}
+.chapter__verse-number {
   margin-right: 10px;
 
   font-size: 14px;
@@ -1411,7 +1412,7 @@ img {
   position: absolute;
 
   display: none;
-  height: 150px;
+  height: 200px;
 
   background: -webkit-linear-gradient(top, #878a9d, #878a9d 50px, transparent 100%);
   background:         linear-gradient(to bottom, #878a9d, #878a9d 50px, transparent 100%);
@@ -1472,17 +1473,6 @@ img {
 .mobile-nav__link--menu {
   opacity: 0.5;
 }
-.mobile-nav__link--menu:active {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-  -webkit-transition-property: -webkit-transform;
-          transition-property: -webkit-transform;
-          transition-property:         transform;
-          transition-property:         transform, -webkit-transform;
-}
 .mobile-nav__link--settings:active {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
@@ -1520,7 +1510,12 @@ img {
  */
 @media (min-width: 451px) {
   .overall-wrapper {
-    background-position: top right;
+    background: #878a9d url("../img/bg-tablet.png") no-repeat scroll top right;
+    background-size: contain;
+  }
+}
+@media (min-width: 701px) {
+  .overall-wrapper {
     background-size: auto;
   }
 }
