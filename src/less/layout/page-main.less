@@ -1,0 +1,14 @@
+.page-main {
+  position: relative;
+  min-height: 500px;
+  flex-grow: 1;
+  background: linear-gradient(to right, @icon-color, @transparent-light-color 25px, @transparent-light-color 30%, transparent 105%);
+  border-top-left-radius: 30% 15px;
+  border-top-right-radius: 30% 15px;
+  padding: 30px 20px 40px;
+
+  @media @desktop-widths {
+    background: linear-gradient(to right, @icon-color, @transparent-light-color 35px, @transparent-light-color 30%, transparent 105%);
+    padding: 30px 30px 40px;
+  }
+}

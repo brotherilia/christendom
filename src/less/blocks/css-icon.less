@@ -1,0 +1,154 @@
+.css-icon {
+  .center-both();
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+  }
+
+  /////*** ANOTHER CHURCH ***/////
+
+  &--church1 {
+    .icon-size(@icon-size * 0.8, @icon-size * 0.6);
+    .offset(@icon-size * 0.3, 0);
+    border: @icon-size * 0.35 solid @icon-color;
+    border-bottom: none;
+    border-top-left-radius: @icon-size * 0.2;
+    border-top-right-radius: @icon-size * 0.2;
+
+    &::before {
+      .icon-size(@icon-size * 0.4, @icon-size * 0.3);
+      .offset(-@icon-size * 0.5, -@icon-size * 0.15);
+      border-top-left-radius: @icon-size * 0.2;
+      border-top-right-radius: @icon-size * 0.2;
+      background-color: @icon-color;
+    }
+
+    &::after {
+      .icon-size(@icon-size * 0.2, @icon-size * 0.2);
+      .center-hor();
+      .offset(-@icon-size * 0.7, -@icon-size * 0.055);
+      background: linear-gradient(to right, transparent, transparent 35%, @icon-color 35%, @icon-color 65%, transparent 65%, transparent 100%), linear-gradient(to bottom, transparent, transparent 40%, @icon-color 40%, @icon-color 60%, transparent 60%, transparent 100%);
+    }
+  }
+
+  /////*** UP ARROW IN CIRCLE ***/////
+
+  &--up {
+    .circle();
+
+    &::before {
+      .center-hor();
+      .icon-size(@icon-size * 0.5, @icon-size * 0.5);
+      bottom: @icon-size * 0.6;
+      border: @icon-size * 0.25 solid transparent;
+      border-bottom: @icon-size * 0.25 solid @icon-color;
+    }
+
+    &::after {
+      .icon-size(@icon-size * 0.18, @icon-size * 0.45);
+      .center-hor();
+      background-color: @icon-color;
+      top: @icon-size * 0.4;
+    }
+  }
+
+  /////*** LEFT TRIANGLE IN CIRCLE ***/////
+
+  &--prev {
+    .circle();
+
+    &::before {
+      .center-vert();
+      .icon-size(@icon-size * 0.5, @icon-size * 0.5);
+      right: @icon-size * 0.45;
+      border: @icon-size * 0.25 solid transparent;
+      border-right: @icon-size * 0.25 solid @icon-color;
+    }
+  }
+
+  /////*** ORTHODOX CHRISTIAN CROSS ***/////
+
+  &--orthodoxy {
+    .icon-size(@icon-size * 0.16, @icon-size);
+    background-color: @icon-color;
+
+    &::before {
+      .icon-size(@icon-size * 0.6, @icon-size * 0.14);
+      .offset(@icon-size * 0.2, 0);
+      .center-hor-abs();
+      background-color: @icon-color;
+    }
+
+    &::after {
+      .icon-size(@icon-size * 0.35, @icon-size * 0.15);
+      transform: skewy(30deg);
+      .offset(@icon-size * 0.62, -@icon-size * 0.095);
+      background-color: @icon-color;
+    }
+  }
+
+  /////*** PLUS IN FILLED CIRCLE ***/////
+
+  &--plus-fill {
+    .circle-fill();
+    background-image: linear-gradient(to bottom, @icon-color, @icon-color 20%, transparent 20%, transparent 80%, @icon-color 80%),
+                      linear-gradient(to right, @icon-color, @icon-color 20%, transparent 20%, transparent 45%, @icon-bg-color 45%, @icon-bg-color 55%, transparent 55%, transparent 80%, @icon-color 80%),
+                      linear-gradient(to bottom, @icon-color, @icon-color 45%, @icon-bg-color 45%, @icon-bg-color 55%, @icon-color 55%);
+  }
+
+  /////*** MINUS IN FILLED CIRCLE ***/////
+
+  &--minus-fill {
+    .circle-fill();
+    background-image: linear-gradient(to right, @icon-color, @icon-color 20%, transparent 20%, transparent 80%, @icon-color 80%),
+                      linear-gradient(to bottom, @icon-color, @icon-color 45%, @icon-bg-color 45%, @icon-bg-color 55%, @icon-color 55%);
+  }
+
+  /////*** SETTINGS ***/////
+
+  &--settings {
+    .icon-size();
+    border-radius: 100%;
+    background-color: @icon-color;
+
+    &::before {
+      .circle-fill(@icon-size * 0.4);
+      .center-both();
+      background-color: @icon-bg-color;
+      box-shadow: 0 @icon-size * 0.5 0 -@icon-size * 0.08 @icon-bg-color,
+                  0 -@icon-size * 0.5 0 -@icon-size * 0.08 @icon-bg-color,
+                  @icon-size * 0.5 0 0 -@icon-size * 0.08 @icon-bg-color,
+                  -@icon-size * 0.5 0 0 -@icon-size * 0.08 @icon-bg-color,
+                  @icon-size * 0.35 @icon-size * 0.35 0 -@icon-size * 0.08 @icon-bg-color,
+                  -@icon-size * 0.35 @icon-size * 0.35 0 -@icon-size * 0.08 @icon-bg-color,
+                  @icon-size * 0.35 -@icon-size * 0.35 0 -@icon-size * 0.08 @icon-bg-color,
+                  -@icon-size * 0.35 -@icon-size * 0.35 0 -@icon-size * 0.08 @icon-bg-color;
+    }
+  }
+
+  /////*** CONTENTS ***/////
+
+  &--contents {
+
+    &::before {
+      .circle-fill(@icon-size * 0.2);
+      .offset(@icon-size * 0.1, 0);
+      box-shadow: 0 @icon-size * 0.3 0 0 @icon-color, 0 @icon-size * 0.6 0 0 @icon-color;
+    }
+
+    &::after {
+      .icon-size(@icon-size * 0.7, @icon-size * 0.2);
+      .offset(@icon-size * 0.1, @icon-size * 0.3);
+      border-radius: @icon-size * 0.1;
+      background-color: @icon-color;
+      box-shadow: 0 @icon-size * 0.3 0 0 @icon-color, 0 @icon-size * 0.6 0 0 @icon-color;
+    }
+  }
+}

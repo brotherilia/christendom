@@ -1,0 +1,21 @@
+html,
+body {
+  .reset-spaces();
+  min-width: 320px;
+  font-family: @base-font-family;
+  font-size: @base-font-size;
+  color: @base-text-color;
+  background-color: @base-bg-color;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+p {
+  .reset-spaces();
+  margin-bottom: 5px;
+  user-select: auto;
+}

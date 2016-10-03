@@ -1,0 +1,38 @@
+.book-list {
+
+  &__title {
+    .reset-spaces();
+    .title();
+    margin-top: -63px;
+
+    @media @tablet-widths {
+      font-size: @title-font-size-tablet;
+      margin-top: -70px;
+    }
+  }
+
+  &__items {
+    .reset-list();
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__item {
+    .reset-spaces();
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 120px;
+  }
+
+  &__link {
+    .reset-button();
+    .btn-common();
+    .btn-light();
+    font-family: @title-font-family;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    color: @lightest-color;
+  }
+}

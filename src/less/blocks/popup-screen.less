@@ -1,0 +1,37 @@
+.popup-screen {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  max-width: 800px;
+  height: 100vh;
+  background-color: @transparent-dark-color;
+  z-index: 2;
+
+  &__main {
+    margin: 70px 50px;
+  }
+
+  &__text {
+    font-family: @service-font-family;
+    font-size: @service-font-size;
+    color: @base-bg-color;
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    color: @alt-bg-color;
+    cursor: default;
+    text-decoration: none;
+
+    &:active {
+      color: @base-bg-color;
+    }
+  }
+
+  &__controls-block {
+    margin: 70px;
+  }
+}

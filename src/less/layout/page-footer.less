@@ -1,0 +1,17 @@
+.page-footer {
+  height: 55px;
+  position: relative;
+
+  &::before {
+    .pseudo-common();
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    border-top-left-radius: 30% 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 30% 15px;
+    background-color: @base-bg-color;
+    box-shadow: inset 10px 5px 5px 0 @icon-color;
+  }
+}

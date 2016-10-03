@@ -1,0 +1,119 @@
+.reset-spaces() {
+  margin: 0;
+  padding: 0;
+}
+
+.reset-list() {
+  .reset-spaces();
+  list-style: none;
+}
+
+.reset-button() {
+  .reset-spaces();
+  box-shadow: none;
+  border: none;
+  outline: none;
+  background: none;
+  text-decoration: none;
+}
+
+.container() {
+  min-width: 320px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.pseudo-common() {
+  content: "";
+  position: absolute;
+  display: block;
+}
+
+.btn-common() {
+  display: block;
+  color: @icon-bg-color;
+  background-color: @icon-color;
+  font-family: @service-font-family;
+  font-size: @base-font-size;
+  font-weight: bold;
+  cursor: default;
+  text-align: center;
+  line-height: @icon-size;
+
+  &:active {
+    transition-property: transform, opacity;
+    transition-duration: 0.5s;
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+}
+
+.btn-light() {
+  background-color: transparent;
+  background: linear-gradient(to right, transparent, @base-bg-color 50%, transparent 100%);
+  box-shadow: 0 2px 5px 1px @transparent-light-color, 0 10px 50px 0 @transparent-light-color;
+  opacity: 0.6;
+}
+
+.title() {
+  font-family: @title-font-family;
+  font-size: @title-font-size-mobile;
+  font-weight: normal;
+  text-align: center;
+  color: @alt-text-color;
+}
+
+.comment-common() {
+  font-size: @smaller-font-size;
+  font-style: italic;
+  color: @base-bg-color;
+}
+
+/////*** ICONS ***/////
+
+.icon-size(@width: @icon-size, @height: @icon-size) {
+  width: @width;
+  height: @height;
+}
+
+.offset(@top: 0, @left: 0) {
+  top: @top;
+  left: @left;
+}
+
+.center-hor() {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.center-vert() {
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+
+.center-both() {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.center-hor-abs() {
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.circle(@diameter: @icon-size) {
+  .icon-size(@width: @diameter, @height: @diameter);
+  border-radius: 100%;
+  box-shadow: inset 0 0 0 @icon-size * 0.1 @icon-color;
+}
+
+.circle-fill(@diameter: @icon-size) {
+  .icon-size(@width: @diameter, @height: @diameter);
+  border-radius: 50%;
+  background-color: @icon-color;
+}

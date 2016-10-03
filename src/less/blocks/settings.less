@@ -1,0 +1,61 @@
+.settings {
+  margin: 0 20px;
+  margin-top: 70px;
+  font-size: @service-font-size;
+
+  @media @tablet-widths {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__block {
+    border: 1px solid @base-bg-color;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+
+    @media @tablet-widths {
+      width: 45%;
+    }
+  }
+
+  &__block-title {
+    font-family: @service-font-family;
+    font-size: @service-font-size;
+    color: @base-bg-color;
+    text-align: center;
+    padding: 0 5px;
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__button {
+    .reset-button();
+    .icon-size();
+    display: block;
+    position: relative;
+    cursor: default;
+    z-index: 1;
+
+    &--text {
+      .btn-common();
+      width: 58px;
+      border-top-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+      color: @lightest-color;
+      font-weight: normal;
+      font-size: @service-font-size;
+    }
+
+    &:active {
+      transition-property: transform, opacity;
+      transition-duration: 0.5s;
+      transform: scale(0.8);
+      opacity: 0.5;
+    }
+  }
+}
