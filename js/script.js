@@ -9,23 +9,35 @@ $(document).ready(function(){
   });
 
 
+  // Открытие и закрытие главного меню
 
-
-  $("#menu-btn").click(function(){
-    event.preventDefault();
+  var openMainMenu = function() {
     $("#main-menu").fadeOut();
     $("#popup-menu").fadeIn();
     return false;
-  });
+  }
 
-  $("body").click(function(){
-    event.preventDefault();
+  var closeMainMenu = function() {
     $("#popup-menu").fadeOut();
     $("#main-menu").fadeIn();
     return false;
+  }
+
+  $("#menu-open-btn").click(function(){
+    event.preventDefault();
+    $(openMainMenu);
   });
 
-  $("#popup-menu").click(function(event){
-    event.stopImmediatePropagation();
+  $("#menu-close-btn").click(function(){
+    event.preventDefault();
+    $(closeMainMenu);
   });
+
+  $(window).scroll(function(){
+    if ($(this).scrollTop() > 100) {
+      $(closeMainMenu);
+    }
+  });
+
+
 });

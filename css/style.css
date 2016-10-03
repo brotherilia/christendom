@@ -436,8 +436,6 @@ th {
 
 /***** CONCATENATION HERE! *****/
 /*
-@mobile-widths: e("(max-width: 599px)");
-@tablet-widths: e("(min-width: 600px)");
 @tablet-wide-widths: e("(min-width: 900px)");
 @desktop-widths: e("(min-width: 1200px)");
 @desktop-wide-widths: e("(min-width: 1600px)");
@@ -565,7 +563,7 @@ body {
   font-family: "forumregular", Arial, sans-serif;
   color: #1d2246;
 
-  background-color: #878a9d;
+  background-color: #000000;
 }
 *,
 *::before,
@@ -1358,12 +1356,21 @@ img {
   box-shadow: 0 9.6px 0 0 #676a7e, 0 19.2px 0 0 #676a7e;
 }
 .overall-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
   min-width: 320px;
-  max-width: 450px;
+  max-width: 900px;
+  min-height: 100vh;
   margin: 0 auto;
 
-  background: url("../img/bg.png") no-repeat scroll top;
+  background: #878a9d url("../img/bg.png") no-repeat scroll top;
   background-size: contain;
+
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
 }
 .page-header {
   position: relative;
@@ -1371,6 +1378,7 @@ img {
   height: 50px;
 }
 .page-main {
+  flex-grow: 1;
   padding: 30px 20px;
 
   background: -webkit-linear-gradient(left, transparent, rgba(255, 255, 255, 0.5) 10px, rgba(255, 255, 255, 0.5) 30%, transparent 100%);
@@ -1379,6 +1387,9 @@ img {
   border-top-right-radius: 30% 15px;
   border-bottom-right-radius: 30% 15px;
   border-bottom-left-radius: 30% 15px;
+
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
 }
 .page-footer {
   height: 50px;
@@ -1400,7 +1411,7 @@ img {
   position: absolute;
 
   display: none;
-  height: 100px;
+  height: 150px;
 
   background: -webkit-linear-gradient(top, #878a9d, #878a9d 50px, transparent 100%);
   background:         linear-gradient(to bottom, #878a9d, #878a9d 50px, transparent 100%);
@@ -1464,14 +1475,13 @@ img {
 .mobile-nav__link--menu:active {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
-  opacity: 1;
 
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
-  -webkit-transition-property: opacity, -webkit-transform;
-          transition-property: opacity, -webkit-transform;
-          transition-property: transform, opacity;
-          transition-property: transform, opacity, -webkit-transform;
+  -webkit-transition-property: -webkit-transform;
+          transition-property: -webkit-transform;
+          transition-property:         transform;
+          transition-property:         transform, -webkit-transform;
 }
 .mobile-nav__link--settings:active {
   -webkit-transform: rotate(360deg);
@@ -1508,3 +1518,9 @@ img {
 @import "css-icon/css-icon";
 
  */
+@media (min-width: 451px) {
+  .overall-wrapper {
+    background-position: top right;
+    background-size: auto;
+  }
+}
