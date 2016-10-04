@@ -1,7 +1,23 @@
 @font-face {
   font-family: "forumregular";
-  src: url("../fonts/forum-regular.woff2") format("woff2"),
-       url("../fonts/forum-regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  src: url("../fonts/forum-regular.woff2") format("woff2"),
+       url("../fonts/forum-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Cuprum";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/cuprum-regular.woff2") format("woff2"),
+       url("../fonts/cuprum-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Cuprum";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/cuprum-bold.woff2") format("woff2"),
+       url("../fonts/cuprum-bold.woff") format("woff");
 }

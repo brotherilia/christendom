@@ -428,10 +428,26 @@ th {
 /***** CONCATENATION HERE! *****/
 @font-face {
   font-family: "forumregular";
-  src: url("../fonts/forum-regular.woff2") format("woff2"),
-       url("../fonts/forum-regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  src: url("../fonts/forum-regular.woff2") format("woff2"),
+       url("../fonts/forum-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Cuprum";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/cuprum-regular.woff2") format("woff2"),
+       url("../fonts/cuprum-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Cuprum";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/cuprum-bold.woff2") format("woff2"),
+       url("../fonts/cuprum-bold.woff") format("woff");
 }
 
 /***** CONCATENATION HERE! *****/
@@ -440,8 +456,6 @@ th {
 @desktop-widths: e("(min-width: 1201px)");
  */
 /*
-@title-font-family: "Jura", Arial, sans-serif;
-@title-font-size: 24px;
 @subtitle-font-size: 20px;
 @subsubtitle-font-size: 12px;
 @slogan-font-size: 20px;
@@ -476,14 +490,6 @@ th {
   color: @slogan-color;
   left: 50%;
   transform: translate(-50%);
-}
-
-.title() {
-  font-family: @title-font-family;
-  font-size: @title-font-size;
-  font-weight: bold;
-  line-height: @title-font-size;
-  color: @base-text-color;
 }
 
 .subtitle() {
@@ -1443,6 +1449,8 @@ img {
   margin: 0;
   padding: 0;
 
+  text-decoration: none;
+
   background: none;
   border: none;
   outline: none;
@@ -1477,20 +1485,104 @@ img {
           transition-property: transform, opacity, -webkit-transform;
 }
 .mobile-nav__link--chapter {
+  display: block;
+
   font-weight: bold;
-  font-size: 20px;
-  font-family: sans-serif;
+  line-height: 32px;
+  font-family: "Cuprum", Arial, sans-serif;
+  text-align: center;
   color: #878a9d;
 
   background-color: #676a7e;
   border-radius: 50%;
+  cursor: default;
+}
+.mobile-nav__link--chapter:active {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  opacity: 0.5;
+
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-property: opacity, -webkit-transform;
+          transition-property: opacity, -webkit-transform;
+          transition-property: transform, opacity;
+          transition-property: transform, opacity, -webkit-transform;
+}
+.book__title {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: "Cuprum", Arial, sans-serif;
+  text-align: center;
+  color: #8e0303;
+}
+.book__contents-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+      flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -ms-flex-wrap: wrap;
+}
+.book__contents-item {
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  margin: 5px;
+  padding: 0;
+}
+.book__contents-link {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+
+  font-weight: bold;
+  line-height: 32px;
+  font-family: "Cuprum", Arial, sans-serif;
+  text-align: center;
+  color: #878a9d;
+  text-decoration: none;
+
+  background: none;
+  background-color: #676a7e;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  box-shadow: none;
+  cursor: default;
+  opacity: 0.8;
+}
+.book__contents-link:active {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  opacity: 0.5;
+
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-property: opacity, -webkit-transform;
+          transition-property: opacity, -webkit-transform;
+          transition-property: transform, opacity;
+          transition-property: transform, opacity, -webkit-transform;
 }
 .book__running-title {
   margin-bottom: 20px;
 
   font-size: 14px;
-  font-family: sans-serif;
-  /* font-weight: bold; */
+  font-family: "Cuprum", Arial, sans-serif;
   text-align: right;
   color: #878a9d;
 }
