@@ -1370,7 +1370,7 @@ img {
   -ms-flex-direction: column;
       flex-direction: column;
   min-width: 320px;
-  max-width: 1200px;
+  max-width: 800px;
   min-height: 100vh;
   margin: 0 auto;
 
@@ -1383,7 +1383,7 @@ img {
 .page-header {
   position: relative;
 
-  height: 50px;
+  height: 45px;
 }
 .page-main {
   position: relative;
@@ -1427,15 +1427,17 @@ img {
 }
 .mobile-nav--top-main {
   position: absolute;
+  z-index: 1;
 
-  padding-top: 10px;
+  padding-top: 8px;
 }
 .mobile-nav--top-popup {
   position: absolute;
+  z-index: 1;
 
   display: none;
   height: 200px;
-  padding-top: 10px;
+  padding-top: 8px;
 
   background: -webkit-linear-gradient(top, #878a9d, #878a9d 50px, transparent 100%);
   background:         linear-gradient(to bottom, #878a9d, #878a9d 50px, transparent 100%);
@@ -1565,12 +1567,12 @@ img {
 }
 .book-list__title {
   margin: 0;
-  margin-bottom: 200px;
+  margin-top: -63px;
+  margin-bottom: 50%;
   padding: 0;
 
   font-weight: normal;
-  font-size: 30px;
-  line-height: 30px;
+  font-size: 24px;
   font-family: "Zlatoust", Arial, sans-serif;
   text-align: center;
   color: #8e0303;
@@ -1593,7 +1595,7 @@ img {
   -ms-flex-pack: center;
 }
 .book-list__item {
-  width: 150px;
+  width: 120px;
   margin: 0;
   margin: 0 auto;
   margin-top: 10px;
@@ -1611,17 +1613,20 @@ img {
   font-family: "Zlatoust", Arial, sans-serif;
   text-align: center;
   color: #878a9d;
-  color: #c6c8d6;
+  color: #ffffff;
   text-decoration: none;
 
   background: none;
+  background: -webkit-linear-gradient(left, transparent, #878a9d 50%, transparent 100%);
+  background:         linear-gradient(to right, transparent, #878a9d 50%, transparent 100%);
   background-color: #676a7e;
+  background-color: transparent;
   border: none;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
   outline: none;
   box-shadow: none;
-  box-shadow: inset 0 0 20px 0 rgba(255, 255, 255, 0.5);
+  box-shadow: 0 2px 5px 1px rgba(255, 255, 255, 0.5), 0 10px 50px 0 rgba(255, 255, 255, 0.5);
   cursor: default;
   opacity: 0.6;
 }
@@ -1639,20 +1644,17 @@ img {
 }
 .book__title {
   margin: 0;
+  margin-top: -63px;
+  margin-bottom: 70%;
   padding: 0;
 
   font-weight: normal;
-  font-size: 30px;
-  line-height: 30px;
+  font-size: 24px;
   font-family: "Zlatoust", Arial, sans-serif;
   text-align: center;
   color: #8e0303;
 }
 .book__contents-items {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1660,12 +1662,10 @@ img {
   justify-content: center;
   width: 80%;
   margin: 0;
+  margin: 0 auto;
   padding: 0;
 
   list-style: none;
-
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
 
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -1690,16 +1690,20 @@ img {
   font-family: "Cuprum", Arial, sans-serif;
   text-align: center;
   color: #878a9d;
+  color: #c6c8d6;
   text-decoration: none;
 
   background: none;
+  background: -webkit-linear-gradient(left, transparent, #878a9d 50%, transparent 100%);
+  background:         linear-gradient(to right, transparent, #878a9d 50%, transparent 100%);
   background-color: #676a7e;
+  background-color: transparent;
   border: none;
-  border-top-right-radius: 50%;
-  border-bottom-left-radius: 50%;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
   outline: none;
   box-shadow: none;
-  box-shadow: inset 0 0 10px 0 rgba(255, 255, 255, 0.5);
+  box-shadow: 0 2px 5px 1px rgba(255, 255, 255, 0.5), 0 10px 50px 0 rgba(255, 255, 255, 0.5);
   cursor: default;
   opacity: 0.6;
 }
@@ -1721,7 +1725,7 @@ img {
   font-size: 14px;
   font-family: "Cuprum", Arial, sans-serif;
   text-align: right;
-  color: #878a9d;
+  color: #8e0303;
 }
 .book__verse-number {
   margin-right: 10px;
@@ -1752,24 +1756,33 @@ img {
 @import "css-icon/css-icon";
 
  */
-@media (min-width: 451px) {
+@media (min-width: 501px) {
   .overall-wrapper {
-    background: #878a9d url("../img/bg-tablet.png") no-repeat scroll top right;
+    background: #878a9d url("../img/bg-tablet.png") no-repeat scroll top;
     background-size: contain;
   }
-}
-@media (min-width: 701px) {
-  .overall-wrapper {
-    background-size: auto;
+  .page-header {
+    height: 60px;
+  }
+  .mobile-nav--top-main {
+    padding-top: 12px;
+  }
+  .mobile-nav--top-popup {
+    padding-top: 12px;
   }
   .book-list__title {
-    margin-bottom: 350px;
+    margin-top: -70px;
+    margin-bottom: 30%;
+
+    font-size: 30px;
   }
-  .book-list__items {
-    margin-bottom: 20px;
+  .book__title {
+    margin-top: -70px;
+
+    font-size: 30px;
   }
 }
-@media (min-width: 1201px) {
+@media (min-width: 801px) {
   .page-main {
     background: -webkit-linear-gradient(left, #676a7e, rgba(255, 255, 255, 0.5) 20px, rgba(255, 255, 255, 0.5) 30%, transparent 105%);
     background:         linear-gradient(to right, #676a7e, rgba(255, 255, 255, 0.5) 20px, rgba(255, 255, 255, 0.5) 30%, transparent 105%);
