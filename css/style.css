@@ -427,7 +427,7 @@ th {
 }
 /***** CONCATENATION HERE! *****/
 @font-face {
-  font-family: "forumregular";
+  font-family: "Forum";
   font-weight: normal;
   font-style: normal;
   src: url("../fonts/forum-regular.woff2") format("woff2"),
@@ -450,11 +450,16 @@ th {
        url("../fonts/cuprum-bold.woff") format("woff");
 }
 
+@font-face {
+  font-family: "Zlatoust";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/zlatoust.woff2") format("woff2"),
+       url("../fonts/zlatoust.woff") format("woff");
+}
+
 /***** CONCATENATION HERE! *****/
 /*
-@tablet-widths: e("(min-width: 701px)");
- */
-/*
 @subtitle-font-size: 20px;
 @subsubtitle-font-size: 12px;
 @slogan-font-size: 20px;
@@ -563,7 +568,7 @@ body {
 
   font-size: 18px;
   line-height: 18px;
-  font-family: "forumregular", Arial, sans-serif;
+  font-family: "Forum", Arial, sans-serif;
   color: #1d2246;
 
   background-color: #878a9d;
@@ -1381,7 +1386,10 @@ img {
   height: 50px;
 }
 .page-main {
+  position: relative;
+
   flex-grow: 1;
+  min-height: 500px;
   padding: 30px 20px;
 
   background: -webkit-linear-gradient(left, #676a7e, rgba(255, 255, 255, 0.5) 20px, rgba(255, 255, 255, 0.5) 30%, transparent 100%);
@@ -1555,19 +1563,96 @@ img {
           transition-property: transform, opacity;
           transition-property: transform, opacity, -webkit-transform;
 }
-.book__title {
+.book-list__title {
   margin: 0;
-  margin-bottom: 250px;
+  margin-bottom: 200px;
   padding: 0;
 
   font-weight: normal;
-  font-size: 24px;
-  line-height: 24px;
+  font-size: 30px;
+  line-height: 30px;
+  font-family: "Zlatoust", Arial, sans-serif;
+  text-align: center;
+  color: #8e0303;
+}
+.book-list__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+}
+.book-list__item {
+  width: 150px;
+  margin: 0;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 0;
+}
+.book-list__link {
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding: 0 20px;
+
+  font-weight: bold;
+  line-height: 32px;
   font-family: "Cuprum", Arial, sans-serif;
+  font-family: "Zlatoust", Arial, sans-serif;
+  text-align: center;
+  color: #878a9d;
+  color: #c6c8d6;
+  text-decoration: none;
+
+  background: none;
+  background-color: #676a7e;
+  border: none;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  outline: none;
+  box-shadow: none;
+  box-shadow: inset 0 0 20px 0 rgba(255, 255, 255, 0.5);
+  cursor: default;
+  opacity: 0.6;
+}
+.book-list__link:active {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  opacity: 0.5;
+
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-property: opacity, -webkit-transform;
+          transition-property: opacity, -webkit-transform;
+          transition-property: transform, opacity;
+          transition-property: transform, opacity, -webkit-transform;
+}
+.book__title {
+  margin: 0;
+  padding: 0;
+
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  font-family: "Zlatoust", Arial, sans-serif;
   text-align: center;
   color: #8e0303;
 }
 .book__contents-items {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1575,10 +1660,12 @@ img {
   justify-content: center;
   width: 80%;
   margin: 0;
-  margin: 0 auto;
   padding: 0;
 
   list-style: none;
+
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -1674,6 +1761,12 @@ img {
 @media (min-width: 701px) {
   .overall-wrapper {
     background-size: auto;
+  }
+  .book-list__title {
+    margin-bottom: 350px;
+  }
+  .book-list__items {
+    margin-bottom: 20px;
   }
 }
 @media (min-width: 1201px) {

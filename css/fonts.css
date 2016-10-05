@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "forumregular";
+  font-family: "Forum";
   font-weight: normal;
   font-style: normal;
   src: url("../fonts/forum-regular.woff2") format("woff2"),
@@ -20,4 +20,12 @@
   font-style: normal;
   src: url("../fonts/cuprum-bold.woff2") format("woff2"),
        url("../fonts/cuprum-bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Zlatoust";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/zlatoust.woff2") format("woff2"),
+       url("../fonts/zlatoust.woff") format("woff");
 }
