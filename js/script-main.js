@@ -8,11 +8,13 @@ $(document).ready(function(){
 
   infoOpenBtn.click(function(){
     event.preventDefault();
+    infoOpenBtn.hide();
     infoPopup.fadeIn(600);
   });
 
   infoCloseBtn.click(function(){
     event.preventDefault();
     infoPopup.fadeOut(600);
+    infoOpenBtn.show();
   });
 });

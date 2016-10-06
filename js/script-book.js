@@ -6,6 +6,8 @@ $(document).ready(function(){
   var menuOpenBtn = $("#menu-open-btn");
   var menuCloseBtn = $("#menu-close-btn");
   var contentsOpenBtn = $("#contents-open-btn");
+  var backToTextNav = $("#back-to-text-nav");
+  var backToTextBtn = $("#back-to-text-btn");
   var contents = $(".book__contents");
   var chapterLink = $(".book__contents-link");
   var runningTitle = $("#running-title");
@@ -80,12 +82,14 @@ $(document).ready(function(){
   chapter.hide();
   chapterNav.hide();
   runningTitle.hide();
+  backToTextNav.hide();
 
   $(chapterLink).click(function(event){
     event.preventDefault();
     chapterIdx = chapterLink.index(this);
     contents.hide();
     chapterNav.show();
+    mainMenu.show();
     $(setupChapter);
     $(showChapter);
   });
@@ -110,10 +114,19 @@ $(document).ready(function(){
     popupMenu.hide();
     chapterNav.hide();
     runningTitle.hide();
-    mainMenu.fadeIn(600);
+    backToTextNav.show();
     contents.fadeIn(600);
   });
 
+  backToTextBtn.click(function(){
+    event.preventDefault();
+    backToTextNav.hide();
+    contents.hide();
+    chapterNav.show();
+    runningTitle.show();
+    mainMenu.show();
+    chapter.fadeIn(600);
+  });
 
 
 
