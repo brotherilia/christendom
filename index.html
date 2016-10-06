@@ -5,48 +5,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Святое Евангелие</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
   <div class="overall-wrapper">
     <header class="page-header">
-      <nav class="mobile-nav mobile-nav--top-main" id="main-menu">
-        <ul class="mobile-nav__items">
-          <li class="mobile-nav__item">
-            <button class="mobile-nav__link mobile-nav__link--menu" id="menu-open-btn">
-              <i class="css-icon css-icon--orthodoxy"></i>
-            </button>
-          </li>
-        </ul>
-      </nav>
-      <nav class="mobile-nav mobile-nav--top-popup" id="popup-menu">
-        <ul class="mobile-nav__items">
-          <li class="mobile-nav__item">
-            <button class="mobile-nav__link" id="menu-close-btn">
-              <i class="css-icon css-icon--close-fill"></i>
-            </button>
-          </li>
-          <li class="mobile-nav__item">
-            <a class="mobile-nav__link" href="index.html">
-              <i class="css-icon css-icon--home"></i>
-            </a>
-          </li>
-          <li class="mobile-nav__item">
-            <button class="mobile-nav__link" id="contents-open-btn">
-              <i class="css-icon css-icon--contents"></i>
-            </button>
-          </li>
-          <li class="mobile-nav__item">
-            <button class="mobile-nav__link mobile-nav__link--settings">
-              <i class="css-icon css-icon--settings"></i>
-            </button>
-          </li>
-          <li class="mobile-nav__item">
-            <button class="mobile-nav__link">
-              <i class="css-icon css-icon--info-fill"></i>
-            </button>
-          </li>
-        </ul>
-      </nav>
     </header>
     <main class="page-main">
       <div class="book-list">
@@ -70,25 +33,33 @@
       </div>
     </main>
     <footer class="page-footer">
-      <nav class="mobile-nav mobile-nav--bottom" id="chapter-nav">
-        <ul class="mobile-nav__items">
+      <nav class="mobile-nav mobile-nav--bottom">
+        <ul class="mobile-nav__items mobile-nav__items--centered">
           <li class="mobile-nav__item">
-            <button class="mobile-nav__link mobile-nav__link--prev-chapter" id="prev-btn"></button>
-          </li>
-          <li class="mobile-nav__item">
-            <a class="mobile-nav__link" id="top-btn" href="#top">
-              <i class="css-icon css-icon--up"></i>
-            </a>
-          </li>
-          <li class="mobile-nav__item">
-            <button class="mobile-nav__link mobile-nav__link--next-chapter" id="next-btn"></button>
+            <button class="mobile-nav__link" id="info-open-btn">
+              <i class="css-icon css-icon--orthodoxy"></i>
+            </button>
           </li>
         </ul>
       </nav>
     </footer>
   </div>
+  <div class="info-popup" id="info-popup">
+    <span class="info-popup__text">
+      Идея и разработка: <a class="info-popup__link" href="http://frontend.menshikov.su/">Илья Меньшиков</a>
+    </span>
+    <nav class="mobile-nav mobile-nav--bottom-abs">
+      <ul class="mobile-nav__items mobile-nav__items--centered">
+        <li class="mobile-nav__item">
+          <button class="mobile-nav__link" id="info-close-btn">
+            <i class="css-icon css-icon--orthodoxy"></i>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
   <script src="js/jquery.js"></script>
-  <script src="js/jquery.mobile.js"></script>
-  <script src="js/script.min.js"></script>
+  <script src="js/script-main.min.js"></script>
 </body>
 </html>
+
