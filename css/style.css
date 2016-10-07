@@ -427,11 +427,11 @@ th {
 }
 /***** CONCATENATION HERE! *****/
 @font-face {
-  font-family: "Forum";
+  font-family: "Dehuti";
+  src: url("../fonts/dehuti.woff2") format("woff2"),
+       url("../fonts/dehuti.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-  src: url("../fonts/forum-regular.woff2") format("woff2"),
-       url("../fonts/forum-regular.woff") format("woff");
 }
 
 @font-face {
@@ -468,7 +468,7 @@ body {
 
   font-size: 18px;
   line-height: 18px;
-  font-family: "Forum", Arial, sans-serif;
+  font-family: "Dehuti", Georgia, serif;
   color: #1d2246;
 
   background-color: #878a9d;
@@ -1330,6 +1330,8 @@ img {
   z-index: 1;
 
   padding-top: 8px;
+
+  opacity: 0.5;
 }
 .mobile-nav--top-popup {
   position: absolute;
@@ -1369,6 +1371,9 @@ img {
   margin: 0;
   padding: 0;
 }
+.mobile-nav__item--main-menu {
+  display: none;
+}
 .mobile-nav__link {
   position: relative;
 
@@ -1397,9 +1402,6 @@ img {
           transition-property: opacity, -webkit-transform;
           transition-property: transform, opacity;
           transition-property: transform, opacity, -webkit-transform;
-}
-.mobile-nav__link--menu {
-  opacity: 0.5;
 }
 .mobile-nav__link--settings:active {
   -webkit-transform: rotate(360deg);

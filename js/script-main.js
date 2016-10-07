@@ -1,20 +1,17 @@
 $(document).ready(function(){
 
-  var infoPopup = $("#info-popup");
-  var infoOpenBtn = $("#info-open-btn");
-  var infoCloseBtn = $("#info-close-btn");
-
   // Открытие и закрытие окна с информацией о проекте
+  var popupInfo = $("#popup-info");
+  var lnkInfoOpen = $("#lnk-info-open");
+  var lnkInfoClose = $("#lnk-info-close");
 
-  infoOpenBtn.click(function(){
+  lnkInfoOpen.click(function(){
     event.preventDefault();
-    infoOpenBtn.hide();
-    infoPopup.fadeIn(600);
+    popupInfo.fadeIn(600);
   });
 
-  infoCloseBtn.click(function(){
+  lnkInfoClose.click(function(){
     event.preventDefault();
-    infoPopup.fadeOut(600);
-    infoOpenBtn.show();
+    popupInfo.fadeOut(600);
   });
 });

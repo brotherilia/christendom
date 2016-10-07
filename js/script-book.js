@@ -1,20 +1,25 @@
 $(document).ready(function(){
 
-  var toTopBtn = $("#top-btn");
   var mainMenu = $("#main-menu");
+  var itmMenu = $("#itm-menu");
+  var lnkMenuOpen = $("#lnk-menu-open");
+  var itmBack = $("#itm-back");
+  var lnkBackToText = $("#lnk-back-to-text");
+  var itmHome = $("#itm-home");
+
   var popupMenu = $("#popup-menu");
-  var menuOpenBtn = $("#menu-open-btn");
-  var menuCloseBtn = $("#menu-close-btn");
-  var contentsOpenBtn = $("#contents-open-btn");
-  var backToTextNav = $("#back-to-text-nav");
-  var backToTextBtn = $("#back-to-text-btn");
+  var lnkPopupMenuClose = $("#lnk-popup-menu-close");
+  var lnkContents = $("#lnk-contents");
+
+  var bottomMenu = $("#bottom-menu");
+  var lnkPrevChapter = $("#lnk-prev-chapter");
+  var lnkNextChapter = $("#lnk-next-chapter");
+  var lnkToTop = $("#lnk-to-top");
+
   var contents = $(".book__contents");
   var chapterLink = $(".book__contents-link");
   var runningTitle = $("#running-title");
   var chapter = $(".book__chapter");
-  var chapterNav = $("#chapter-nav");
-  var prevChapterLink = $("#prev-btn");
-  var nextChapterLink = $("#next-btn");
   var firstChapter = chapter.first();
   var lastChapter = chapter.last();
   var firstChapterIdx = chapter.index(firstChapter);
@@ -25,21 +30,21 @@ $(document).ready(function(){
 
   var setupChapter = function() {
     chapter.hide();
-    prevChapterLink.text(chapterIdx);
-    nextChapterLink.text(chapterIdx + 2);
+    lnkPrevChapter.text(chapterIdx);
+    lnkNextChapter.text(chapterIdx + 2);
     currentChapterNumberMark.text(chapterIdx + 1);
-    runningTitle.fadeIn(600);
+    runningTitle.show();
     if (chapterIdx == firstChapterIdx){
-      prevChapterLink.hide();
-      nextChapterLink.show();
+      lnkPrevChapter.hide();
+      lnkNextChapter.show();
     }
     else if (chapterIdx == lastChapterIdx){
-      nextChapterLink.hide();
-      prevChapterLink.show();
+      lnkNextChapter.hide();
+      lnkPrevChapter.show();
     }
     else {
-      prevChapterLink.show();
-      nextChapterLink.show();
+      lnkPrevChapter.show();
+      lnkNextChapter.show();
     }
   }
 
@@ -51,81 +56,77 @@ $(document).ready(function(){
 
   // Плавная прокрутка страницы наверх
 
-  toTopBtn.click(function(){
+  lnkToTop.click(function(){
     event.preventDefault();
     $("html, body").animate({ scrollTop: 0 }, 600);
   });
 
-  // Открытие и закрытие главного меню
+  // Открытие и закрытие всплывающего меню
 
-  menuOpenBtn.click(function(){
+  lnkMenuOpen.click(function(){
     event.preventDefault();
-    mainMenu.fadeOut(600);
+    itmMenu.hide();
     popupMenu.fadeIn(600);
   });
 
-  menuCloseBtn.click(function(){
+  lnkPopupMenuClose.click(function(){
     event.preventDefault();
     popupMenu.fadeOut(600);
-    mainMenu.fadeIn(600);
-  });
-
-  $(window).scroll(function(){
-    if ($(this).scrollTop() > 100) {
-      popupMenu.fadeOut(600);
-      mainMenu.fadeIn(600);
-    }
+    itmMenu.show();
   });
 
   // Переходы между главами
 
   chapter.hide();
-  chapterNav.hide();
+  bottomMenu.hide();
   runningTitle.hide();
-  backToTextNav.hide();
+  itmHome.show();
 
   $(chapterLink).click(function(event){
     event.preventDefault();
     chapterIdx = chapterLink.index(this);
+    itmHome.hide();
+    itmBack.hide();
     contents.hide();
-    chapterNav.show();
-    mainMenu.show();
+    bottomMenu.show();
+    itmMenu.show();
     $(setupChapter);
     $(showChapter);
   });
 
-  prevChapterLink.click(function(){
+  lnkPrevChapter.click(function(){
     event.preventDefault();
     chapterIdx--;
     $(setupChapter);
     $(showChapter);
   });
 
-  nextChapterLink.click(function(){
+  lnkNextChapter.click(function(){
     event.preventDefault();
     chapterIdx++;
     $(setupChapter);
     $(showChapter);
   });
 
-  contentsOpenBtn.click(function(){
+  lnkContents.click(function(){
     event.preventDefault();
     chapter.hide();
     popupMenu.hide();
-    chapterNav.hide();
+    bottomMenu.hide();
     runningTitle.hide();
-    backToTextNav.show();
+    itmBack.show();
     contents.fadeIn(600);
   });
 
-  backToTextBtn.click(function(){
+  lnkBackToText.click(function(){
     event.preventDefault();
-    backToTextNav.hide();
+    itmBack.hide();
     contents.hide();
-    chapterNav.show();
+    bottomMenu.show();
     runningTitle.show();
-    mainMenu.show();
-    chapter.fadeIn(600);
+    itmMenu.show();
+    $(setupChapter);
+    $(showChapter);
   });
 
 

@@ -12,26 +12,27 @@
     <header class="page-header">
       <nav class="mobile-nav mobile-nav--top-main" id="main-menu">
         <ul class="mobile-nav__items">
-          <li class="mobile-nav__item">
-            <button class="mobile-nav__link mobile-nav__link--menu" id="menu-open-btn">
+          <li class="mobile-nav__item mobile-nav__item--main-menu" id="itm-menu">
+            <button class="mobile-nav__link" id="lnk-menu-open">
               <i class="css-icon css-icon--orthodoxy"></i>
             </button>
           </li>
-        </ul>
-      </nav>
-      <nav class="mobile-nav mobile-nav--top-main" id="back-to-text-nav">
-        <ul class="mobile-nav__items">
-          <li class="mobile-nav__item">
-            <button class="mobile-nav__link mobile-nav__link--menu" id="back-to-text-btn">
+          <li class="mobile-nav__item mobile-nav__item--main-menu" id="itm-back">
+            <button class="mobile-nav__link" id="lnk-back-to-text">
               <i class="css-icon css-icon--prev"></i>
             </button>
+          </li>
+          <li class="mobile-nav__item mobile-nav__item--main-menu" id="itm-home">
+            <a class="mobile-nav__link" href="index.html">
+              <i class="css-icon css-icon--home"></i>
+            </a>
           </li>
         </ul>
       </nav>
       <nav class="mobile-nav mobile-nav--top-popup" id="popup-menu">
         <ul class="mobile-nav__items">
           <li class="mobile-nav__item">
-            <button class="mobile-nav__link" id="menu-close-btn">
+            <button class="mobile-nav__link" id="lnk-popup-menu-close">
               <i class="css-icon css-icon--orthodoxy"></i>
             </button>
           </li>
@@ -41,12 +42,12 @@
             </a>
           </li>
           <li class="mobile-nav__item">
-            <button class="mobile-nav__link" id="contents-open-btn">
+            <button class="mobile-nav__link" id="lnk-contents">
               <i class="css-icon css-icon--contents"></i>
             </button>
           </li>
           <li class="mobile-nav__item">
-            <button class="mobile-nav__link mobile-nav__link--settings">
+            <button class="mobile-nav__link mobile-nav__link--settings" id="lnk-settings">
               <i class="css-icon css-icon--settings"></i>
             </button>
           </li>
@@ -60,66 +61,27 @@
             Е#VГЛІЕ WТ ЇWА1ННА
           </h1>
           <ul class="book__contents-items">
-            <li class="book__contents-item">
-              <a class="book__contents-link" href="#chapter1">1</a>
-            </li>
-            <li class="book__contents-item">
-              <a class="book__contents-link" href="#chapter2">2</a>
-            </li>
-            <li class="book__contents-item">
-              <a class="book__contents-link" href="#chapter3">3</a>
-            </li>
-            <li class="book__contents-item">
-              <a class="book__contents-link" href="#chapter4">4</a>
-            </li>
-            <li class="book__contents-item">
-              <a class="book__contents-link" href="#chapter5">5</a>
-            </li>
-            <li class="book__contents-item">
-              <a class="book__contents-link" href="#chapter6">6</a>
-            </li>
-            <li class="book__contents-item">
-              <a class="book__contents-link" href="#chapter7">7</a>
-            </li>
-            <li class="book__contents-item">
-              <a class="book__contents-link" href="#chapter8">8</a>
-            </li>
-            <li class="book__contents-item">
-              <a class="book__contents-link" href="#chapter9">9</a>
-            </li>
-            <li class="book__contents-item">
-              <a class="book__contents-link" href="#chapter10">10</a>
-            </li>
-            <li class="book__contents-item">
-              <a class="book__contents-link" href="#chapter11">11</a>
-            </li>
-            <li class="book__contents-item">
-              <a class="book__contents-link" href="#chapter12">12</a>
-            </li>
-            <li class="book__contents-item">
-              <a class="book__contents-link" href="#chapter13">13</a>
-            </li>
-            <li class="book__contents-item">
-              <a class="book__contents-link" href="#chapter14">14</a>
-            </li>
-            <li class="book__contents-item">
-              <a class="book__contents-link" href="#chapter15">15</a>
-            </li>
-            <li class="book__contents-item">
-              <a class="book__contents-link" href="#chapter16">16</a>
-            </li>
-            <li class="book__contents-item">
-              <a class="book__contents-link" href="#chapter17">17</a>
-            </li>
-            <li class="book__contents-item">
-              <a class="book__contents-link" href="#chapter18">18</a>
-            </li>
-            <li class="book__contents-item">
-              <a class="book__contents-link" href="#chapter19">19</a>
-            </li>
-            <li class="book__contents-item">
-              <a class="book__contents-link" href="#chapter20">20</a>
-            </li>
+            <li class="book__contents-item"><a class="book__contents-link" href="#chapter1">1</a></li>
+            <li class="book__contents-item"><a class="book__contents-link" href="#chapter2">2</a></li>
+            <li class="book__contents-item"><a class="book__contents-link" href="#chapter3">3</a></li>
+            <li class="book__contents-item"><a class="book__contents-link" href="#chapter4">4</a></li>
+            <li class="book__contents-item"><a class="book__contents-link" href="#chapter5">5</a></li>
+            <li class="book__contents-item"><a class="book__contents-link" href="#chapter6">6</a></li>
+            <li class="book__contents-item"><a class="book__contents-link" href="#chapter7">7</a></li>
+            <li class="book__contents-item"><a class="book__contents-link" href="#chapter8">8</a></li>
+            <li class="book__contents-item"><a class="book__contents-link" href="#chapter9">9</a></li>
+            <li class="book__contents-item"><a class="book__contents-link" href="#chapter10">10</a></li>
+            <li class="book__contents-item"><a class="book__contents-link" href="#chapter11">11</a></li>
+            <li class="book__contents-item"><a class="book__contents-link" href="#chapter12">12</a></li>
+            <li class="book__contents-item"><a class="book__contents-link" href="#chapter13">13</a></li>
+            <li class="book__contents-item"><a class="book__contents-link" href="#chapter14">14</a></li>
+            <li class="book__contents-item"><a class="book__contents-link" href="#chapter15">15</a></li>
+            <li class="book__contents-item"><a class="book__contents-link" href="#chapter16">16</a></li>
+            <li class="book__contents-item"><a class="book__contents-link" href="#chapter17">17</a></li>
+            <li class="book__contents-item"><a class="book__contents-link" href="#chapter18">18</a></li>
+            <li class="book__contents-item"><a class="book__contents-link" href="#chapter19">19</a></li>
+            <li class="book__contents-item"><a class="book__contents-link" href="#chapter20">20</a></li>
+            <li class="book__contents-item"><a class="book__contents-link" href="#chapter21">21</a></li>
           </ul>
         </nav>
         <div class="book__running-title" id="running-title">
@@ -272,18 +234,18 @@
       </div>
     </main>
     <footer class="page-footer">
-      <nav class="mobile-nav mobile-nav--bottom" id="chapter-nav">
+      <nav class="mobile-nav mobile-nav--bottom" id="bottom-menu">
         <ul class="mobile-nav__items">
           <li class="mobile-nav__item">
-            <button class="mobile-nav__link mobile-nav__link--prev-chapter" id="prev-btn"></button>
+            <button class="mobile-nav__link mobile-nav__link--prev-chapter" id="lnk-prev-chapter"></button>
           </li>
           <li class="mobile-nav__item">
-            <a class="mobile-nav__link" id="top-btn" href="#top">
+            <a class="mobile-nav__link" id="lnk-to-top" href="#top">
               <i class="css-icon css-icon--up"></i>
             </a>
           </li>
           <li class="mobile-nav__item">
-            <button class="mobile-nav__link mobile-nav__link--next-chapter" id="next-btn"></button>
+            <button class="mobile-nav__link mobile-nav__link--next-chapter" id="lnk-next-chapter"></button>
           </li>
         </ul>
       </nav>
