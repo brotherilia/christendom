@@ -426,21 +426,36 @@ th {
   padding: 0;
 }
 /***** CONCATENATION HERE! *****/
-/* @font-face {
-  font-family: "Dehuti";
-  src: url("../fonts/dehuti.woff2") format("woff2"),
-       url("../fonts/dehuti.woff") format("woff");
+@font-face {
+  font-family: "PT Serif";
   font-weight: normal;
   font-style: normal;
+  src: url("../fonts/ptserif-normal.woff2") format("woff2"),
+       url("../fonts/ptserif-normal.woff") format("woff");
 }
- */
 
 @font-face {
-  font-family: "Cormorant-infant";
-  src: url("../fonts/cormorantinfant-regular.woff2") format("woff2"),
-       url("../fonts/cormorantinfant-regular.woff") format("woff");
+  font-family: "PT Serif";
   font-weight: normal;
+  font-style: italic;
+  src: url("../fonts/ptserif-italic.woff2") format("woff2"),
+       url("../fonts/ptserif-italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PT Serif";
+  font-weight: bold;
   font-style: normal;
+  src: url("../fonts/ptserif-bold.woff2") format("woff2"),
+       url("../fonts/ptserif-bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PT Serif";
+  font-weight: bold;
+  font-style: italic;
+  src: url("../fonts/ptserif-bolditalic.woff2") format("woff2"),
+       url("../fonts/ptserif-bolditalic.woff") format("woff");
 }
 
 @font-face {
@@ -475,9 +490,9 @@ body {
   margin: 0;
   padding: 0;
 
-  font-size: 18px;
+  font-size: 16px;
   line-height: 18px;
-  font-family: "Cormorant-infant", Georgia, serif;
+  font-family: "PT Serif", Georgia, serif;
   color: #1d2246;
 
   background-color: #878a9d;
@@ -1408,8 +1423,8 @@ img {
   min-height: 500px;
   padding: 30px 20px;
 
-  background: -webkit-linear-gradient(left, #676a7e, rgba(255, 255, 255, 0.5) 50px, rgba(255, 255, 255, 0.5) 30%, transparent 105%);
-  background:         linear-gradient(to right, #676a7e, rgba(255, 255, 255, 0.5) 50px, rgba(255, 255, 255, 0.5) 30%, transparent 105%);
+  background: -webkit-linear-gradient(left, #676a7e, rgba(255, 255, 255, 0.5) 25px, rgba(255, 255, 255, 0.5) 30%, transparent 105%);
+  background:         linear-gradient(to right, #676a7e, rgba(255, 255, 255, 0.5) 25px, rgba(255, 255, 255, 0.5) 30%, transparent 105%);
   border-top-left-radius: 30% 15px;
   border-top-right-radius: 30% 15px;
 
@@ -1836,7 +1851,7 @@ img {
   .page-main {
     padding: 30px;
 
-    background: -webkit-linear-gradient(left, #676a7e, rgba(255, 255, 255, 0.5) 60px, rgba(255, 255, 255, 0.5) 30%, transparent 105%);
-    background:         linear-gradient(to right, #676a7e, rgba(255, 255, 255, 0.5) 60px, rgba(255, 255, 255, 0.5) 30%, transparent 105%);
+    background: -webkit-linear-gradient(left, #676a7e, rgba(255, 255, 255, 0.5) 35px, rgba(255, 255, 255, 0.5) 30%, transparent 105%);
+    background:         linear-gradient(to right, #676a7e, rgba(255, 255, 255, 0.5) 35px, rgba(255, 255, 255, 0.5) 30%, transparent 105%);
   }
 }

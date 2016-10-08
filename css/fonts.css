@@ -1,18 +1,33 @@
-/* @font-face {
-  font-family: "Dehuti";
-  src: url("../fonts/dehuti.woff2") format("woff2"),
-       url("../fonts/dehuti.woff") format("woff");
+@font-face {
+  font-family: "PT Serif";
   font-weight: normal;
   font-style: normal;
+  src: url("../fonts/ptserif-normal.woff2") format("woff2"),
+       url("../fonts/ptserif-normal.woff") format("woff");
 }
- */
 
 @font-face {
-  font-family: "Cormorant-infant";
-  src: url("../fonts/cormorantinfant-regular.woff2") format("woff2"),
-       url("../fonts/cormorantinfant-regular.woff") format("woff");
+  font-family: "PT Serif";
   font-weight: normal;
+  font-style: italic;
+  src: url("../fonts/ptserif-italic.woff2") format("woff2"),
+       url("../fonts/ptserif-italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PT Serif";
+  font-weight: bold;
   font-style: normal;
+  src: url("../fonts/ptserif-bold.woff2") format("woff2"),
+       url("../fonts/ptserif-bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PT Serif";
+  font-weight: bold;
+  font-style: italic;
+  src: url("../fonts/ptserif-bolditalic.woff2") format("woff2"),
+       url("../fonts/ptserif-bolditalic.woff") format("woff");
 }
 
 @font-face {
