@@ -426,10 +426,19 @@ th {
   padding: 0;
 }
 /***** CONCATENATION HERE! *****/
-@font-face {
+/* @font-face {
   font-family: "Dehuti";
   src: url("../fonts/dehuti.woff2") format("woff2"),
        url("../fonts/dehuti.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+ */
+
+@font-face {
+  font-family: "Cormorant-infant";
+  src: url("../fonts/cormorantinfant-regular.woff2") format("woff2"),
+       url("../fonts/cormorantinfant-regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -468,7 +477,7 @@ body {
 
   font-size: 18px;
   line-height: 18px;
-  font-family: "Dehuti", Georgia, serif;
+  font-family: "Cormorant-infant", Georgia, serif;
   color: #1d2246;
 
   background-color: #878a9d;
@@ -645,6 +654,79 @@ img {
   height: 9.6px;
 
   background-color: #676a7e;
+}
+.css-icon--home-church {
+  top: -19.2px;
+  left: 0;
+
+  width: 32px;
+  height: 32px;
+
+  border: 16px solid transparent;
+  border-bottom: 16px solid #676a7e;
+}
+.css-icon--home-church::before {
+  top: 16px;
+  left: 50%;
+
+  width: 25.6px;
+  height: 9.6px;
+
+  border: 11.2px solid #676a7e;
+  border-top: 5.76px solid #676a7e;
+  border-top: none;
+  border-bottom: none;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+.css-icon--home-church::after {
+  top: -5.44px;
+  right: 0;
+  left: 0;
+  left: -3.2px;
+
+  width: 6.4px;
+  height: 6.4px;
+  margin: 0 auto;
+
+  background: -webkit-linear-gradient(left, transparent, transparent 40%, #676a7e 40%, #676a7e 60%, transparent 60%, transparent 100%), -webkit-linear-gradient(top, transparent, transparent 40%, #676a7e 40%, #676a7e 60%, transparent 60%, transparent 100%);
+  background:         linear-gradient(to right, transparent, transparent 40%, #676a7e 40%, #676a7e 60%, transparent 60%, transparent 100%), linear-gradient(to bottom, transparent, transparent 40%, #676a7e 40%, #676a7e 60%, transparent 60%, transparent 100%);
+}
+.css-icon--church1 {
+  top: 11.2px;
+  left: 0;
+
+  width: 25.6px;
+  height: 19.2px;
+
+  border: 11.2px solid #676a7e;
+  border-bottom: none;
+  border-top-left-radius: 6.4px;
+  border-top-right-radius: 6.4px;
+}
+.css-icon--church1::before {
+  top: -16px;
+  left: -4.8px;
+
+  width: 12.8px;
+  height: 9.6px;
+
+  background-color: #676a7e;
+  border-top-left-radius: 6.4px;
+  border-top-right-radius: 6.4px;
+}
+.css-icon--church1::after {
+  top: -22.4px;
+  right: 0;
+  left: 0;
+  left: -1.76px;
+
+  width: 6.4px;
+  height: 6.4px;
+  margin: 0 auto;
+
+  background: -webkit-linear-gradient(left, transparent, transparent 35%, #676a7e 35%, #676a7e 65%, transparent 65%, transparent 100%), -webkit-linear-gradient(top, transparent, transparent 40%, #676a7e 40%, #676a7e 60%, transparent 60%, transparent 100%);
+  background:         linear-gradient(to right, transparent, transparent 35%, #676a7e 35%, #676a7e 65%, transparent 65%, transparent 100%), linear-gradient(to bottom, transparent, transparent 40%, #676a7e 40%, #676a7e 60%, transparent 60%, transparent 100%);
 }
 .css-icon--info {
   width: 32px;
@@ -1071,11 +1153,45 @@ img {
   margin: 0 auto;
 
   background-color: #676a7e;
-  border-top-left-radius: 4.8px;
-  border-top-right-radius: 4.8px;
-  border-bottom-right-radius: 4.8px;
-  border-bottom-left-radius: 4.8px;
+  border-radius: 4.8px;
   box-shadow: 0 0 0 0.96px #878a9d, 9.6px -3.2px 0 0 #676a7e, -3.2px -8px 0 0 #676a7e;
+}
+.css-icon--church {
+  top: 6.4px;
+  right: 0;
+  left: 0;
+
+  width: 16px;
+  height: 16px;
+  margin: 0 auto;
+
+  border: 3.2px solid #676a7e;
+  border-top: none;
+  border-radius: 16px;
+  box-shadow: 0 9.6px 0 -3.2px #676a7e;
+}
+.css-icon--church::before {
+  top: -6.4px;
+  right: 0;
+  left: 0;
+
+  width: 6.4px;
+  height: 6.4px;
+  margin: 0 auto;
+
+  background: -webkit-linear-gradient(left, transparent, transparent 40%, #676a7e 40%, #676a7e 60%, transparent 60%, transparent 100%), -webkit-linear-gradient(top, transparent, transparent 40%, #676a7e 40%, #676a7e 60%, transparent 60%, transparent 100%);
+  background:         linear-gradient(to right, transparent, transparent 40%, #676a7e 40%, #676a7e 60%, transparent 60%, transparent 100%), linear-gradient(to bottom, transparent, transparent 40%, #676a7e 40%, #676a7e 60%, transparent 60%, transparent 100%);
+}
+.css-icon--church::after {
+  top: 19.2px;
+  left: -3.2px;
+
+  width: 16px;
+  height: 6.4px;
+
+  background: #676a7e;
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
 }
 .css-icon--orthodoxy {
   width: 5.12px;
@@ -1292,8 +1408,8 @@ img {
   min-height: 500px;
   padding: 30px 20px;
 
-  background: -webkit-linear-gradient(left, #676a7e, rgba(255, 255, 255, 0.5) 20px, rgba(255, 255, 255, 0.5) 30%, transparent 100%);
-  background:         linear-gradient(to right, #676a7e, rgba(255, 255, 255, 0.5) 20px, rgba(255, 255, 255, 0.5) 30%, transparent 100%);
+  background: -webkit-linear-gradient(left, #676a7e, rgba(255, 255, 255, 0.5) 50px, rgba(255, 255, 255, 0.5) 30%, transparent 105%);
+  background:         linear-gradient(to right, #676a7e, rgba(255, 255, 255, 0.5) 50px, rgba(255, 255, 255, 0.5) 30%, transparent 105%);
   border-top-left-radius: 30% 15px;
   border-top-right-radius: 30% 15px;
 
@@ -1638,13 +1754,17 @@ img {
 .info-popup {
   position: fixed;
   top: 0;
+  left: 50%;
   z-index: 1;
 
   display: none;
   width: 100%;
+  max-width: 800px;
   height: 100vh;
 
   background-color: rgba(29, 34, 70, 0.9);
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 .info-popup__text {
   display: block;
@@ -1714,7 +1834,9 @@ img {
 }
 @media (min-width: 801px) {
   .page-main {
-    background: -webkit-linear-gradient(left, #676a7e, rgba(255, 255, 255, 0.5) 20px, rgba(255, 255, 255, 0.5) 30%, transparent 105%);
-    background:         linear-gradient(to right, #676a7e, rgba(255, 255, 255, 0.5) 20px, rgba(255, 255, 255, 0.5) 30%, transparent 105%);
+    padding: 30px;
+
+    background: -webkit-linear-gradient(left, #676a7e, rgba(255, 255, 255, 0.5) 60px, rgba(255, 255, 255, 0.5) 30%, transparent 105%);
+    background:         linear-gradient(to right, #676a7e, rgba(255, 255, 255, 0.5) 60px, rgba(255, 255, 255, 0.5) 30%, transparent 105%);
   }
 }

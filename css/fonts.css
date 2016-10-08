@@ -1,7 +1,16 @@
-@font-face {
+/* @font-face {
   font-family: "Dehuti";
   src: url("../fonts/dehuti.woff2") format("woff2"),
        url("../fonts/dehuti.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+ */
+
+@font-face {
+  font-family: "Cormorant-infant";
+  src: url("../fonts/cormorantinfant-regular.woff2") format("woff2"),
+       url("../fonts/cormorantinfant-regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
