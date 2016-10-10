@@ -11,6 +11,16 @@ $(document).ready(function(){
   var lnkPopupMenuClose = $("#lnk-popup-menu-close");
   var lnkContents = $("#lnk-contents");
 
+  var popupSettings = $("#popup-settings");
+  var lnkSettingsOpen = $("#lnk-settings-open");
+  var lnkSettingsClose = $("#lnk-settings-close");
+  var lnkFontSizeDecrease = $("#lnk-font-size-decrease");
+  var lnkFontSizeIncrease = $("#lnk-font-size-increase");
+  var fontSize = ($("html, body").css("font-size")).substr(0,2);
+  var lnkLineHeightDecrease = $("#lnk-line-height-decrease");
+  var lnkLineHeightIncrease = $("#lnk-line-height-increase");
+  var lineHeight = ($("html, body").css("line-height")).substr(0,2);
+
   var bottomMenu = $("#bottom-menu");
   var lnkPrevChapter = $("#lnk-prev-chapter");
   var lnkNextChapter = $("#lnk-next-chapter");
@@ -129,9 +139,36 @@ $(document).ready(function(){
     $(showChapter);
   });
 
+  // Открытие и закрытие окна настроек
+  lnkSettingsOpen.click(function(){
+    event.preventDefault();
+    popupSettings.fadeIn(600);
+  });
 
+  lnkSettingsClose.click(function(){
+    event.preventDefault();
+    popupSettings.fadeOut(600);
+  });
 
+  // Изменение размера шрифта
 
+  lnkFontSizeDecrease.click(function(){
+    event.preventDefault();
+    console.log(fontSize);
+    if (fontSize > 10) {
+      fontSize--;
+      $("html, body").css({"font-size": fontSize+"px"});
+    }
+  });
+
+  lnkFontSizeIncrease.click(function(){
+    event.preventDefault();
+    console.log(fontSize);
+    if (fontSize < 24) {
+      fontSize++;
+      $("html, body").css({"font-size": fontSize+"px"});
+    }
+  });
 
 
 

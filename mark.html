@@ -47,7 +47,7 @@
             </button>
           </li>
           <li class="mobile-nav__item">
-            <button class="mobile-nav__link mobile-nav__link--settings" id="lnk-settings">
+            <button class="mobile-nav__link mobile-nav__link--settings" id="lnk-settings-open">
               <i class="css-icon css-icon--settings"></i>
             </button>
           </li>
@@ -197,6 +197,45 @@
         </ul>
       </nav>
     </footer>
+  </div>
+  <div class="popup-screen" id="popup-settings">
+    <nav class="mobile-nav mobile-nav--top-main">
+      <ul class="mobile-nav__items">
+        <li class="mobile-nav__item">
+          <button class="mobile-nav__link" id="lnk-settings-close">
+            <i class="css-icon css-icon--orthodoxy"></i>
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <div class="settings">
+      <fieldset class="settings__block">
+        <legend class="settings__block-title">
+          Размер шрифта
+        </legend>
+        <div class="settings__controls">
+          <button class="settings__button" id="lnk-font-size-decrease">
+            <i class="css-icon css-icon--prev"></i>
+          </button>
+          <button class="settings__button" id="lnk-font-size-increase">
+            <i class="css-icon css-icon--next"></i>
+          </button>
+        </div>
+      </fieldset>
+      <fieldset class="settings__block">
+        <legend class="settings__block-title">
+          Язык
+        </legend>
+        <div class="settings__controls">
+          <button class="settings__button settings__button--text" id="lnk-lang-ru">
+            Рус
+          </button>
+          <button class="settings__button settings__button--text" id="lnk-lang-en">
+            En
+          </button>
+        </div>
+      </fieldset>
+    </div>
   </div>
   <script src="js/jquery.js"></script>
   <script src="js/jquery.mobile.js"></script>
