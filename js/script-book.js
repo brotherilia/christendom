@@ -21,6 +21,8 @@ $(document).ready(function(){
   var langEn = $(".lang-en");
   var lnkLangRu = $("#lnk-lang-ru");
   var lnkLangEn = $("#lnk-lang-en");
+  var lnkFontSans = $("#lnk-font-sans");
+  var lnkFontSerif = $("#lnk-font-serif");
 
   var bottomMenu = $("#bottom-menu");
   var lnkPrevChapter = $("#lnk-prev-chapter");
@@ -92,8 +94,10 @@ $(document).ready(function(){
   bottomMenu.hide();
   runningTitle.hide();
   itmHome.show();
-  lnkLangRu.css({"color":"#ffffff"});
-  lnkLangEn.css({"color":"#878a9d"});
+  lnkFontSerif.css({"color": "#ffffff"}).css({"background-color": "#c6c8d6"});
+  lnkFontSans.css({"color":"#878a9d"}).css({"background-color": "#676a7e"});
+  lnkLangRu.css({"color":"#ffffff"}).css({"background-color": "#c6c8d6"});
+  lnkLangEn.css({"color":"#878a9d"}).css({"background-color": "#676a7e"});
   langEn.hide();
   langRu.show();
 
@@ -157,6 +161,20 @@ $(document).ready(function(){
     itmMenu.show();
   });
 
+  // Изменение шрифта
+
+  lnkFontSans.click(function(){
+    $(this).css({"color":"#ffffff"}).css({"background-color": "#c6c8d6"});
+    lnkFontSerif.css({"color":"#878a9d"}).css({"background-color": "#676a7e"});
+    $("html, body").css({"font-family": "'PT Sans', Arial, sans-serif"});
+  });
+
+  lnkFontSerif.click(function(){
+    $(this).css({"color":"#ffffff"}).css({"background-color": "#c6c8d6"});
+    lnkFontSans.css({"color":"#878a9d"}).css({"background-color": "#676a7e"});
+    $("html, body").css({"font-family": "'PT Serif', Georgia, serif"});
+  });
+
   // Изменение размера шрифта
 
   lnkFontSizeDecrease.click(function(){
@@ -178,15 +196,15 @@ $(document).ready(function(){
   // Изменение языка
 
   lnkLangEn.click(function(){
-    $(this).css({"color":"#ffffff"});
-    lnkLangRu.css({"color":"#878a9d"});
+    $(this).css({"color": "#ffffff"}).css({"background-color": "#c6c8d6"});
+    lnkLangRu.css({"color": "#878a9d"}).css({"background-color": "#676a7e"});
     langRu.hide();
     langEn.show();
   });
 
   lnkLangRu.click(function(){
-    $(this).css({"color":"#ffffff"});
-    lnkLangEn.css({"color":"#878a9d"});
+    $(this).css({"color": "#ffffff"}).css({"background-color": "#c6c8d6"});
+    lnkLangEn.css({"color": "#878a9d"}).css({"background-color": "#676a7e"});
     langEn.hide();
     langRu.show();
   });

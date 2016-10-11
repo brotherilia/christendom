@@ -451,11 +451,27 @@ th {
 }
 
 @font-face {
-  font-family: "PT Serif";
-  font-weight: bold;
+  font-family: "PT Sans";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/ptsans-normal.woff2") format("woff2"),
+       url("../fonts/ptsans-normal.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-weight: normal;
   font-style: italic;
-  src: url("../fonts/ptserif-bolditalic.woff2") format("woff2"),
-       url("../fonts/ptserif-bolditalic.woff") format("woff");
+  src: url("../fonts/ptsans-italic.woff2") format("woff2"),
+       url("../fonts/ptsans-italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/ptsans-bold.woff2") format("woff2"),
+       url("../fonts/ptsans-bold.woff") format("woff");
 }
 
 @font-face {
@@ -1810,6 +1826,8 @@ img {
   border-radius: 20px;
 }
 .settings__block-title {
+  padding: 0 5px;
+
   font-size: 14px;
   font-family: "Cuprum", Arial, sans-serif;
   text-align: center;
@@ -1843,6 +1861,7 @@ img {
 }
 .settings__button--text {
   display: block;
+  width: 80px;
 
   font-weight: bold;
   font-size: 16px;
@@ -1852,8 +1871,8 @@ img {
   color: #878a9d;
 
   background-color: #676a7e;
-  border-top-left-radius: 50%;
-  border-bottom-right-radius: 50%;
+  border-top-left-radius: 16px;
+  border-bottom-right-radius: 16px;
   cursor: default;
 }
 .settings__button--text:active {
@@ -1937,10 +1956,12 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+        flex-wrap: wrap;
     justify-content: space-between;
 
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
+    -ms-flex-wrap: wrap;
   }
   .settings__block {
     width: 45%;

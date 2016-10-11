@@ -23,11 +23,27 @@
 }
 
 @font-face {
-  font-family: "PT Serif";
-  font-weight: bold;
+  font-family: "PT Sans";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/ptsans-normal.woff2") format("woff2"),
+       url("../fonts/ptsans-normal.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-weight: normal;
   font-style: italic;
-  src: url("../fonts/ptserif-bolditalic.woff2") format("woff2"),
-       url("../fonts/ptserif-bolditalic.woff") format("woff");
+  src: url("../fonts/ptsans-italic.woff2") format("woff2"),
+       url("../fonts/ptsans-italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/ptsans-bold.woff2") format("woff2"),
+       url("../fonts/ptsans-bold.woff") format("woff");
 }
 
 @font-face {
