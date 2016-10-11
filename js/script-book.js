@@ -17,9 +17,10 @@ $(document).ready(function(){
   var lnkFontSizeDecrease = $("#lnk-font-size-decrease");
   var lnkFontSizeIncrease = $("#lnk-font-size-increase");
   var fontSize = ($("html, body").css("font-size")).substr(0,2);
-  var lnkLineHeightDecrease = $("#lnk-line-height-decrease");
-  var lnkLineHeightIncrease = $("#lnk-line-height-increase");
-  var lineHeight = ($("html, body").css("line-height")).substr(0,2);
+  var langRu = $(".lang-ru");
+  var langEn = $(".lang-en");
+  var lnkLangRu = $("#lnk-lang-ru");
+  var lnkLangEn = $("#lnk-lang-en");
 
   var bottomMenu = $("#bottom-menu");
   var lnkPrevChapter = $("#lnk-prev-chapter");
@@ -91,6 +92,10 @@ $(document).ready(function(){
   bottomMenu.hide();
   runningTitle.hide();
   itmHome.show();
+  lnkLangRu.css({"color":"#ffffff"});
+  lnkLangEn.css({"color":"#878a9d"});
+  langEn.hide();
+  langRu.show();
 
   $(chapterLink).click(function(event){
     event.preventDefault();
@@ -142,19 +147,20 @@ $(document).ready(function(){
   // Открытие и закрытие окна настроек
   lnkSettingsOpen.click(function(){
     event.preventDefault();
+    popupMenu.fadeOut(600);
     popupSettings.fadeIn(600);
   });
 
   lnkSettingsClose.click(function(){
     event.preventDefault();
     popupSettings.fadeOut(600);
+    itmMenu.show();
   });
 
   // Изменение размера шрифта
 
   lnkFontSizeDecrease.click(function(){
     event.preventDefault();
-    console.log(fontSize);
     if (fontSize > 10) {
       fontSize--;
       $("html, body").css({"font-size": fontSize+"px"});
@@ -163,15 +169,27 @@ $(document).ready(function(){
 
   lnkFontSizeIncrease.click(function(){
     event.preventDefault();
-    console.log(fontSize);
     if (fontSize < 24) {
       fontSize++;
       $("html, body").css({"font-size": fontSize+"px"});
     }
   });
 
+  // Изменение языка
 
+  lnkLangEn.click(function(){
+    $(this).css({"color":"#ffffff"});
+    lnkLangRu.css({"color":"#878a9d"});
+    langRu.hide();
+    langEn.show();
+  });
 
+  lnkLangRu.click(function(){
+    $(this).css({"color":"#ffffff"});
+    lnkLangEn.css({"color":"#878a9d"});
+    langEn.hide();
+    langRu.show();
+  });
 
 
 
