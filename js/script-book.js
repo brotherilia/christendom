@@ -9,6 +9,7 @@ $(document).ready(function(){
 
   var popupMenu = $("#popup-menu");
   var lnkPopupMenuClose = $("#lnk-popup-menu-close");
+  var itmContents = $("#itm-contents");
   var lnkContents = $("#lnk-contents");
 
   var popupSettings = $("#popup-settings");
@@ -30,6 +31,7 @@ $(document).ready(function(){
   var lnkToTop = $("#lnk-to-top");
 
   var contents = $(".book__contents");
+  var bookTitle = $(".book__title");
   var chapterLink = $(".book__contents-link");
   var runningTitle = $("#running-title");
   var chapter = $(".book__chapter");
@@ -79,6 +81,13 @@ $(document).ready(function(){
   lnkMenuOpen.click(function(){
     event.preventDefault();
     itmMenu.hide();
+    bookTitle.css({"opacity": "0"});
+    if (contents.css("display") != "none"){
+      itmContents.hide();
+    }
+    else {
+      itmContents.show();
+    }
     popupMenu.fadeIn(600);
   });
 
@@ -86,6 +95,7 @@ $(document).ready(function(){
     event.preventDefault();
     popupMenu.fadeOut(600);
     itmMenu.show();
+    bookTitle.css({"opacity": "1"});
   });
 
   // Переходы между главами
@@ -93,7 +103,7 @@ $(document).ready(function(){
   chapter.hide();
   bottomMenu.hide();
   runningTitle.hide();
-  itmHome.show();
+  itmMenu.show();
   lnkFontSerif.css({"color": "#ffffff"}).css({"background-color": "#c6c8d6"});
   lnkFontSans.css({"color":"#878a9d"}).css({"background-color": "#676a7e"});
   lnkLangRu.css({"color":"#ffffff"}).css({"background-color": "#c6c8d6"});
@@ -159,6 +169,7 @@ $(document).ready(function(){
     event.preventDefault();
     popupSettings.fadeOut(600);
     itmMenu.show();
+    bookTitle.css({"opacity": "1"});
   });
 
   // Изменение шрифта
