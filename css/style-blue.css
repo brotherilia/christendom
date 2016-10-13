@@ -508,9 +508,9 @@ body {
 
   font-size: 16px;
   font-family: "PT Serif", Georgia, serif;
-  color: #1d2246;
+  color: #1d2244;
 
-  background-color: #878a9d;
+  background-color: #86899c;
 }
 *,
 *::before,
@@ -554,6 +554,64 @@ img {
   white-space: nowrap;
 }
  */
+.overall-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  min-width: 320px;
+  max-width: 800px;
+  min-height: 100vh;
+  margin: 0 auto;
+
+  background: #86899c url("../img/bg-mobile.png") no-repeat scroll top;
+  background-size: contain;
+
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+}
+.page-header {
+  position: relative;
+
+  height: 45px;
+}
+.page-main {
+  position: relative;
+
+  flex-grow: 1;
+  min-height: 500px;
+  padding: 30px 20px 40px;
+
+  background: -webkit-linear-gradient(left, #65687b, rgba(255, 255, 255, 0.5) 25px, rgba(255, 255, 255, 0.5) 30%, transparent 105%);
+  background:         linear-gradient(to right, #65687b, rgba(255, 255, 255, 0.5) 25px, rgba(255, 255, 255, 0.5) 30%, transparent 105%);
+  border-top-left-radius: 30% 15px;
+  border-top-right-radius: 30% 15px;
+
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+}
+.page-footer {
+  position: relative;
+
+  height: 55px;
+}
+.page-footer::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+
+  display: block;
+  width: 100%;
+  height: 20px;
+
+  background-color: #86899c;
+  border-top-left-radius: 30% 15px;
+  border-top-right-radius: 30% 15px;
+  border-bottom-left-radius: 15px;
+  box-shadow: inset 10px 5px 5px 0 #65687b;
+}
 .css-icon {
   position: absolute;
   top: 0;
@@ -593,8 +651,8 @@ img {
   width: 32px;
   height: 28.8px;
 
-  background-image: -webkit-linear-gradient(bottom, #676a7e, #676a7e 20%, transparent 20%, transparent 39%, #676a7e 39%, #676a7e 61%, transparent 61%, transparent 80%, #676a7e 80%, #676a7e 100%);
-  background-image:         linear-gradient(to top, #676a7e, #676a7e 20%, transparent 20%, transparent 39%, #676a7e 39%, #676a7e 61%, transparent 61%, transparent 80%, #676a7e 80%, #676a7e 100%);
+  background-image: -webkit-linear-gradient(bottom, #65687b, #65687b 20%, transparent 20%, transparent 39%, #65687b 39%, #65687b 61%, transparent 61%, transparent 80%, #65687b 80%, #65687b 100%);
+  background-image:         linear-gradient(to top, #65687b, #65687b 20%, transparent 20%, transparent 39%, #65687b 39%, #65687b 61%, transparent 61%, transparent 80%, #65687b 80%, #65687b 100%);
   border-radius: 20%;
 }
 .css-icon--close {
@@ -602,7 +660,7 @@ img {
   height: 32px;
 
   border-radius: 100%;
-  box-shadow: inset 0 0 0 3.2px #676a7e;
+  box-shadow: inset 0 0 0 3.2px #65687b;
 }
 .css-icon--close::before,
 .css-icon--close::after {
@@ -614,7 +672,7 @@ img {
   height: 22.4px;
   margin: 0 auto;
 
-  background-color: #676a7e;
+  background-color: #65687b;
   border-radius: 5.12px;
 }
 .css-icon--close::before {
@@ -629,7 +687,7 @@ img {
   width: 32px;
   height: 32px;
 
-  background-color: #676a7e;
+  background-color: #65687b;
   border-radius: 50%;
 }
 .css-icon--close-fill::before,
@@ -642,7 +700,7 @@ img {
   height: 22.4px;
   margin: 0 auto;
 
-  background-color: #878a9d;
+  background-color: #86899c;
   border-radius: 5.12px;
 }
 .css-icon--close-fill::before {
@@ -661,7 +719,7 @@ img {
   height: 32px;
 
   border: 16px solid transparent;
-  border-bottom: 16px solid #676a7e;
+  border-bottom: 16px solid #65687b;
 }
 .css-icon--home::before {
   top: 16px;
@@ -670,8 +728,8 @@ img {
   width: 25.6px;
   height: 14.4px;
 
-  border: 11.2px solid #676a7e;
-  border-top: 5.76px solid #676a7e;
+  border: 11.2px solid #65687b;
+  border-top: 5.76px solid #65687b;
   border-bottom: none;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
@@ -683,7 +741,7 @@ img {
   width: 3.84px;
   height: 9.6px;
 
-  background-color: #676a7e;
+  background-color: #65687b;
 }
 .css-icon--home-church {
   top: -19.2px;
@@ -693,7 +751,7 @@ img {
   height: 32px;
 
   border: 16px solid transparent;
-  border-bottom: 16px solid #676a7e;
+  border-bottom: 16px solid #65687b;
 }
 .css-icon--home-church::before {
   top: 16px;
@@ -702,8 +760,8 @@ img {
   width: 25.6px;
   height: 9.6px;
 
-  border: 11.2px solid #676a7e;
-  border-top: 5.76px solid #676a7e;
+  border: 11.2px solid #65687b;
+  border-top: 5.76px solid #65687b;
   border-top: none;
   border-bottom: none;
   -webkit-transform: translate(-50%, 0);
@@ -719,8 +777,8 @@ img {
   height: 6.4px;
   margin: 0 auto;
 
-  background: -webkit-linear-gradient(left, transparent, transparent 40%, #676a7e 40%, #676a7e 60%, transparent 60%, transparent 100%), -webkit-linear-gradient(top, transparent, transparent 40%, #676a7e 40%, #676a7e 60%, transparent 60%, transparent 100%);
-  background:         linear-gradient(to right, transparent, transparent 40%, #676a7e 40%, #676a7e 60%, transparent 60%, transparent 100%), linear-gradient(to bottom, transparent, transparent 40%, #676a7e 40%, #676a7e 60%, transparent 60%, transparent 100%);
+  background: -webkit-linear-gradient(left, transparent, transparent 40%, #65687b 40%, #65687b 60%, transparent 60%, transparent 100%), -webkit-linear-gradient(top, transparent, transparent 40%, #65687b 40%, #65687b 60%, transparent 60%, transparent 100%);
+  background:         linear-gradient(to right, transparent, transparent 40%, #65687b 40%, #65687b 60%, transparent 60%, transparent 100%), linear-gradient(to bottom, transparent, transparent 40%, #65687b 40%, #65687b 60%, transparent 60%, transparent 100%);
 }
 .css-icon--church1 {
   top: 9.6px;
@@ -729,7 +787,7 @@ img {
   width: 25.6px;
   height: 19.2px;
 
-  border: 11.2px solid #676a7e;
+  border: 11.2px solid #65687b;
   border-bottom: none;
   border-top-left-radius: 6.4px;
   border-top-right-radius: 6.4px;
@@ -741,7 +799,7 @@ img {
   width: 12.8px;
   height: 9.6px;
 
-  background-color: #676a7e;
+  background-color: #65687b;
   border-top-left-radius: 6.4px;
   border-top-right-radius: 6.4px;
 }
@@ -755,15 +813,15 @@ img {
   height: 6.4px;
   margin: 0 auto;
 
-  background: -webkit-linear-gradient(left, transparent, transparent 35%, #676a7e 35%, #676a7e 65%, transparent 65%, transparent 100%), -webkit-linear-gradient(top, transparent, transparent 40%, #676a7e 40%, #676a7e 60%, transparent 60%, transparent 100%);
-  background:         linear-gradient(to right, transparent, transparent 35%, #676a7e 35%, #676a7e 65%, transparent 65%, transparent 100%), linear-gradient(to bottom, transparent, transparent 40%, #676a7e 40%, #676a7e 60%, transparent 60%, transparent 100%);
+  background: -webkit-linear-gradient(left, transparent, transparent 35%, #65687b 35%, #65687b 65%, transparent 65%, transparent 100%), -webkit-linear-gradient(top, transparent, transparent 40%, #65687b 40%, #65687b 60%, transparent 60%, transparent 100%);
+  background:         linear-gradient(to right, transparent, transparent 35%, #65687b 35%, #65687b 65%, transparent 65%, transparent 100%), linear-gradient(to bottom, transparent, transparent 40%, #65687b 40%, #65687b 60%, transparent 60%, transparent 100%);
 }
 .css-icon--info {
   width: 32px;
   height: 32px;
 
   border-radius: 100%;
-  box-shadow: inset 0 0 0 3.2px #676a7e;
+  box-shadow: inset 0 0 0 3.2px #65687b;
 }
 .css-icon--info::before,
 .css-icon--info::after {
@@ -773,7 +831,7 @@ img {
   width: 6.4px;
   margin: 0 auto;
 
-  background-color: #676a7e;
+  background-color: #65687b;
 }
 .css-icon--info::before {
   top: 4.8px;
@@ -793,7 +851,7 @@ img {
   width: 32px;
   height: 32px;
 
-  background-color: #676a7e;
+  background-color: #65687b;
   border-radius: 50%;
 }
 .css-icon--info-fill::before,
@@ -804,7 +862,7 @@ img {
   width: 6.4px;
   margin: 0 auto;
 
-  background-color: #878a9d;
+  background-color: #86899c;
 }
 .css-icon--info-fill::before {
   top: 4.8px;
@@ -825,7 +883,7 @@ img {
   height: 32px;
 
   border-radius: 100%;
-  box-shadow: inset 0 0 0 3.2px #676a7e;
+  box-shadow: inset 0 0 0 3.2px #65687b;
 }
 .css-icon--alarm::before,
 .css-icon--alarm::after {
@@ -835,7 +893,7 @@ img {
   width: 6.4px;
   margin: 0 auto;
 
-  background-color: #676a7e;
+  background-color: #65687b;
 }
 .css-icon--alarm::before {
   top: 20.8px;
@@ -855,7 +913,7 @@ img {
   width: 32px;
   height: 32px;
 
-  background-color: #676a7e;
+  background-color: #65687b;
   border-radius: 50%;
 }
 .css-icon--alarm-fill::before,
@@ -866,7 +924,7 @@ img {
   width: 6.4px;
   margin: 0 auto;
 
-  background-color: #878a9d;
+  background-color: #86899c;
 }
 .css-icon--alarm-fill::before {
   top: 20.8px;
@@ -887,7 +945,7 @@ img {
   height: 32px;
 
   border-radius: 100%;
-  box-shadow: inset 0 0 0 3.2px #676a7e;
+  box-shadow: inset 0 0 0 3.2px #65687b;
 }
 .css-icon--up::before {
   right: 0;
@@ -899,7 +957,7 @@ img {
   margin: 0 auto;
 
   border: 8px solid transparent;
-  border-bottom: 8px solid #676a7e;
+  border-bottom: 8px solid #65687b;
 }
 .css-icon--up::after {
   top: 12.8px;
@@ -910,13 +968,13 @@ img {
   height: 14.4px;
   margin: 0 auto;
 
-  background-color: #676a7e;
+  background-color: #65687b;
 }
 .css-icon--up-fill {
   width: 32px;
   height: 32px;
 
-  background-color: #676a7e;
+  background-color: #65687b;
   border-radius: 50%;
 }
 .css-icon--up-fill::before {
@@ -929,7 +987,7 @@ img {
   margin: 0 auto;
 
   border: 8px solid transparent;
-  border-bottom: 8px solid #878a9d;
+  border-bottom: 8px solid #86899c;
 }
 .css-icon--up-fill::after {
   top: 12.8px;
@@ -940,14 +998,14 @@ img {
   height: 14.4px;
   margin: 0 auto;
 
-  background-color: #878a9d;
+  background-color: #86899c;
 }
 .css-icon--down {
   width: 32px;
   height: 32px;
 
   border-radius: 100%;
-  box-shadow: inset 0 0 0 3.2px #676a7e;
+  box-shadow: inset 0 0 0 3.2px #65687b;
 }
 .css-icon--down::before {
   top: 19.2px;
@@ -959,7 +1017,7 @@ img {
   margin: 0 auto;
 
   border: 8px solid transparent;
-  border-top: 8px solid #676a7e;
+  border-top: 8px solid #65687b;
 }
 .css-icon--down::after {
   right: 0;
@@ -970,13 +1028,13 @@ img {
   height: 14.4px;
   margin: 0 auto;
 
-  background-color: #676a7e;
+  background-color: #65687b;
 }
 .css-icon--down-fill {
   width: 32px;
   height: 32px;
 
-  background-color: #676a7e;
+  background-color: #65687b;
   border-radius: 50%;
 }
 .css-icon--down-fill::before {
@@ -989,7 +1047,7 @@ img {
   margin: 0 auto;
 
   border: 8px solid transparent;
-  border-top: 8px solid #878a9d;
+  border-top: 8px solid #86899c;
 }
 .css-icon--down-fill::after {
   right: 0;
@@ -1000,14 +1058,14 @@ img {
   height: 14.4px;
   margin: 0 auto;
 
-  background-color: #878a9d;
+  background-color: #86899c;
 }
 .css-icon--prev {
   width: 32px;
   height: 32px;
 
   border-radius: 100%;
-  box-shadow: inset 0 0 0 3.2px #676a7e;
+  box-shadow: inset 0 0 0 3.2px #65687b;
 }
 .css-icon--prev::before {
   top: 0;
@@ -1019,13 +1077,13 @@ img {
   margin: auto 0;
 
   border: 8px solid transparent;
-  border-right: 8px solid #676a7e;
+  border-right: 8px solid #65687b;
 }
 .css-icon--prev-fill {
   width: 32px;
   height: 32px;
 
-  background-color: #676a7e;
+  background-color: #65687b;
   border-radius: 50%;
 }
 .css-icon--prev-fill::before {
@@ -1038,14 +1096,14 @@ img {
   margin: auto 0;
 
   border: 8px solid transparent;
-  border-right: 8px solid #878a9d;
+  border-right: 8px solid #86899c;
 }
 .css-icon--next {
   width: 32px;
   height: 32px;
 
   border-radius: 100%;
-  box-shadow: inset 0 0 0 3.2px #676a7e;
+  box-shadow: inset 0 0 0 3.2px #65687b;
 }
 .css-icon--next::before {
   top: 0;
@@ -1057,13 +1115,13 @@ img {
   margin: auto 0;
 
   border: 8px solid transparent;
-  border-left: 8px solid #676a7e;
+  border-left: 8px solid #65687b;
 }
 .css-icon--next-fill {
   width: 32px;
   height: 32px;
 
-  background-color: #676a7e;
+  background-color: #65687b;
   border-radius: 50%;
 }
 .css-icon--next-fill::before {
@@ -1076,13 +1134,13 @@ img {
   margin: auto 0;
 
   border: 8px solid transparent;
-  border-left: 8px solid #878a9d;
+  border-left: 8px solid #86899c;
 }
 .css-icon--briefcase {
   width: 32px;
   height: 25.6px;
 
-  background-color: #676a7e;
+  background-color: #65687b;
   border-radius: 3.2px;
 }
 .css-icon--briefcase::before {
@@ -1094,7 +1152,7 @@ img {
   height: 9.6px;
   margin: 0 auto;
 
-  border-bottom: 1px solid #878a9d;
+  border-bottom: 1px solid #86899c;
   border-bottom-right-radius: 32px;
   border-bottom-left-radius: 32px;
 }
@@ -1107,7 +1165,7 @@ img {
   height: 3.2px;
   margin: 0 auto;
 
-  background-color: #878a9d;
+  background-color: #86899c;
   border-bottom-right-radius: 32px;
   border-bottom-left-radius: 32px;
 }
@@ -1115,9 +1173,9 @@ img {
   width: 20.8px;
   height: 20.8px;
 
-  background-color: #676a7e;
+  background-color: #65687b;
   border-radius: 100%;
-  box-shadow: 0 13.44px 0 -8.96px #676a7e, 0 -13.44px 0 -8.96px #676a7e, 13.44px 0 0 -8.96px #676a7e, -13.44px 0 0 -8.96px #676a7e, 9.6px 9.6px 0 -8.96px #676a7e, -9.6px 9.6px 0 -8.96px #676a7e, 9.6px -9.6px 0 -8.96px #676a7e, -9.6px -9.6px 0 -8.96px #676a7e;
+  box-shadow: 0 13.44px 0 -8.96px #65687b, 0 -13.44px 0 -8.96px #65687b, 13.44px 0 0 -8.96px #65687b, -13.44px 0 0 -8.96px #65687b, 9.6px 9.6px 0 -8.96px #65687b, -9.6px 9.6px 0 -8.96px #65687b, 9.6px -9.6px 0 -8.96px #65687b, -9.6px -9.6px 0 -8.96px #65687b;
 }
 .css-icon--moon {
   top: -14.4px;
@@ -1127,7 +1185,7 @@ img {
   height: 28.8px;
 
   border-radius: 100%;
-  box-shadow: 6.4px 6.4px 0 1.6px #676a7e;
+  box-shadow: 6.4px 6.4px 0 1.6px #65687b;
 }
 .css-icon--heart {
   top: -14.4px;
@@ -1136,7 +1194,7 @@ img {
   width: 16px;
   height: 10.56px;
 
-  background-color: #676a7e;
+  background-color: #65687b;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   -webkit-transform: rotate(-45deg);
@@ -1148,7 +1206,7 @@ img {
   width: 25.6px;
   height: 16px;
 
-  background-color: #676a7e;
+  background-color: #65687b;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
 }
@@ -1168,10 +1226,10 @@ img {
   height: 11.2px;
   margin: 0 auto;
 
-  background-color: #676a7e;
+  background-color: #65687b;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  box-shadow: 0 0 0 0.96px #878a9d, 9.6px -3.2px 0 0 #676a7e, -3.2px -8px 0 0 #676a7e;
+  box-shadow: 0 0 0 0.96px #86899c, 9.6px -3.2px 0 0 #65687b, -3.2px -8px 0 0 #65687b;
 }
 .css-icon--people::after {
   top: 0;
@@ -1182,9 +1240,9 @@ img {
   height: 11.2px;
   margin: 0 auto;
 
-  background-color: #676a7e;
+  background-color: #65687b;
   border-radius: 4.8px;
-  box-shadow: 0 0 0 0.96px #878a9d, 9.6px -3.2px 0 0 #676a7e, -3.2px -8px 0 0 #676a7e;
+  box-shadow: 0 0 0 0.96px #86899c, 9.6px -3.2px 0 0 #65687b, -3.2px -8px 0 0 #65687b;
 }
 .css-icon--church {
   top: 6.4px;
@@ -1195,10 +1253,10 @@ img {
   height: 16px;
   margin: 0 auto;
 
-  border: 3.2px solid #676a7e;
+  border: 3.2px solid #65687b;
   border-top: none;
   border-radius: 16px;
-  box-shadow: 0 9.6px 0 -3.2px #676a7e;
+  box-shadow: 0 9.6px 0 -3.2px #65687b;
 }
 .css-icon--church::before {
   top: -6.4px;
@@ -1209,8 +1267,8 @@ img {
   height: 6.4px;
   margin: 0 auto;
 
-  background: -webkit-linear-gradient(left, transparent, transparent 40%, #676a7e 40%, #676a7e 60%, transparent 60%, transparent 100%), -webkit-linear-gradient(top, transparent, transparent 40%, #676a7e 40%, #676a7e 60%, transparent 60%, transparent 100%);
-  background:         linear-gradient(to right, transparent, transparent 40%, #676a7e 40%, #676a7e 60%, transparent 60%, transparent 100%), linear-gradient(to bottom, transparent, transparent 40%, #676a7e 40%, #676a7e 60%, transparent 60%, transparent 100%);
+  background: -webkit-linear-gradient(left, transparent, transparent 40%, #65687b 40%, #65687b 60%, transparent 60%, transparent 100%), -webkit-linear-gradient(top, transparent, transparent 40%, #65687b 40%, #65687b 60%, transparent 60%, transparent 100%);
+  background:         linear-gradient(to right, transparent, transparent 40%, #65687b 40%, #65687b 60%, transparent 60%, transparent 100%), linear-gradient(to bottom, transparent, transparent 40%, #65687b 40%, #65687b 60%, transparent 60%, transparent 100%);
 }
 .css-icon--church::after {
   top: 19.2px;
@@ -1219,7 +1277,7 @@ img {
   width: 16px;
   height: 6.4px;
 
-  background: #676a7e;
+  background: #65687b;
   border-top-left-radius: 50% 100%;
   border-top-right-radius: 50% 100%;
 }
@@ -1227,7 +1285,7 @@ img {
   width: 5.12px;
   height: 32px;
 
-  background-color: #676a7e;
+  background-color: #65687b;
 }
 .css-icon--orthodoxy::before {
   top: 6.4px;
@@ -1237,7 +1295,7 @@ img {
   width: 19.2px;
   height: 4.48px;
 
-  background-color: #676a7e;
+  background-color: #65687b;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
 }
@@ -1248,7 +1306,7 @@ img {
   width: 11.2px;
   height: 4.8px;
 
-  background-color: #676a7e;
+  background-color: #65687b;
   -webkit-transform: skewy(30deg);
           transform: skewy(30deg);
 }
@@ -1257,7 +1315,7 @@ img {
   height: 32px;
 
   border-radius: 100%;
-  box-shadow: inset 0 0 0 3.2px #676a7e;
+  box-shadow: inset 0 0 0 3.2px #65687b;
 }
 .css-icon--plus::before,
 .css-icon--plus::after {
@@ -1270,7 +1328,7 @@ img {
   height: 19.2px;
   margin: auto;
 
-  background-color: #676a7e;
+  background-color: #65687b;
   border-radius: 3.2px;
 }
 .css-icon--plus::after {
@@ -1281,9 +1339,9 @@ img {
   width: 32px;
   height: 32px;
 
-  background-color: #676a7e;
-  background-image: -webkit-linear-gradient(top, #676a7e, #676a7e 20%, transparent 20%, transparent 80%, #676a7e 80%), -webkit-linear-gradient(left, #676a7e, #676a7e 20%, transparent 20%, transparent 45%, #878a9d 45%, #878a9d 55%, transparent 55%, transparent 80%, #676a7e 80%), -webkit-linear-gradient(top, #676a7e, #676a7e 45%, #878a9d 45%, #878a9d 55%, #676a7e 55%);
-  background-image:         linear-gradient(to bottom, #676a7e, #676a7e 20%, transparent 20%, transparent 80%, #676a7e 80%), linear-gradient(to right, #676a7e, #676a7e 20%, transparent 20%, transparent 45%, #878a9d 45%, #878a9d 55%, transparent 55%, transparent 80%, #676a7e 80%), linear-gradient(to bottom, #676a7e, #676a7e 45%, #878a9d 45%, #878a9d 55%, #676a7e 55%);
+  background-color: #65687b;
+  background-image: -webkit-linear-gradient(top, #65687b, #65687b 20%, transparent 20%, transparent 80%, #65687b 80%), -webkit-linear-gradient(left, #65687b, #65687b 20%, transparent 20%, transparent 45%, #86899c 45%, #86899c 55%, transparent 55%, transparent 80%, #65687b 80%), -webkit-linear-gradient(top, #65687b, #65687b 45%, #86899c 45%, #86899c 55%, #65687b 55%);
+  background-image:         linear-gradient(to bottom, #65687b, #65687b 20%, transparent 20%, transparent 80%, #65687b 80%), linear-gradient(to right, #65687b, #65687b 20%, transparent 20%, transparent 45%, #86899c 45%, #86899c 55%, transparent 55%, transparent 80%, #65687b 80%), linear-gradient(to bottom, #65687b, #65687b 45%, #86899c 45%, #86899c 55%, #65687b 55%);
   border-radius: 50%;
 }
 .css-icon--minus {
@@ -1291,7 +1349,7 @@ img {
   height: 32px;
 
   border-radius: 100%;
-  box-shadow: inset 0 0 0 3.2px #676a7e;
+  box-shadow: inset 0 0 0 3.2px #65687b;
 }
 .css-icon--minus::before {
   top: 0;
@@ -1303,16 +1361,16 @@ img {
   height: 4.8px;
   margin: auto;
 
-  background-color: #676a7e;
+  background-color: #65687b;
   border-radius: 3.2px;
 }
 .css-icon--minus-fill {
   width: 32px;
   height: 32px;
 
-  background-color: #676a7e;
-  background-image: -webkit-linear-gradient(left, #676a7e, #676a7e 20%, transparent 20%, transparent 80%, #676a7e 80%), -webkit-linear-gradient(top, #676a7e, #676a7e 45%, #878a9d 45%, #878a9d 55%, #676a7e 55%);
-  background-image:         linear-gradient(to right, #676a7e, #676a7e 20%, transparent 20%, transparent 80%, #676a7e 80%), linear-gradient(to bottom, #676a7e, #676a7e 45%, #878a9d 45%, #878a9d 55%, #676a7e 55%);
+  background-color: #65687b;
+  background-image: -webkit-linear-gradient(left, #65687b, #65687b 20%, transparent 20%, transparent 80%, #65687b 80%), -webkit-linear-gradient(top, #65687b, #65687b 45%, #86899c 45%, #86899c 55%, #65687b 55%);
+  background-image:         linear-gradient(to right, #65687b, #65687b 20%, transparent 20%, transparent 80%, #65687b 80%), linear-gradient(to bottom, #65687b, #65687b 45%, #86899c 45%, #86899c 55%, #65687b 55%);
   border-radius: 50%;
 }
 .css-icon--power {
@@ -1323,7 +1381,7 @@ img {
   height: 25.6px;
 
   border-radius: 100%;
-  box-shadow: inset 0 0 0 3.2px #676a7e;
+  box-shadow: inset 0 0 0 3.2px #65687b;
 }
 .css-icon--power::before {
   top: -2.24px;
@@ -1334,15 +1392,15 @@ img {
   height: 12.8px;
   margin: 0 auto;
 
-  background-color: #676a7e;
+  background-color: #65687b;
   border-radius: 3.2px;
-  box-shadow: 0 0 0 1.6px #878a9d;
+  box-shadow: 0 0 0 1.6px #86899c;
 }
 .css-icon--settings {
   width: 32px;
   height: 32px;
 
-  background-color: #676a7e;
+  background-color: #65687b;
   border-radius: 100%;
 }
 .css-icon--settings::before {
@@ -1355,10 +1413,10 @@ img {
   height: 12.8px;
   margin: auto;
 
-  background-color: #676a7e;
-  background-color: #878a9d;
+  background-color: #65687b;
+  background-color: #86899c;
   border-radius: 50%;
-  box-shadow: 0 16px 0 -2.56px #878a9d, 0 -16px 0 -2.56px #878a9d, 16px 0 0 -2.56px #878a9d, -16px 0 0 -2.56px #878a9d, 11.2px 11.2px 0 -2.56px #878a9d, -11.2px 11.2px 0 -2.56px #878a9d, 11.2px -11.2px 0 -2.56px #878a9d, -11.2px -11.2px 0 -2.56px #878a9d;
+  box-shadow: 0 16px 0 -2.56px #86899c, 0 -16px 0 -2.56px #86899c, 16px 0 0 -2.56px #86899c, -16px 0 0 -2.56px #86899c, 11.2px 11.2px 0 -2.56px #86899c, -11.2px 11.2px 0 -2.56px #86899c, 11.2px -11.2px 0 -2.56px #86899c, -11.2px -11.2px 0 -2.56px #86899c;
 }
 .css-icon--contents::before {
   top: 3.2px;
@@ -1367,9 +1425,9 @@ img {
   width: 6.4px;
   height: 6.4px;
 
-  background-color: #676a7e;
+  background-color: #65687b;
   border-radius: 50%;
-  box-shadow: 0 9.6px 0 0 #676a7e, 0 19.2px 0 0 #676a7e;
+  box-shadow: 0 9.6px 0 0 #65687b, 0 19.2px 0 0 #65687b;
 }
 .css-icon--contents::after {
   top: 3.2px;
@@ -1378,75 +1436,17 @@ img {
   width: 22.4px;
   height: 6.4px;
 
-  background-color: #676a7e;
+  background-color: #65687b;
   border-radius: 3.2px;
-  box-shadow: 0 9.6px 0 0 #676a7e, 0 19.2px 0 0 #676a7e;
+  box-shadow: 0 9.6px 0 0 #65687b, 0 19.2px 0 0 #65687b;
 }
 .css-icon--radio {
   width: 32px;
   height: 32px;
 
   border-radius: 100%;
-  box-shadow: inset 0 0 0 3.2px #676a7e;
-  box-shadow: inset 0 0 0 10.24px #676a7e;
-}
-.overall-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  min-width: 320px;
-  max-width: 800px;
-  min-height: 100vh;
-  margin: 0 auto;
-
-  background: #878a9d url("../img/bg-mobile.png") no-repeat scroll top;
-  background-size: contain;
-
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-}
-.page-header {
-  position: relative;
-
-  height: 45px;
-}
-.page-main {
-  position: relative;
-
-  flex-grow: 1;
-  min-height: 500px;
-  padding: 30px 20px 40px;
-
-  background: -webkit-linear-gradient(left, #676a7e, rgba(255, 255, 255, 0.5) 25px, rgba(255, 255, 255, 0.5) 30%, transparent 105%);
-  background:         linear-gradient(to right, #676a7e, rgba(255, 255, 255, 0.5) 25px, rgba(255, 255, 255, 0.5) 30%, transparent 105%);
-  border-top-left-radius: 30% 15px;
-  border-top-right-radius: 30% 15px;
-
-  -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-}
-.page-footer {
-  position: relative;
-
-  height: 55px;
-}
-.page-footer::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 0;
-
-  display: block;
-  width: 100%;
-  height: 20px;
-
-  background-color: #878a9d;
-  border-top-left-radius: 30% 15px;
-  border-top-right-radius: 30% 15px;
-  border-bottom-left-radius: 15px;
-  box-shadow: inset 10px 5px 5px 0 #676a7e;
+  box-shadow: inset 0 0 0 3.2px #65687b;
+  box-shadow: inset 0 0 0 10.24px #65687b;
 }
 .mobile-nav {
   width: 100%;
@@ -1469,8 +1469,8 @@ img {
   height: 200px;
   padding-top: 8px;
 
-  background: -webkit-linear-gradient(top, #878a9d, #878a9d 50px, transparent 100%);
-  background:         linear-gradient(to bottom, #878a9d, #878a9d 50px, transparent 100%);
+  background: -webkit-linear-gradient(top, #86899c, #86899c 50px, transparent 100%);
+  background:         linear-gradient(to bottom, #86899c, #86899c 50px, transparent 100%);
   opacity: 0.6;
 }
 .mobile-nav--bottom {
@@ -1551,9 +1551,9 @@ img {
   line-height: 32px;
   font-family: "Cuprum", Arial, sans-serif;
   text-align: center;
-  color: #878a9d;
+  color: #86899c;
 
-  background-color: #676a7e;
+  background-color: #65687b;
   border-top-left-radius: 50%;
   border-bottom-right-radius: 50%;
   cursor: default;
@@ -1578,9 +1578,9 @@ img {
   line-height: 32px;
   font-family: "Cuprum", Arial, sans-serif;
   text-align: center;
-  color: #878a9d;
+  color: #86899c;
 
-  background-color: #676a7e;
+  background-color: #65687b;
   border-top-right-radius: 50%;
   border-bottom-left-radius: 50%;
   cursor: default;
@@ -1607,7 +1607,7 @@ img {
   font-size: 24px;
   font-family: "Zlatoust", Arial, sans-serif;
   text-align: center;
-  color: #8e0303;
+  color: #8b0404;
 }
 .book-list__items {
   margin: 0;
@@ -1633,14 +1633,14 @@ img {
   font-family: "Cuprum", Arial, sans-serif;
   font-family: "Zlatoust", Arial, sans-serif;
   text-align: center;
-  color: #878a9d;
+  color: #86899c;
   color: #ffffff;
   text-decoration: none;
 
   background: none;
-  background: -webkit-linear-gradient(left, transparent, #878a9d 50%, transparent 100%);
-  background:         linear-gradient(to right, transparent, #878a9d 50%, transparent 100%);
-  background-color: #676a7e;
+  background: -webkit-linear-gradient(left, transparent, #86899c 50%, transparent 100%);
+  background:         linear-gradient(to right, transparent, #86899c 50%, transparent 100%);
+  background-color: #65687b;
   background-color: transparent;
   border: none;
   border-top-right-radius: 20px;
@@ -1673,7 +1673,7 @@ img {
   font-size: 24px;
   font-family: "Zlatoust", Arial, sans-serif;
   text-align: center;
-  color: #8e0303;
+  color: #8b0404;
 }
 .book__contents-items {
   margin: 0;
@@ -1701,14 +1701,14 @@ img {
   line-height: 20px;
   font-family: "Cuprum", Arial, sans-serif;
   text-align: center;
-  color: #878a9d;
+  color: #86899c;
   color: #ffffff;
   text-decoration: none;
 
   background: none;
-  background: -webkit-linear-gradient(left, transparent, #878a9d 50%, transparent 100%);
-  background:         linear-gradient(to right, transparent, #878a9d 50%, transparent 100%);
-  background-color: #676a7e;
+  background: -webkit-linear-gradient(left, transparent, #86899c 50%, transparent 100%);
+  background:         linear-gradient(to right, transparent, #86899c 50%, transparent 100%);
+  background-color: #65687b;
   background-color: transparent;
   border: none;
   border-top-right-radius: 15px;
@@ -1735,7 +1735,7 @@ img {
   display: block;
 
   font-size: 0.8em;
-  color: #878a9d;
+  color: #86899c;
   font-style: italic;
 }
 .book__running-title {
@@ -1744,13 +1744,13 @@ img {
   font-size: 0.8em;
   font-family: "Cuprum", Arial, sans-serif;
   text-align: right;
-  color: #8e0303;
+  color: #8b0404;
 }
 .book__verse-number {
   margin-right: 10px;
 
   font-size: 0.8em;
-  color: #8e0303;
+  color: #8b0404;
 }
 .book__comment-items {
   position: relative;
@@ -1772,12 +1772,12 @@ img {
   width: 100%;
   height: 1px;
 
-  background: -webkit-linear-gradient(left, transparent, #878a9d 50%, transparent 100%);
-  background:         linear-gradient(to right, transparent, #878a9d 50%, transparent 100%);
+  background: -webkit-linear-gradient(left, transparent, #86899c 50%, transparent 100%);
+  background:         linear-gradient(to right, transparent, #86899c 50%, transparent 100%);
 }
 .book__comment-item {
   font-size: 0.8em;
-  color: #878a9d;
+  color: #86899c;
   font-style: italic;
 }
 .popup-screen {
@@ -1791,7 +1791,7 @@ img {
   max-width: 800px;
   height: 100vh;
 
-  background-color: rgba(29, 34, 70, 0.9);
+  background-color: rgba(29, 34, 68, 0.9);
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
 }
@@ -1803,16 +1803,16 @@ img {
 
   font-size: 14px;
   font-family: "Cuprum", Arial, sans-serif;
-  color: #878a9d;
+  color: #86899c;
 }
 .popup-screen__link {
-  color: #c6c8d6;
+  color: #c4c6d4;
   text-decoration: none;
 
   cursor: default;
 }
 .popup-screen__link:active {
-  color: #878a9d;
+  color: #86899c;
 }
 .popup-screen__controls-block {
   margin: 70px;
@@ -1825,7 +1825,9 @@ img {
 }
 .settings__block {
   margin-bottom: 20px;
+  padding-top: 10px;
 
+  border: 1px solid #86899c;
   border-radius: 20px;
 }
 .settings__block-title {
@@ -1834,7 +1836,7 @@ img {
   font-size: 14px;
   font-family: "Cuprum", Arial, sans-serif;
   text-align: center;
-  color: #878a9d;
+  color: #86899c;
 }
 .settings__controls {
   display: -webkit-box;
@@ -1864,16 +1866,19 @@ img {
 }
 .settings__button--text {
   display: block;
-  width: 80px;
+  width: 58px;
 
   font-weight: bold;
+  font-weight: normal;
   font-size: 16px;
+  font-size: 14px;
   line-height: 32px;
   font-family: "Cuprum", Arial, sans-serif;
   text-align: center;
-  color: #878a9d;
+  color: #86899c;
+  color: #ffffff;
 
-  background-color: #676a7e;
+  background-color: #65687b;
   border-top-left-radius: 16px;
   border-bottom-right-radius: 16px;
   cursor: default;
@@ -1902,32 +1907,9 @@ img {
           transition-property: transform, opacity;
           transition-property: transform, opacity, -webkit-transform;
 }
-/*
-
-@import "layout/page-content";
-@import "layout/page-aside-left";
-@import "layout/page-aside-right";
-
-@import "blocks/inline-link";
-@import "blocks/common-list";
-@import "blocks/common-table";
-@import "blocks/main-nav";
-@import "blocks/projects-nav";
-@import "blocks/contacts-nav";
-@import "blocks/menu-list";
-@import "blocks/icon-list";
-@import "blocks/logo";
-@import "blocks/article";
-@import "blocks/info";
-
-@import "css-icon/variab";
-@import "css-icon/mixins";
-@import "css-icon/css-icon";
-
- */
 @media (min-width: 501px) {
   .overall-wrapper {
-    background: #878a9d url("../img/bg-tablet.png") no-repeat scroll top;
+    background: #86899c url("../img/bg-tablet.png") no-repeat scroll top;
     background-size: contain;
   }
   .page-header {
@@ -1974,7 +1956,7 @@ img {
   .page-main {
     padding: 30px 30px 40px;
 
-    background: -webkit-linear-gradient(left, #676a7e, rgba(255, 255, 255, 0.5) 35px, rgba(255, 255, 255, 0.5) 30%, transparent 105%);
-    background:         linear-gradient(to right, #676a7e, rgba(255, 255, 255, 0.5) 35px, rgba(255, 255, 255, 0.5) 30%, transparent 105%);
+    background: -webkit-linear-gradient(left, #65687b, rgba(255, 255, 255, 0.5) 35px, rgba(255, 255, 255, 0.5) 30%, transparent 105%);
+    background:         linear-gradient(to right, #65687b, rgba(255, 255, 255, 0.5) 35px, rgba(255, 255, 255, 0.5) 30%, transparent 105%);
   }
 }

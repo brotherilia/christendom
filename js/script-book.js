@@ -24,6 +24,10 @@ $(document).ready(function(){
   var lnkLangEn = $("#lnk-lang-en");
   var lnkFontSans = $("#lnk-font-sans");
   var lnkFontSerif = $("#lnk-font-serif");
+  var lnkColorScheme1 = $("#lnk-color-scheme-1");
+  var lnkColorScheme2 = $("#lnk-color-scheme-2");
+  var lnkColorScheme3 = $("#lnk-color-scheme-3");
+  var stylesheet = $("#stylesheet");
 
   var lnkPrevChapter = $("#lnk-prev-chapter");
   var lnkNextChapter = $("#lnk-next-chapter");
@@ -117,19 +121,22 @@ $(document).ready(function(){
     bookTitle.css({"opacity": "1"});
   });
 
-  // Переходы между главами
-
   chapter.hide();
   lnkPrevChapter.hide();
   lnkNextChapter.hide();
   runningTitle.hide();
   itmMenu.show();
-  lnkFontSerif.css({"color": "#ffffff"}).css({"background-color": "#c6c8d6"});
-  lnkFontSans.css({"color":"#878a9d"}).css({"background-color": "#676a7e"});
-  lnkLangRu.css({"color":"#ffffff"}).css({"background-color": "#c6c8d6"});
-  lnkLangEn.css({"color":"#878a9d"}).css({"background-color": "#676a7e"});
+  lnkFontSerif.css({"opacity": "1"});
+  lnkFontSans.css({"opacity": "0.5"});
+  lnkLangRu.css({"opacity": "1"});
+  lnkLangEn.css({"opacity": "0.5"});
+  lnkColorScheme1.css({"opacity": "1"});
+  lnkColorScheme2.css({"opacity": "0.5"});
+  lnkColorScheme3.css({"opacity": "0.5"});
   langEn.hide();
   langRu.show();
+
+  // Переходы между главами
 
   $(chapterLink).click(function(event){
     event.preventDefault();
@@ -196,14 +203,14 @@ $(document).ready(function(){
   // Изменение шрифта
 
   lnkFontSans.click(function(){
-    $(this).css({"color":"#ffffff"}).css({"background-color": "#c6c8d6"});
-    lnkFontSerif.css({"color":"#878a9d"}).css({"background-color": "#676a7e"});
+    $(this).css({"opacity": "1"});
+    lnkFontSerif.css({"opacity": "0.5"});
     $("html, body").css({"font-family": "'PT Sans', Arial, sans-serif"});
   });
 
   lnkFontSerif.click(function(){
-    $(this).css({"color":"#ffffff"}).css({"background-color": "#c6c8d6"});
-    lnkFontSans.css({"color":"#878a9d"}).css({"background-color": "#676a7e"});
+    $(this).css({"opacity": "1"});
+    lnkFontSans.css({"opacity": "0.5"});
     $("html, body").css({"font-family": "'PT Serif', Georgia, serif"});
   });
 
@@ -228,16 +235,39 @@ $(document).ready(function(){
   // Изменение языка
 
   lnkLangEn.click(function(){
-    $(this).css({"color": "#ffffff"}).css({"background-color": "#c6c8d6"});
-    lnkLangRu.css({"color": "#878a9d"}).css({"background-color": "#676a7e"});
+    $(this).css({"opacity": "1"});
+    lnkLangRu.css({"opacity": "0.5"});
     langRu.hide();
     langEn.show();
   });
 
   lnkLangRu.click(function(){
-    $(this).css({"color": "#ffffff"}).css({"background-color": "#c6c8d6"});
-    lnkLangEn.css({"color": "#878a9d"}).css({"background-color": "#676a7e"});
+    $(this).css({"opacity": "1"});
+    lnkLangEn.css({"opacity": "0.5"});
     langEn.hide();
     langRu.show();
+  });
+
+// Смена цветовой схемы
+
+  lnkColorScheme1.click(function(event){
+    stylesheet.attr("href", "css/style-blue.min.css");
+    lnkColorScheme1.css({"opacity": "1"});
+    lnkColorScheme2.css({"opacity": "0.5"});
+    lnkColorScheme3.css({"opacity": "0.5"});
+  });
+
+  lnkColorScheme2.click(function(event){
+    stylesheet.attr("href", "css/style-red.min.css");
+    lnkColorScheme1.css({"opacity": "0.5"});
+    lnkColorScheme2.css({"opacity": "1"});
+    lnkColorScheme3.css({"opacity": "0.5"});
+  });
+
+  lnkColorScheme3.click(function(event){
+    stylesheet.attr("href", "css/style-green.min.css");
+    lnkColorScheme1.css({"opacity": "0.5"});
+    lnkColorScheme2.css({"opacity": "0.5"});
+    lnkColorScheme3.css({"opacity": "1"});
   });
 });
