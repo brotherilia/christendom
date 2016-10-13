@@ -25,7 +25,6 @@ $(document).ready(function(){
   var lnkFontSans = $("#lnk-font-sans");
   var lnkFontSerif = $("#lnk-font-serif");
 
-  var bottomMenu = $("#bottom-menu");
   var lnkPrevChapter = $("#lnk-prev-chapter");
   var lnkNextChapter = $("#lnk-next-chapter");
   var lnkToTop = $("#lnk-to-top");
@@ -69,8 +68,28 @@ $(document).ready(function(){
     $("html, body").animate({ scrollTop: 0 }, 0);
   }
 
+  var showBottomMenu = function() {
+    lnkPrevChapter.show();
+    lnkNextChapter.show();
+    lnkToTop.show();
+  }
+
+  var hideBottomMenu = function() {
+    lnkPrevChapter.hide();
+    lnkNextChapter.hide();
+    lnkToTop.hide();
+  }
+
   // Плавная прокрутка страницы наверх
 
+  $(window).scroll(function(){
+    if ($(this).scrollTop() > 100) {
+      lnkToTop.fadeIn();
+    }
+    else {
+      lnkToTop.fadeOut();
+    }
+  });
   lnkToTop.click(function(){
     event.preventDefault();
     $("html, body").animate({ scrollTop: 0 }, 600);
@@ -101,7 +120,8 @@ $(document).ready(function(){
   // Переходы между главами
 
   chapter.hide();
-  bottomMenu.hide();
+  lnkPrevChapter.hide();
+  lnkNextChapter.hide();
   runningTitle.hide();
   itmMenu.show();
   lnkFontSerif.css({"color": "#ffffff"}).css({"background-color": "#c6c8d6"});
@@ -117,7 +137,7 @@ $(document).ready(function(){
     itmHome.hide();
     itmBack.hide();
     contents.hide();
-    bottomMenu.show();
+    $(showBottomMenu);
     itmMenu.show();
     $(setupChapter);
     $(showChapter);
@@ -141,7 +161,8 @@ $(document).ready(function(){
     event.preventDefault();
     chapter.hide();
     popupMenu.hide();
-    bottomMenu.hide();
+    lnkPrevChapter.hide();
+    lnkNextChapter.hide();
     runningTitle.hide();
     itmBack.show();
     contents.fadeIn(600);
@@ -151,7 +172,7 @@ $(document).ready(function(){
     event.preventDefault();
     itmBack.hide();
     contents.hide();
-    bottomMenu.show();
+    $(showBottomMenu);
     runningTitle.show();
     itmMenu.show();
     $(setupChapter);
@@ -219,32 +240,4 @@ $(document).ready(function(){
     langEn.hide();
     langRu.show();
   });
-
-
-
-  // Перелистывание страниц
-
-/*
-
-  var windowHeight = $(window).height() * 0.99;
-
-  var prevPage = function() {
-    $("html, body").animate({ scrollTop: -windowHeight }, 0);
-  }
-
-  var nextPage = function() {
-    $("html, body").animate({ scrollTop: windowHeight }, 0);
-  }
-
-  $(chapter).on("swiperight",function(event){
-    $(prevPage);
-  });
-
-  $(chapter).on("swipeleft",function(event){
-    $(nextPage);
-  });
-
-*/
-
-
 });
