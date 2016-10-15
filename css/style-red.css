@@ -511,6 +511,11 @@ body {
   color: #441d22;
 
   background-color: #9c8689;
+
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 *,
 *::before,
@@ -521,39 +526,12 @@ p {
   margin: 0;
   margin-bottom: 5px;
   padding: 0;
-}
-/*
 
-h1,
-h2,
-h3,
-h4 {
-  .reset-spaces();
-  font-weight: normal;
+  -webkit-user-select: auto;
+     -moz-user-select: auto;
+      -ms-user-select: auto;
+          user-select: auto;
 }
-
-a {
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.comment {
-  font-style: italic;
-}
-
-.strong-comment {
-  font-style: italic;
-  font-weight: bold;
-}
-
-.nowrap {
-  white-space: nowrap;
-}
- */
 .overall-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -622,22 +600,6 @@ img {
   display: block;
   box-sizing: border-box;
   margin: auto;
-  /*
-
-  &-- {
-    .icon-size();
-    .offset();
-
-    &::before {
-      .icon-size(@icon-size, @icon-size);
-    }
-
-    &::after {
-      .icon-size(@icon-size, @icon-size);
-    }
-  }
-
- */
 }
 .css-icon::before,
 .css-icon::after {
@@ -646,139 +608,6 @@ img {
 
   display: block;
   box-sizing: border-box;
-}
-.css-icon--menu {
-  width: 32px;
-  height: 28.8px;
-
-  background-image: -webkit-linear-gradient(bottom, #7b6568, #7b6568 20%, transparent 20%, transparent 39%, #7b6568 39%, #7b6568 61%, transparent 61%, transparent 80%, #7b6568 80%, #7b6568 100%);
-  background-image:         linear-gradient(to top, #7b6568, #7b6568 20%, transparent 20%, transparent 39%, #7b6568 39%, #7b6568 61%, transparent 61%, transparent 80%, #7b6568 80%, #7b6568 100%);
-  border-radius: 20%;
-}
-.css-icon--close {
-  width: 32px;
-  height: 32px;
-
-  border-radius: 100%;
-  box-shadow: inset 0 0 0 3.2px #7b6568;
-}
-.css-icon--close::before,
-.css-icon--close::after {
-  top: 4.8px;
-  right: 0;
-  left: 0;
-
-  width: 4.8px;
-  height: 22.4px;
-  margin: 0 auto;
-
-  background-color: #7b6568;
-  border-radius: 5.12px;
-}
-.css-icon--close::before {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-.css-icon--close::after {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-.css-icon--close-fill {
-  width: 32px;
-  height: 32px;
-
-  background-color: #7b6568;
-  border-radius: 50%;
-}
-.css-icon--close-fill::before,
-.css-icon--close-fill::after {
-  top: 4.8px;
-  right: 0;
-  left: 0;
-
-  width: 4.8px;
-  height: 22.4px;
-  margin: 0 auto;
-
-  background-color: #9c8689;
-  border-radius: 5.12px;
-}
-.css-icon--close-fill::before {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-.css-icon--close-fill::after {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-.css-icon--home {
-  top: -30.4px;
-  left: 0;
-
-  width: 32px;
-  height: 32px;
-
-  border: 16px solid transparent;
-  border-bottom: 16px solid #7b6568;
-}
-.css-icon--home::before {
-  top: 16px;
-  left: 50%;
-
-  width: 25.6px;
-  height: 14.4px;
-
-  border: 11.2px solid #7b6568;
-  border-top: 5.76px solid #7b6568;
-  border-bottom: none;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-}
-.css-icon--home::after {
-  top: 1.6px;
-  left: 4.8px;
-
-  width: 3.84px;
-  height: 9.6px;
-
-  background-color: #7b6568;
-}
-.css-icon--home-church {
-  top: -19.2px;
-  left: 0;
-
-  width: 32px;
-  height: 32px;
-
-  border: 16px solid transparent;
-  border-bottom: 16px solid #7b6568;
-}
-.css-icon--home-church::before {
-  top: 16px;
-  left: 50%;
-
-  width: 25.6px;
-  height: 9.6px;
-
-  border: 11.2px solid #7b6568;
-  border-top: 5.76px solid #7b6568;
-  border-top: none;
-  border-bottom: none;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-}
-.css-icon--home-church::after {
-  top: -5.44px;
-  right: 0;
-  left: 0;
-  left: -3.2px;
-
-  width: 6.4px;
-  height: 6.4px;
-  margin: 0 auto;
-
-  background: -webkit-linear-gradient(left, transparent, transparent 40%, #7b6568 40%, #7b6568 60%, transparent 60%, transparent 100%), -webkit-linear-gradient(top, transparent, transparent 40%, #7b6568 40%, #7b6568 60%, transparent 60%, transparent 100%);
-  background:         linear-gradient(to right, transparent, transparent 40%, #7b6568 40%, #7b6568 60%, transparent 60%, transparent 100%), linear-gradient(to bottom, transparent, transparent 40%, #7b6568 40%, #7b6568 60%, transparent 60%, transparent 100%);
 }
 .css-icon--church1 {
   top: 9.6px;
@@ -816,130 +645,6 @@ img {
   background: -webkit-linear-gradient(left, transparent, transparent 35%, #7b6568 35%, #7b6568 65%, transparent 65%, transparent 100%), -webkit-linear-gradient(top, transparent, transparent 40%, #7b6568 40%, #7b6568 60%, transparent 60%, transparent 100%);
   background:         linear-gradient(to right, transparent, transparent 35%, #7b6568 35%, #7b6568 65%, transparent 65%, transparent 100%), linear-gradient(to bottom, transparent, transparent 40%, #7b6568 40%, #7b6568 60%, transparent 60%, transparent 100%);
 }
-.css-icon--info {
-  width: 32px;
-  height: 32px;
-
-  border-radius: 100%;
-  box-shadow: inset 0 0 0 3.2px #7b6568;
-}
-.css-icon--info::before,
-.css-icon--info::after {
-  right: 0;
-  left: 0;
-
-  width: 6.4px;
-  margin: 0 auto;
-
-  background-color: #7b6568;
-}
-.css-icon--info::before {
-  top: 4.8px;
-
-  height: 6.4px;
-
-  border-radius: 3.2px;
-}
-.css-icon--info::after {
-  top: 12.8px;
-
-  height: 14.4px;
-
-  border-radius: 5.12px;
-}
-.css-icon--info-fill {
-  width: 32px;
-  height: 32px;
-
-  background-color: #7b6568;
-  border-radius: 50%;
-}
-.css-icon--info-fill::before,
-.css-icon--info-fill::after {
-  right: 0;
-  left: 0;
-
-  width: 6.4px;
-  margin: 0 auto;
-
-  background-color: #9c8689;
-}
-.css-icon--info-fill::before {
-  top: 4.8px;
-
-  height: 6.4px;
-
-  border-radius: 3.2px;
-}
-.css-icon--info-fill::after {
-  top: 12.8px;
-
-  height: 14.4px;
-
-  border-radius: 5.12px;
-}
-.css-icon--alarm {
-  width: 32px;
-  height: 32px;
-
-  border-radius: 100%;
-  box-shadow: inset 0 0 0 3.2px #7b6568;
-}
-.css-icon--alarm::before,
-.css-icon--alarm::after {
-  right: 0;
-  left: 0;
-
-  width: 6.4px;
-  margin: 0 auto;
-
-  background-color: #7b6568;
-}
-.css-icon--alarm::before {
-  top: 20.8px;
-
-  height: 6.4px;
-
-  border-radius: 3.2px;
-}
-.css-icon--alarm::after {
-  top: 4.8px;
-
-  height: 14.4px;
-
-  border-radius: 5.12px;
-}
-.css-icon--alarm-fill {
-  width: 32px;
-  height: 32px;
-
-  background-color: #7b6568;
-  border-radius: 50%;
-}
-.css-icon--alarm-fill::before,
-.css-icon--alarm-fill::after {
-  right: 0;
-  left: 0;
-
-  width: 6.4px;
-  margin: 0 auto;
-
-  background-color: #9c8689;
-}
-.css-icon--alarm-fill::before {
-  top: 20.8px;
-
-  height: 6.4px;
-
-  border-radius: 3.2px;
-}
-.css-icon--alarm-fill::after {
-  top: 4.8px;
-
-  height: 14.4px;
-
-  border-radius: 5.12px;
-}
 .css-icon--up {
   width: 32px;
   height: 32px;
@@ -970,96 +675,6 @@ img {
 
   background-color: #7b6568;
 }
-.css-icon--up-fill {
-  width: 32px;
-  height: 32px;
-
-  background-color: #7b6568;
-  border-radius: 50%;
-}
-.css-icon--up-fill::before {
-  right: 0;
-  bottom: 19.2px;
-  left: 0;
-
-  width: 16px;
-  height: 16px;
-  margin: 0 auto;
-
-  border: 8px solid transparent;
-  border-bottom: 8px solid #9c8689;
-}
-.css-icon--up-fill::after {
-  top: 12.8px;
-  right: 0;
-  left: 0;
-
-  width: 5.76px;
-  height: 14.4px;
-  margin: 0 auto;
-
-  background-color: #9c8689;
-}
-.css-icon--down {
-  width: 32px;
-  height: 32px;
-
-  border-radius: 100%;
-  box-shadow: inset 0 0 0 3.2px #7b6568;
-}
-.css-icon--down::before {
-  top: 19.2px;
-  right: 0;
-  left: 0;
-
-  width: 16px;
-  height: 16px;
-  margin: 0 auto;
-
-  border: 8px solid transparent;
-  border-top: 8px solid #7b6568;
-}
-.css-icon--down::after {
-  right: 0;
-  bottom: 12.8px;
-  left: 0;
-
-  width: 5.76px;
-  height: 14.4px;
-  margin: 0 auto;
-
-  background-color: #7b6568;
-}
-.css-icon--down-fill {
-  width: 32px;
-  height: 32px;
-
-  background-color: #7b6568;
-  border-radius: 50%;
-}
-.css-icon--down-fill::before {
-  top: 19.2px;
-  right: 0;
-  left: 0;
-
-  width: 16px;
-  height: 16px;
-  margin: 0 auto;
-
-  border: 8px solid transparent;
-  border-top: 8px solid #9c8689;
-}
-.css-icon--down-fill::after {
-  right: 0;
-  bottom: 12.8px;
-  left: 0;
-
-  width: 5.76px;
-  height: 14.4px;
-  margin: 0 auto;
-
-  background-color: #9c8689;
-}
 .css-icon--prev {
   width: 32px;
   height: 32px;
@@ -1078,208 +693,6 @@ img {
 
   border: 8px solid transparent;
   border-right: 8px solid #7b6568;
-}
-.css-icon--prev-fill {
-  width: 32px;
-  height: 32px;
-
-  background-color: #7b6568;
-  border-radius: 50%;
-}
-.css-icon--prev-fill::before {
-  top: 0;
-  right: 14.4px;
-  bottom: 0;
-
-  width: 16px;
-  height: 16px;
-  margin: auto 0;
-
-  border: 8px solid transparent;
-  border-right: 8px solid #9c8689;
-}
-.css-icon--next {
-  width: 32px;
-  height: 32px;
-
-  border-radius: 100%;
-  box-shadow: inset 0 0 0 3.2px #7b6568;
-}
-.css-icon--next::before {
-  top: 0;
-  bottom: 0;
-  left: 14.4px;
-
-  width: 16px;
-  height: 16px;
-  margin: auto 0;
-
-  border: 8px solid transparent;
-  border-left: 8px solid #7b6568;
-}
-.css-icon--next-fill {
-  width: 32px;
-  height: 32px;
-
-  background-color: #7b6568;
-  border-radius: 50%;
-}
-.css-icon--next-fill::before {
-  top: 0;
-  bottom: 0;
-  left: 14.4px;
-
-  width: 16px;
-  height: 16px;
-  margin: auto 0;
-
-  border: 8px solid transparent;
-  border-left: 8px solid #9c8689;
-}
-.css-icon--briefcase {
-  width: 32px;
-  height: 25.6px;
-
-  background-color: #7b6568;
-  border-radius: 3.2px;
-}
-.css-icon--briefcase::before {
-  top: 6.4px;
-  right: 0;
-  left: 0;
-
-  width: 32px;
-  height: 9.6px;
-  margin: 0 auto;
-
-  border-bottom: 1px solid #9c8689;
-  border-bottom-right-radius: 32px;
-  border-bottom-left-radius: 32px;
-}
-.css-icon--briefcase::after {
-  top: 15.68px;
-  right: 0;
-  left: 0;
-
-  width: 6.4px;
-  height: 3.2px;
-  margin: 0 auto;
-
-  background-color: #9c8689;
-  border-bottom-right-radius: 32px;
-  border-bottom-left-radius: 32px;
-}
-.css-icon--sun {
-  width: 20.8px;
-  height: 20.8px;
-
-  background-color: #7b6568;
-  border-radius: 100%;
-  box-shadow: 0 13.44px 0 -8.96px #7b6568, 0 -13.44px 0 -8.96px #7b6568, 13.44px 0 0 -8.96px #7b6568, -13.44px 0 0 -8.96px #7b6568, 9.6px 9.6px 0 -8.96px #7b6568, -9.6px 9.6px 0 -8.96px #7b6568, 9.6px -9.6px 0 -8.96px #7b6568, -9.6px -9.6px 0 -8.96px #7b6568;
-}
-.css-icon--moon {
-  top: -14.4px;
-  left: -14.4px;
-
-  width: 28.8px;
-  height: 28.8px;
-
-  border-radius: 100%;
-  box-shadow: 6.4px 6.4px 0 1.6px #7b6568;
-}
-.css-icon--heart {
-  top: -14.4px;
-  left: -18.24px;
-
-  width: 16px;
-  height: 10.56px;
-
-  background-color: #7b6568;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-.css-icon--heart::before {
-  top: 9.6px;
-
-  width: 25.6px;
-  height: 16px;
-
-  background-color: #7b6568;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
-.css-icon--people {
-  top: 16px;
-  left: -5.76px;
-
-  width: 32px;
-  height: 32px;
-}
-.css-icon--people::before {
-  top: 10.56px;
-  right: 0;
-  left: 0;
-
-  width: 19.2px;
-  height: 11.2px;
-  margin: 0 auto;
-
-  background-color: #7b6568;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  box-shadow: 0 0 0 0.96px #9c8689, 9.6px -3.2px 0 0 #7b6568, -3.2px -8px 0 0 #7b6568;
-}
-.css-icon--people::after {
-  top: 0;
-  right: 0;
-  left: 0;
-
-  width: 9.6px;
-  height: 11.2px;
-  margin: 0 auto;
-
-  background-color: #7b6568;
-  border-radius: 4.8px;
-  box-shadow: 0 0 0 0.96px #9c8689, 9.6px -3.2px 0 0 #7b6568, -3.2px -8px 0 0 #7b6568;
-}
-.css-icon--church {
-  top: 6.4px;
-  right: 0;
-  left: 0;
-
-  width: 16px;
-  height: 16px;
-  margin: 0 auto;
-
-  border: 3.2px solid #7b6568;
-  border-top: none;
-  border-radius: 16px;
-  box-shadow: 0 9.6px 0 -3.2px #7b6568;
-}
-.css-icon--church::before {
-  top: -6.4px;
-  right: 0;
-  left: 0;
-
-  width: 6.4px;
-  height: 6.4px;
-  margin: 0 auto;
-
-  background: -webkit-linear-gradient(left, transparent, transparent 40%, #7b6568 40%, #7b6568 60%, transparent 60%, transparent 100%), -webkit-linear-gradient(top, transparent, transparent 40%, #7b6568 40%, #7b6568 60%, transparent 60%, transparent 100%);
-  background:         linear-gradient(to right, transparent, transparent 40%, #7b6568 40%, #7b6568 60%, transparent 60%, transparent 100%), linear-gradient(to bottom, transparent, transparent 40%, #7b6568 40%, #7b6568 60%, transparent 60%, transparent 100%);
-}
-.css-icon--church::after {
-  top: 19.2px;
-  left: -3.2px;
-
-  width: 16px;
-  height: 6.4px;
-
-  background: #7b6568;
-  border-top-left-radius: 50% 100%;
-  border-top-right-radius: 50% 100%;
 }
 .css-icon--orthodoxy {
   width: 5.12px;
@@ -1310,31 +723,6 @@ img {
   -webkit-transform: skewy(30deg);
           transform: skewy(30deg);
 }
-.css-icon--plus {
-  width: 32px;
-  height: 32px;
-
-  border-radius: 100%;
-  box-shadow: inset 0 0 0 3.2px #7b6568;
-}
-.css-icon--plus::before,
-.css-icon--plus::after {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  width: 4.8px;
-  height: 19.2px;
-  margin: auto;
-
-  background-color: #7b6568;
-  border-radius: 3.2px;
-}
-.css-icon--plus::after {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-}
 .css-icon--plus-fill {
   width: 32px;
   height: 32px;
@@ -1344,26 +732,6 @@ img {
   background-image:         linear-gradient(to bottom, #7b6568, #7b6568 20%, transparent 20%, transparent 80%, #7b6568 80%), linear-gradient(to right, #7b6568, #7b6568 20%, transparent 20%, transparent 45%, #9c8689 45%, #9c8689 55%, transparent 55%, transparent 80%, #7b6568 80%), linear-gradient(to bottom, #7b6568, #7b6568 45%, #9c8689 45%, #9c8689 55%, #7b6568 55%);
   border-radius: 50%;
 }
-.css-icon--minus {
-  width: 32px;
-  height: 32px;
-
-  border-radius: 100%;
-  box-shadow: inset 0 0 0 3.2px #7b6568;
-}
-.css-icon--minus::before {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  width: 17.6px;
-  height: 4.8px;
-  margin: auto;
-
-  background-color: #7b6568;
-  border-radius: 3.2px;
-}
 .css-icon--minus-fill {
   width: 32px;
   height: 32px;
@@ -1372,29 +740,6 @@ img {
   background-image: -webkit-linear-gradient(left, #7b6568, #7b6568 20%, transparent 20%, transparent 80%, #7b6568 80%), -webkit-linear-gradient(top, #7b6568, #7b6568 45%, #9c8689 45%, #9c8689 55%, #7b6568 55%);
   background-image:         linear-gradient(to right, #7b6568, #7b6568 20%, transparent 20%, transparent 80%, #7b6568 80%), linear-gradient(to bottom, #7b6568, #7b6568 45%, #9c8689 45%, #9c8689 55%, #7b6568 55%);
   border-radius: 50%;
-}
-.css-icon--power {
-  top: 2.24px;
-  left: 0;
-
-  width: 25.6px;
-  height: 25.6px;
-
-  border-radius: 100%;
-  box-shadow: inset 0 0 0 3.2px #7b6568;
-}
-.css-icon--power::before {
-  top: -2.24px;
-  right: 0;
-  left: 0;
-
-  width: 3.84px;
-  height: 12.8px;
-  margin: 0 auto;
-
-  background-color: #7b6568;
-  border-radius: 3.2px;
-  box-shadow: 0 0 0 1.6px #9c8689;
 }
 .css-icon--settings {
   width: 32px;
@@ -1439,14 +784,6 @@ img {
   background-color: #7b6568;
   border-radius: 3.2px;
   box-shadow: 0 9.6px 0 0 #7b6568, 0 19.2px 0 0 #7b6568;
-}
-.css-icon--radio {
-  width: 32px;
-  height: 32px;
-
-  border-radius: 100%;
-  box-shadow: inset 0 0 0 3.2px #7b6568;
-  box-shadow: inset 0 0 0 10.24px #7b6568;
 }
 .mobile-nav {
   width: 100%;
@@ -1600,7 +937,6 @@ img {
 .book-list__title {
   margin: 0;
   margin-top: -63px;
-  margin-bottom: 50%;
   padding: 0;
 
   font-weight: normal;
@@ -1610,10 +946,17 @@ img {
   color: #8b0404;
 }
 .book-list__items {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
   margin: 0;
   padding: 0;
 
   list-style: none;
+
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 .book-list__item {
   width: 120px;
@@ -1737,6 +1080,11 @@ img {
   font-size: 0.8em;
   color: #9c8689;
   font-style: italic;
+
+  -webkit-user-select: auto;
+     -moz-user-select: auto;
+      -ms-user-select: auto;
+          user-select: auto;
 }
 .book__running-title {
   margin-bottom: 20px;
@@ -1923,7 +1271,6 @@ img {
   }
   .book-list__title {
     margin-top: -70px;
-    margin-bottom: 30%;
 
     font-size: 30px;
   }
