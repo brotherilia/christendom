@@ -20,8 +20,10 @@ $(document).ready(function(){
   var fontSize = ($("html, body").css("font-size")).substr(0,2);
   var langRu = $(".lang-ru");
   var langEn = $(".lang-en");
+  var langSl = $(".lang-sl");
   var lnkLangRu = $("#lnk-lang-ru");
   var lnkLangEn = $("#lnk-lang-en");
+  var lnkLangSl = $("#lnk-lang-sl");
   var lnkFontSans = $("#lnk-font-sans");
   var lnkFontSerif = $("#lnk-font-serif");
   var lnkColorScheme1 = $("#lnk-color-scheme-1");
@@ -130,10 +132,12 @@ $(document).ready(function(){
   lnkFontSans.css({"opacity": "0.5"});
   lnkLangRu.css({"opacity": "1"});
   lnkLangEn.css({"opacity": "0.5"});
+  lnkLangSl.css({"opacity": "0.5"});
   lnkColorScheme1.css({"opacity": "1"});
   lnkColorScheme2.css({"opacity": "0.5"});
   lnkColorScheme3.css({"opacity": "0.5"});
   langEn.hide();
+  langSl.hide();
   langRu.show();
 
   // Переходы между главами
@@ -237,15 +241,28 @@ $(document).ready(function(){
   lnkLangEn.click(function(){
     $(this).css({"opacity": "1"});
     lnkLangRu.css({"opacity": "0.5"});
+    lnkLangSl.css({"opacity": "0.5"});
     langRu.hide();
+    langSl.hide();
     langEn.show();
   });
 
   lnkLangRu.click(function(){
     $(this).css({"opacity": "1"});
     lnkLangEn.css({"opacity": "0.5"});
+    lnkLangSl.css({"opacity": "0.5"});
     langEn.hide();
+    langSl.hide();
     langRu.show();
+  });
+
+  lnkLangSl.click(function(){
+    $(this).css({"opacity": "1"});
+    lnkLangEn.css({"opacity": "0.5"});
+    lnkLangRu.css({"opacity": "0.5"});
+    langEn.hide();
+    langRu.hide();
+    langSl.show();
   });
 
 // Смена цветовой схемы

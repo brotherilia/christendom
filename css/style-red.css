@@ -549,6 +549,13 @@ p {
   -webkit-box-direction: normal;
   -webkit-box-orient: vertical;
 }
+.overall-wrapper--firstpage {
+  background: #9c8689 url("../img/bg-firstpage-mobile.png") no-repeat scroll top;
+  background-size: contain;
+}
+.overall-wrapper--main {
+  background: none;
+}
 .page-header {
   position: relative;
 
@@ -558,7 +565,7 @@ p {
   position: relative;
 
   flex-grow: 1;
-  min-height: 500px;
+  min-height: 550px;
   padding: 30px 20px 40px;
 
   background: -webkit-linear-gradient(left, #7b6568, rgba(255, 255, 255, 0.5) 25px, rgba(255, 255, 255, 0.5) 30%, transparent 105%);
@@ -958,6 +965,14 @@ p {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
+.book-list__items--firstpage {
+  top: auto;
+  bottom: 20%;
+  left: 50%;
+
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
 .book-list__item {
   width: 120px;
   margin: 0;
@@ -1086,6 +1101,11 @@ p {
       -ms-user-select: auto;
           user-select: auto;
 }
+.book__contents-text--main {
+  font-size: 16px;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-style: normal;
+}
 .book__running-title {
   margin-bottom: 20px;
 
@@ -1099,6 +1119,13 @@ p {
 
   font-size: 0.8em;
   color: #8b0404;
+}
+.book__verse-title {
+  display: inline;
+  margin: 0;
+  padding: 0;
+
+  font-size: 16px;
 }
 .book__comment-items {
   position: relative;
@@ -1260,6 +1287,13 @@ p {
     background: #9c8689 url("../img/bg-tablet.png") no-repeat scroll top;
     background-size: contain;
   }
+  .overall-wrapper--firstpage {
+    background: #9c8689 url("../img/bg-firstpage-mobile.png") no-repeat scroll top;
+    background-size: auto;
+  }
+  .overall-wrapper--main {
+    background: none;
+  }
   .page-header {
     height: 60px;
   }
@@ -1273,6 +1307,9 @@ p {
     margin-top: -70px;
 
     font-size: 30px;
+  }
+  .book-list__items--firstpage {
+    bottom: 15%;
   }
   .book__title {
     margin-top: -70px;

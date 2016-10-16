@@ -508,9 +508,9 @@ body {
 
   font-size: 16px;
   font-family: "PT Serif", Georgia, serif;
-  color: #22441d;
+  color: #0a1c33;
 
-  background-color: #899c86;
+  background-color: #537aac;
 
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -543,14 +543,14 @@ p {
   min-height: 100vh;
   margin: 0 auto;
 
-  background: #899c86 url("../img/bg-mobile.png") no-repeat scroll top;
+  background: #537aac url("../img/bg-mobile.png") no-repeat scroll top;
   background-size: contain;
 
   -webkit-box-direction: normal;
   -webkit-box-orient: vertical;
 }
 .overall-wrapper--firstpage {
-  background: #899c86 url("../img/bg-firstpage-mobile.png") no-repeat scroll top;
+  background: #537aac url("../img/bg-firstpage-mobile.png") no-repeat scroll top;
   background-size: contain;
 }
 .overall-wrapper--main {
@@ -568,8 +568,8 @@ p {
   min-height: 550px;
   padding: 30px 20px 40px;
 
-  background: -webkit-linear-gradient(left, #687b65, rgba(255, 255, 255, 0.5) 25px, rgba(255, 255, 255, 0.5) 30%, transparent 105%);
-  background:         linear-gradient(to right, #687b65, rgba(255, 255, 255, 0.5) 25px, rgba(255, 255, 255, 0.5) 30%, transparent 105%);
+  background: -webkit-linear-gradient(left, #3d5a7f, rgba(255, 255, 255, 0.5) 25px, rgba(255, 255, 255, 0.5) 30%, transparent 105%);
+  background:         linear-gradient(to right, #3d5a7f, rgba(255, 255, 255, 0.5) 25px, rgba(255, 255, 255, 0.5) 30%, transparent 105%);
   border-top-left-radius: 30% 15px;
   border-top-right-radius: 30% 15px;
 
@@ -591,11 +591,11 @@ p {
   width: 100%;
   height: 20px;
 
-  background-color: #899c86;
+  background-color: #537aac;
   border-top-left-radius: 30% 15px;
   border-top-right-radius: 30% 15px;
   border-bottom-left-radius: 15px;
-  box-shadow: inset 10px 5px 5px 0 #687b65;
+  box-shadow: inset 10px 5px 5px 0 #3d5a7f;
 }
 .css-icon {
   position: absolute;
@@ -623,7 +623,7 @@ p {
   width: 25.6px;
   height: 19.2px;
 
-  border: 11.2px solid #687b65;
+  border: 11.2px solid #3d5a7f;
   border-bottom: none;
   border-top-left-radius: 6.4px;
   border-top-right-radius: 6.4px;
@@ -635,7 +635,7 @@ p {
   width: 12.8px;
   height: 9.6px;
 
-  background-color: #687b65;
+  background-color: #3d5a7f;
   border-top-left-radius: 6.4px;
   border-top-right-radius: 6.4px;
 }
@@ -649,15 +649,15 @@ p {
   height: 6.4px;
   margin: 0 auto;
 
-  background: -webkit-linear-gradient(left, transparent, transparent 35%, #687b65 35%, #687b65 65%, transparent 65%, transparent 100%), -webkit-linear-gradient(top, transparent, transparent 40%, #687b65 40%, #687b65 60%, transparent 60%, transparent 100%);
-  background:         linear-gradient(to right, transparent, transparent 35%, #687b65 35%, #687b65 65%, transparent 65%, transparent 100%), linear-gradient(to bottom, transparent, transparent 40%, #687b65 40%, #687b65 60%, transparent 60%, transparent 100%);
+  background: -webkit-linear-gradient(left, transparent, transparent 35%, #3d5a7f 35%, #3d5a7f 65%, transparent 65%, transparent 100%), -webkit-linear-gradient(top, transparent, transparent 40%, #3d5a7f 40%, #3d5a7f 60%, transparent 60%, transparent 100%);
+  background:         linear-gradient(to right, transparent, transparent 35%, #3d5a7f 35%, #3d5a7f 65%, transparent 65%, transparent 100%), linear-gradient(to bottom, transparent, transparent 40%, #3d5a7f 40%, #3d5a7f 60%, transparent 60%, transparent 100%);
 }
 .css-icon--up {
   width: 32px;
   height: 32px;
 
   border-radius: 100%;
-  box-shadow: inset 0 0 0 3.2px #687b65;
+  box-shadow: inset 0 0 0 3.2px #3d5a7f;
 }
 .css-icon--up::before {
   right: 0;
@@ -669,7 +669,7 @@ p {
   margin: 0 auto;
 
   border: 8px solid transparent;
-  border-bottom: 8px solid #687b65;
+  border-bottom: 8px solid #3d5a7f;
 }
 .css-icon--up::after {
   top: 12.8px;
@@ -680,14 +680,14 @@ p {
   height: 14.4px;
   margin: 0 auto;
 
-  background-color: #687b65;
+  background-color: #3d5a7f;
 }
 .css-icon--prev {
   width: 32px;
   height: 32px;
 
   border-radius: 100%;
-  box-shadow: inset 0 0 0 3.2px #687b65;
+  box-shadow: inset 0 0 0 3.2px #3d5a7f;
 }
 .css-icon--prev::before {
   top: 0;
@@ -699,13 +699,13 @@ p {
   margin: auto 0;
 
   border: 8px solid transparent;
-  border-right: 8px solid #687b65;
+  border-right: 8px solid #3d5a7f;
 }
 .css-icon--orthodoxy {
   width: 5.12px;
   height: 32px;
 
-  background-color: #687b65;
+  background-color: #3d5a7f;
 }
 .css-icon--orthodoxy::before {
   top: 6.4px;
@@ -715,7 +715,7 @@ p {
   width: 19.2px;
   height: 4.48px;
 
-  background-color: #687b65;
+  background-color: #3d5a7f;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
 }
@@ -726,7 +726,7 @@ p {
   width: 11.2px;
   height: 4.8px;
 
-  background-color: #687b65;
+  background-color: #3d5a7f;
   -webkit-transform: skewy(30deg);
           transform: skewy(30deg);
 }
@@ -734,25 +734,25 @@ p {
   width: 32px;
   height: 32px;
 
-  background-color: #687b65;
-  background-image: -webkit-linear-gradient(top, #687b65, #687b65 20%, transparent 20%, transparent 80%, #687b65 80%), -webkit-linear-gradient(left, #687b65, #687b65 20%, transparent 20%, transparent 45%, #899c86 45%, #899c86 55%, transparent 55%, transparent 80%, #687b65 80%), -webkit-linear-gradient(top, #687b65, #687b65 45%, #899c86 45%, #899c86 55%, #687b65 55%);
-  background-image:         linear-gradient(to bottom, #687b65, #687b65 20%, transparent 20%, transparent 80%, #687b65 80%), linear-gradient(to right, #687b65, #687b65 20%, transparent 20%, transparent 45%, #899c86 45%, #899c86 55%, transparent 55%, transparent 80%, #687b65 80%), linear-gradient(to bottom, #687b65, #687b65 45%, #899c86 45%, #899c86 55%, #687b65 55%);
+  background-color: #3d5a7f;
+  background-image: -webkit-linear-gradient(top, #3d5a7f, #3d5a7f 20%, transparent 20%, transparent 80%, #3d5a7f 80%), -webkit-linear-gradient(left, #3d5a7f, #3d5a7f 20%, transparent 20%, transparent 45%, #537aac 45%, #537aac 55%, transparent 55%, transparent 80%, #3d5a7f 80%), -webkit-linear-gradient(top, #3d5a7f, #3d5a7f 45%, #537aac 45%, #537aac 55%, #3d5a7f 55%);
+  background-image:         linear-gradient(to bottom, #3d5a7f, #3d5a7f 20%, transparent 20%, transparent 80%, #3d5a7f 80%), linear-gradient(to right, #3d5a7f, #3d5a7f 20%, transparent 20%, transparent 45%, #537aac 45%, #537aac 55%, transparent 55%, transparent 80%, #3d5a7f 80%), linear-gradient(to bottom, #3d5a7f, #3d5a7f 45%, #537aac 45%, #537aac 55%, #3d5a7f 55%);
   border-radius: 50%;
 }
 .css-icon--minus-fill {
   width: 32px;
   height: 32px;
 
-  background-color: #687b65;
-  background-image: -webkit-linear-gradient(left, #687b65, #687b65 20%, transparent 20%, transparent 80%, #687b65 80%), -webkit-linear-gradient(top, #687b65, #687b65 45%, #899c86 45%, #899c86 55%, #687b65 55%);
-  background-image:         linear-gradient(to right, #687b65, #687b65 20%, transparent 20%, transparent 80%, #687b65 80%), linear-gradient(to bottom, #687b65, #687b65 45%, #899c86 45%, #899c86 55%, #687b65 55%);
+  background-color: #3d5a7f;
+  background-image: -webkit-linear-gradient(left, #3d5a7f, #3d5a7f 20%, transparent 20%, transparent 80%, #3d5a7f 80%), -webkit-linear-gradient(top, #3d5a7f, #3d5a7f 45%, #537aac 45%, #537aac 55%, #3d5a7f 55%);
+  background-image:         linear-gradient(to right, #3d5a7f, #3d5a7f 20%, transparent 20%, transparent 80%, #3d5a7f 80%), linear-gradient(to bottom, #3d5a7f, #3d5a7f 45%, #537aac 45%, #537aac 55%, #3d5a7f 55%);
   border-radius: 50%;
 }
 .css-icon--settings {
   width: 32px;
   height: 32px;
 
-  background-color: #687b65;
+  background-color: #3d5a7f;
   border-radius: 100%;
 }
 .css-icon--settings::before {
@@ -765,10 +765,10 @@ p {
   height: 12.8px;
   margin: auto;
 
-  background-color: #687b65;
-  background-color: #899c86;
+  background-color: #3d5a7f;
+  background-color: #537aac;
   border-radius: 50%;
-  box-shadow: 0 16px 0 -2.56px #899c86, 0 -16px 0 -2.56px #899c86, 16px 0 0 -2.56px #899c86, -16px 0 0 -2.56px #899c86, 11.2px 11.2px 0 -2.56px #899c86, -11.2px 11.2px 0 -2.56px #899c86, 11.2px -11.2px 0 -2.56px #899c86, -11.2px -11.2px 0 -2.56px #899c86;
+  box-shadow: 0 16px 0 -2.56px #537aac, 0 -16px 0 -2.56px #537aac, 16px 0 0 -2.56px #537aac, -16px 0 0 -2.56px #537aac, 11.2px 11.2px 0 -2.56px #537aac, -11.2px 11.2px 0 -2.56px #537aac, 11.2px -11.2px 0 -2.56px #537aac, -11.2px -11.2px 0 -2.56px #537aac;
 }
 .css-icon--contents::before {
   top: 3.2px;
@@ -777,9 +777,9 @@ p {
   width: 6.4px;
   height: 6.4px;
 
-  background-color: #687b65;
+  background-color: #3d5a7f;
   border-radius: 50%;
-  box-shadow: 0 9.6px 0 0 #687b65, 0 19.2px 0 0 #687b65;
+  box-shadow: 0 9.6px 0 0 #3d5a7f, 0 19.2px 0 0 #3d5a7f;
 }
 .css-icon--contents::after {
   top: 3.2px;
@@ -788,9 +788,9 @@ p {
   width: 22.4px;
   height: 6.4px;
 
-  background-color: #687b65;
+  background-color: #3d5a7f;
   border-radius: 3.2px;
-  box-shadow: 0 9.6px 0 0 #687b65, 0 19.2px 0 0 #687b65;
+  box-shadow: 0 9.6px 0 0 #3d5a7f, 0 19.2px 0 0 #3d5a7f;
 }
 .mobile-nav {
   width: 100%;
@@ -813,8 +813,8 @@ p {
   height: 200px;
   padding-top: 8px;
 
-  background: -webkit-linear-gradient(top, #899c86, #899c86 50px, transparent 100%);
-  background:         linear-gradient(to bottom, #899c86, #899c86 50px, transparent 100%);
+  background: -webkit-linear-gradient(top, #537aac, #537aac 50px, transparent 100%);
+  background:         linear-gradient(to bottom, #537aac, #537aac 50px, transparent 100%);
   opacity: 0.6;
 }
 .mobile-nav--bottom {
@@ -895,9 +895,9 @@ p {
   line-height: 32px;
   font-family: "Cuprum", Arial, sans-serif;
   text-align: center;
-  color: #899c86;
+  color: #537aac;
 
-  background-color: #687b65;
+  background-color: #3d5a7f;
   border-top-left-radius: 50%;
   border-bottom-right-radius: 50%;
   cursor: default;
@@ -922,9 +922,9 @@ p {
   line-height: 32px;
   font-family: "Cuprum", Arial, sans-serif;
   text-align: center;
-  color: #899c86;
+  color: #537aac;
 
-  background-color: #687b65;
+  background-color: #3d5a7f;
   border-top-right-radius: 50%;
   border-bottom-left-radius: 50%;
   cursor: default;
@@ -991,14 +991,14 @@ p {
   font-family: "Cuprum", Arial, sans-serif;
   font-family: "Zlatoust", Arial, sans-serif;
   text-align: center;
-  color: #899c86;
+  color: #537aac;
   color: #ffffff;
   text-decoration: none;
 
   background: none;
-  background: -webkit-linear-gradient(left, transparent, #899c86 50%, transparent 100%);
-  background:         linear-gradient(to right, transparent, #899c86 50%, transparent 100%);
-  background-color: #687b65;
+  background: -webkit-linear-gradient(left, transparent, #537aac 50%, transparent 100%);
+  background:         linear-gradient(to right, transparent, #537aac 50%, transparent 100%);
+  background-color: #3d5a7f;
   background-color: transparent;
   border: none;
   border-top-right-radius: 20px;
@@ -1059,14 +1059,14 @@ p {
   line-height: 20px;
   font-family: "Cuprum", Arial, sans-serif;
   text-align: center;
-  color: #899c86;
+  color: #537aac;
   color: #ffffff;
   text-decoration: none;
 
   background: none;
-  background: -webkit-linear-gradient(left, transparent, #899c86 50%, transparent 100%);
-  background:         linear-gradient(to right, transparent, #899c86 50%, transparent 100%);
-  background-color: #687b65;
+  background: -webkit-linear-gradient(left, transparent, #537aac 50%, transparent 100%);
+  background:         linear-gradient(to right, transparent, #537aac 50%, transparent 100%);
+  background-color: #3d5a7f;
   background-color: transparent;
   border: none;
   border-top-right-radius: 15px;
@@ -1093,7 +1093,7 @@ p {
   display: block;
 
   font-size: 0.8em;
-  color: #899c86;
+  color: #537aac;
   font-style: italic;
 
   -webkit-user-select: auto;
@@ -1147,12 +1147,12 @@ p {
   width: 100%;
   height: 1px;
 
-  background: -webkit-linear-gradient(left, transparent, #899c86 50%, transparent 100%);
-  background:         linear-gradient(to right, transparent, #899c86 50%, transparent 100%);
+  background: -webkit-linear-gradient(left, transparent, #537aac 50%, transparent 100%);
+  background:         linear-gradient(to right, transparent, #537aac 50%, transparent 100%);
 }
 .book__comment-item {
   font-size: 0.8em;
-  color: #899c86;
+  color: #537aac;
   font-style: italic;
 }
 .popup-screen {
@@ -1166,7 +1166,7 @@ p {
   max-width: 800px;
   height: 100vh;
 
-  background-color: rgba(34, 68, 29, 0.9);
+  background-color: rgba(10, 28, 51, 0.9);
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
 }
@@ -1178,16 +1178,16 @@ p {
 
   font-size: 14px;
   font-family: "Cuprum", Arial, sans-serif;
-  color: #899c86;
+  color: #537aac;
 }
 .popup-screen__link {
-  color: #c6d4c4;
+  color: #9eb6d6;
   text-decoration: none;
 
   cursor: default;
 }
 .popup-screen__link:active {
-  color: #899c86;
+  color: #537aac;
 }
 .popup-screen__controls-block {
   margin: 70px;
@@ -1202,7 +1202,7 @@ p {
   margin-bottom: 20px;
   padding-top: 10px;
 
-  border: 1px solid #899c86;
+  border: 1px solid #537aac;
   border-radius: 20px;
 }
 .settings__block-title {
@@ -1211,7 +1211,7 @@ p {
   font-size: 14px;
   font-family: "Cuprum", Arial, sans-serif;
   text-align: center;
-  color: #899c86;
+  color: #537aac;
 }
 .settings__controls {
   display: -webkit-box;
@@ -1250,10 +1250,10 @@ p {
   line-height: 32px;
   font-family: "Cuprum", Arial, sans-serif;
   text-align: center;
-  color: #899c86;
+  color: #537aac;
   color: #ffffff;
 
-  background-color: #687b65;
+  background-color: #3d5a7f;
   border-top-left-radius: 16px;
   border-bottom-right-radius: 16px;
   cursor: default;
@@ -1284,11 +1284,11 @@ p {
 }
 @media (min-width: 501px) {
   .overall-wrapper {
-    background: #899c86 url("../img/bg-tablet.png") no-repeat scroll top;
+    background: #537aac url("../img/bg-tablet.png") no-repeat scroll top;
     background-size: contain;
   }
   .overall-wrapper--firstpage {
-    background: #899c86 url("../img/bg-firstpage-mobile.png") no-repeat scroll top;
+    background: #537aac url("../img/bg-firstpage-mobile.png") no-repeat scroll top;
     background-size: auto;
   }
   .overall-wrapper--main {
@@ -1340,7 +1340,7 @@ p {
   .page-main {
     padding: 30px 30px 40px;
 
-    background: -webkit-linear-gradient(left, #687b65, rgba(255, 255, 255, 0.5) 35px, rgba(255, 255, 255, 0.5) 30%, transparent 105%);
-    background:         linear-gradient(to right, #687b65, rgba(255, 255, 255, 0.5) 35px, rgba(255, 255, 255, 0.5) 30%, transparent 105%);
+    background: -webkit-linear-gradient(left, #3d5a7f, rgba(255, 255, 255, 0.5) 35px, rgba(255, 255, 255, 0.5) 30%, transparent 105%);
+    background:         linear-gradient(to right, #3d5a7f, rgba(255, 255, 255, 0.5) 35px, rgba(255, 255, 255, 0.5) 30%, transparent 105%);
   }
 }
