@@ -59,11 +59,25 @@ module.exports = function(grunt) {
     processhtml: {
       target: {
         files: {
-          "build/index.html": ["build/index.html"],
-          "build/matthew.html": ["build/matthew.html"],
-          "build/mark.html": ["build/mark.html"],
-          "build/luke.html": ["build/luke.html"],
-          "build/john.html": ["build/john.html"]
+          "build/main.html": ["build/main.html"],
+
+          "build/genesis.html": ["build/genesis.html"],
+
+          "build/gospel-matthew.html": ["build/gospel-matthew.html"],
+          "build/gospel-mark.html": ["build/gospel-mark.html"],
+          "build/gospel-luke.html": ["build/gospel-luke.html"],
+          "build/gospel-john.html": ["build/gospel-john.html"],
+
+          "build/prayers-morning.html": ["build/prayers-morning.html"],
+          "build/prayers-evening.html": ["build/prayers-evening.html"],
+
+          "build/prayers-canon1.html": ["build/prayers-canon1.html"],
+          "build/prayers-canon2.html": ["build/prayers-canon2.html"],
+          "build/prayers-canon3.html": ["build/prayers-canon3.html"],
+
+          "build/prayers-confession.html": ["build/prayers-confession.html"],
+          "build/prayers-communion.html": ["build/prayers-communion.html"],
+          "build/prayers-thanksgiving.html": ["build/prayers-thanksgiving.html"]
         }
       }
     },
@@ -83,6 +97,11 @@ module.exports = function(grunt) {
       stylegreen: {
         files: {
           "build/css/style-green.css": "src/less/style-green.less"
+        }
+      },
+      stylecyan: {
+        files: {
+          "build/css/style-cyan.css": "src/less/style-cyan.less"
         }
       }
     },
@@ -108,6 +127,9 @@ module.exports = function(grunt) {
       },
       stylegreen: {
         src: "build/css/style-green.css"
+      },
+      stylecyan: {
+        src: "build/css/style-cyan.css"
       }
     },
 
@@ -120,7 +142,8 @@ module.exports = function(grunt) {
         files: {
           "build/css/style-blue.css": ["build/css/style-blue.css"],
           "build/css/style-red.css": ["build/css/style-red.css"],
-          "build/css/style-green.css": ["build/css/style-green.css"]
+          "build/css/style-green.css": ["build/css/style-green.css"],
+          "build/css/style-cyan.css": ["build/css/style-cyan.css"]
         }
       }
     },
@@ -147,6 +170,13 @@ module.exports = function(grunt) {
         options: {
           separator: "\n\r/***** CONCATENATION HERE! *****/\n\r"
         }
+      },
+      csscyan: {
+        src: ["build/css/normalize.css", "build/css/fonts.css", "build/css/style-cyan.css"],
+        dest: "build/css/style-cyan.css",
+        options: {
+          separator: "\n\r/***** CONCATENATION HERE! *****/\n\r"
+        }
       }
     },
 
@@ -159,7 +189,8 @@ module.exports = function(grunt) {
         files: {
           "build/css/style-blue.min.css": ["build/css/style-blue.css"],
           "build/css/style-red.min.css": ["build/css/style-red.css"],
-          "build/css/style-green.min.css": ["build/css/style-green.css"]
+          "build/css/style-green.min.css": ["build/css/style-green.css"],
+          "build/css/style-cyan.min.css": ["build/css/style-cyan.css"]
         }
       }
     },
@@ -171,7 +202,7 @@ module.exports = function(grunt) {
       },
       scripts: {
         files: {
-          "build/js/script-main.min.js": ["build/js/script-main.js"],
+          "build/js/script-firstpage.min.js": ["build/js/script-firstpage.js"],
           "build/js/script-book.min.js": ["build/js/script-book.js"]
         }
       }

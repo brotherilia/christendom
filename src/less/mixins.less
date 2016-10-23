@@ -32,7 +32,7 @@
 .btn-common() {
   display: block;
   color: @icon-bg-color;
-  background-color: @icon-color;
+  background-color: @darker-color;
   font-family: @service-font-family;
   font-size: @base-font-size;
   font-weight: bold;
@@ -50,7 +50,7 @@
 
 .btn-light() {
   background-color: transparent;
-  background: linear-gradient(to right, transparent, @base-bg-color 50%, transparent 100%);
+  background: linear-gradient(to right, transparent, @base-color 50%, transparent 100%);
   box-shadow: 0 2px 5px 1px @transparent-light-color, 0 10px 50px 0 @transparent-light-color;
   opacity: 0.6;
 }
@@ -61,12 +61,20 @@
   font-weight: normal;
   text-align: center;
   color: @alt-text-color;
+  text-shadow: 0 0 8px @lightest-color;
+}
+
+.subtitle() {
+  font-family: @alt-font-family;
+  font-weight: normal;
+  color: @darker-color;
+  font-size: @bigger-font-size;
 }
 
 .comment-common() {
   font-size: @smaller-font-size;
   font-style: italic;
-  color: @base-bg-color;
+  color: @darker-color;
 }
 
 /////*** ICONS ***/////
@@ -109,11 +117,11 @@
 .circle(@diameter: @icon-size) {
   .icon-size(@width: @diameter, @height: @diameter);
   border-radius: 100%;
-  box-shadow: inset 0 0 0 @icon-size * 0.1 @icon-color;
+  box-shadow: inset 0 0 0 @icon-size * 0.1 @darker-color;
 }
 
 .circle-fill(@diameter: @icon-size) {
   .icon-size(@width: @diameter, @height: @diameter);
   border-radius: 50%;
-  background-color: @icon-color;
+  background-color: @darker-color;
 }

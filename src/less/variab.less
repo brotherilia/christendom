@@ -9,21 +9,23 @@
 @service-font-family: "Cuprum", Arial, sans-serif;
 @base-font-size: 16px;
 @smaller-font-size: 0.8em;
+@bigger-font-size: 1.2em;
+@normal-font-size: 1em;
 @service-font-size: 14px;
 @title-font-family: "Zlatoust", Arial, sans-serif;
 @title-font-size-mobile: 24px;
 @title-font-size-tablet: 30px;
 
 /////*** COLORS ***/////
-@base-bg-color: hsla(@base-hue, 10%, 57%, 1.0);
-@alt-bg-color: hsla(@base-hue, 16%, 80%, 1.0);
-@base-text-color: hsla(@base-hue, 41%, 19%, 1.0);
-@alt-text-color: hsla(0, 95%, 28%, 1.0);
-@transparent-light-color: hsla(0, 0%, 100%, 0.5);
-@transparent-dark-color: hsla(@base-hue, 41%, 19%, 0.9);
+@lighter-color: lighten(saturate(@base-color, 6%), 23%);
+@darker-color: darken(@base-color, 13%);
+@deep-dark-color: darken(saturate(@base-color, 31%), 38%);
+@transparent-dark-color: fade(@deep-dark-color, 90%);
 @lightest-color: #ffffff;
+@transparent-light-color: fade(@lightest-color, 50%);
+@alt-text-color: hsl(0, 95%, 28%);
 
 /////*** ICONS ***/////
 @icon-size: 32px;
-@icon-color: hsla(@base-hue, 10%, 44%, 1.0);
-@icon-bg-color: @base-bg-color;
+@icon-color: @darker-color;
+@icon-bg-color: @base-color;

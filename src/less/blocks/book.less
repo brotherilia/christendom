@@ -1,15 +1,12 @@
 .book {
+  margin-top: 45px;
 
-  &__title {
-    .reset-spaces();
-    .title();
-    margin-top: -63px;
-    margin-bottom: 50px;
+  @media @tablet-widths {
+    padding: 0 10px;
+  }
 
-    @media @tablet-widths {
-      font-size: @title-font-size-tablet;
-      margin-top: -70px;
-    }
+  &--prayers {
+    margin-top: 210px;
   }
 
   &__contents-items {
@@ -19,10 +16,7 @@
   &__contents-item {
     .reset-spaces();
     margin-bottom: 10px;
-
-    @media @tablet-widths {
-      display: flex;
-    }
+    display: flex;
   }
 
   &__contents-link {
@@ -39,10 +33,25 @@
     margin: 0 10px 10px 10px;
   }
 
-  &__contents-text {
+  &__contents-chapter-title {
+    display: block;
+    font-family: @alt-font-family;
+    color: @darker-color;
+  }
+
+  &__contents-chapter-intro {
     .comment-common();
     display: block;
     user-select: auto;
+  }
+
+  &__contents-subtitle {
+    .subtitle();
+    display: block;
+    font-size: @normal-font-size;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-left: 10px;
   }
 
   &__running-title {
@@ -50,7 +59,28 @@
     font-family: @service-font-family;
     font-size: @smaller-font-size;
     text-align: right;
+    margin-top: -15px;
     margin-bottom: 20px;
+
+    &--prayers {
+      margin-top: 0;
+    }
+  }
+
+  &__title {
+    .subtitle();
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &__chapter-title {
+    .subtitle();
+    margin-bottom: 10px;
+  }
+
+  &__verse-title {
+    display: inline;
+    font-size: @normal-font-size;
   }
 
   &__verse-number {
@@ -59,23 +89,70 @@
     margin-right: 10px;
   }
 
-  &__comment-items {
+  &__emph {
+    font-weight: bold;
+    color: @alt-text-color;
+  }
+
+  &__comment-block {
     .reset-list();
     margin-top: 20px;
-    padding-top: 10px;
+    padding-top: 15px;
     position: relative;
 
-    &::after {
+    &::before {
       .pseudo-common();
       top: 0;
       left: 0;
       width: 100%;
       height: 1px;
-      background: linear-gradient(to right, transparent, @base-bg-color 50%, transparent 100%);
+      background: linear-gradient(to right, transparent, @base-color 50%, transparent 100%);
+      opacity: 0.3;
+    }
+
+    &--inner {
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+
+      &::after {
+        .pseudo-common();
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(to right, transparent, @base-color 50%, transparent 100%);
+        opacity: 0.3;
+      }
     }
   }
 
-  &__comment-item {
+  &__comment {
     .comment-common();
+
+    &--large {
+      font-size: @bigger-font-size;
+    }
+  }
+
+  &__text-block {
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    font-size: @smaller-font-size;
+    font-family: @alt-font-family;
+    text-align: justify;
+  }
+
+  &__link {
+    color: @darker-color;
+    cursor: default;
+    text-decoration: none;
+    border-bottom: 1px dotted @darker-color;
+
+    &:active {
+      color: @deep-dark-color;
+      border-bottom: 1px dotted @deep-dark-color;
+    }
   }
 }

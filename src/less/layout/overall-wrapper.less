@@ -3,11 +3,49 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: @base-bg-color url("../img/bg-mobile.png") no-repeat scroll top;
-  background-size: contain;
 
-  @media @tablet-widths {
-    background: @base-bg-color url("../img/bg-tablet.png") no-repeat scroll top;
+  &--firstpage {
+    background: @base-color url("../img/bg-firstpage.png") no-repeat scroll center 10px;
+    background-size: auto;
+
+    @media @tablet-widths {
+      background: @base-color url("../img/bg-firstpage.png") no-repeat scroll center 25px;
+      background-size: auto;
+    }
+  }
+
+  &--main {
+    background: @base-color url("../img/bg-main.png") no-repeat scroll top;
     background-size: contain;
+  }
+
+  &--genesis {
+    background: @base-color url("../img/bg-genesis.png") no-repeat scroll center -15px;
+    background-size: auto;
+
+    @media @tablet-widths {
+      background: @base-color url("../img/bg-genesis.png") no-repeat scroll top;
+      background-size: auto;
+    }
+  }
+
+  &--prayers {
+    background: @base-color url("../img/bg-prayers.png") no-repeat scroll center -15px;
+    background-size: auto;
+
+    @media @tablet-widths {
+      background: @base-color url("../img/bg-prayers.png") no-repeat scroll top;
+      background-size: auto;
+    }
+  }
+
+  &--gospel {
+    background: @base-color url("../img/bg-gospel-mobile.png") no-repeat scroll top;
+    background-size: contain;
+
+    @media @tablet-widths {
+      background: @base-color url("../img/bg-gospel-tablet.png") no-repeat scroll top;
+      background-size: contain;
+    }
   }
 }

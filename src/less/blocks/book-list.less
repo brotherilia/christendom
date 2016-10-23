@@ -1,22 +1,20 @@
 .book-list {
+  .reset-list();
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-  &__title {
-    .reset-spaces();
-    .title();
-    margin-top: -63px;
-
-    @media @tablet-widths {
-      font-size: @title-font-size-tablet;
-      margin-top: -70px;
-    }
+  &--firstpage {
+    top: 340px;
+    left: 50%;
+    transform: translate(-50%, 0);
   }
 
-  &__items {
-    .reset-list();
-    position: absolute;
-    top: 50%;
+  &--prayers {
+    top: 190px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0);
   }
 
   &__item {
@@ -24,6 +22,10 @@
     margin: 0 auto;
     margin-top: 10px;
     width: 120px;
+
+    &--prayers {
+      width: 220px;
+    }
   }
 
   &__link {
@@ -34,5 +36,9 @@
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
     color: @lightest-color;
+
+    &--prayers {
+      font-size: @smaller-font-size;
+    }
   }
 }
