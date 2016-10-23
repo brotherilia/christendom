@@ -532,6 +532,14 @@ p {
       -ms-user-select: auto;
           user-select: auto;
 }
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+
+  font-size: inherit;
+}
 .overall-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -543,18 +551,24 @@ p {
   min-height: 100vh;
   margin: 0 auto;
 
-  background: #86899c url("../img/bg-mobile.png") no-repeat scroll top;
-  background-size: contain;
-
   -webkit-box-direction: normal;
   -webkit-box-orient: vertical;
 }
 .overall-wrapper--firstpage {
-  background: #86899c url("../img/bg-firstpage-mobile.png") no-repeat scroll top;
-  background-size: contain;
+  background: #86899c url("../img/bg-firstpage.png") no-repeat scroll top;
+  background-size: auto;
 }
 .overall-wrapper--main {
-  background: none;
+  background: #86899c url("../img/bg-main.png") no-repeat scroll top;
+  background-size: contain;
+}
+.overall-wrapper--prayers {
+  background: #86899c url("../img/bg-prayers.png") no-repeat scroll center -15px;
+  background-size: auto;
+}
+.overall-wrapper--gospel {
+  background: #86899c url("../img/bg-gospel-mobile.png") no-repeat scroll top;
+  background-size: contain;
 }
 .page-header {
   position: relative;
@@ -575,6 +589,16 @@ p {
 
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
+}
+.page-main__title {
+  margin-top: -65px;
+
+  font-weight: normal;
+  font-size: 24px;
+  font-family: "Zlatoust", Arial, sans-serif;
+  text-align: center;
+  color: #8b0404;
+  text-shadow: 0 0 8px #ffffff;
 }
 .page-footer {
   position: relative;
@@ -941,18 +965,7 @@ p {
           transition-property: transform, opacity;
           transition-property: transform, opacity, -webkit-transform;
 }
-.book-list__title {
-  margin: 0;
-  margin-top: -63px;
-  padding: 0;
-
-  font-weight: normal;
-  font-size: 24px;
-  font-family: "Zlatoust", Arial, sans-serif;
-  text-align: center;
-  color: #8b0404;
-}
-.book-list__items {
+.book-list {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -965,9 +978,15 @@ p {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
-.book-list__items--firstpage {
-  top: auto;
-  bottom: 20%;
+.book-list--firstpage {
+  top: 330px;
+  left: 50%;
+
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+.book-list--prayers {
+  top: 190px;
   left: 50%;
 
   -webkit-transform: translate(-50%, 0);
@@ -979,6 +998,9 @@ p {
   margin: 0 auto;
   margin-top: 10px;
   padding: 0;
+}
+.book-list__item--prayers {
+  width: 200px;
 }
 .book-list__link {
   display: block;
@@ -1021,17 +1043,14 @@ p {
           transition-property: transform, opacity;
           transition-property: transform, opacity, -webkit-transform;
 }
-.book__title {
-  margin: 0;
-  margin-top: -63px;
-  margin-bottom: 50px;
-  padding: 0;
-
-  font-weight: normal;
-  font-size: 24px;
-  font-family: "Zlatoust", Arial, sans-serif;
-  text-align: center;
-  color: #8b0404;
+.book-list__link--prayers {
+  font-size: 0.8em;
+}
+.book {
+  margin-top: 45px;
+}
+.book--prayers {
+  margin-top: 210px;
 }
 .book__contents-items {
   margin: 0;
@@ -1040,6 +1059,9 @@ p {
   list-style: none;
 }
 .book__contents-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 0;
   margin-bottom: 10px;
   padding: 0;
@@ -1089,11 +1111,17 @@ p {
           transition-property: transform, opacity;
           transition-property: transform, opacity, -webkit-transform;
 }
+.book__contents-title {
+  display: block;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  color: #65687b;
+}
 .book__contents-text {
   display: block;
 
   font-size: 0.8em;
-  color: #86899c;
+  color: #65687b;
   font-style: italic;
 
   -webkit-user-select: auto;
@@ -1101,18 +1129,37 @@ p {
       -ms-user-select: auto;
           user-select: auto;
 }
-.book__contents-text--main {
-  font-size: 16px;
+.book__title {
+  margin-bottom: 20px;
+
+  font-weight: normal;
+  font-size: 1.2em;
   font-family: "PT Sans", Arial, sans-serif;
-  font-style: normal;
+  text-align: center;
+  color: #65687b;
+}
+.book__subtitle {
+  margin-bottom: 15px;
+  margin-left: 10px;
+
+  font-weight: normal;
+  font-weight: bold;
+  font-size: 1.2em;
+  font-size: 1em;
+  font-family: "PT Sans", Arial, sans-serif;
+  color: #65687b;
 }
 .book__running-title {
+  margin-top: -15px;
   margin-bottom: 20px;
 
   font-size: 0.8em;
   font-family: "Cuprum", Arial, sans-serif;
   text-align: right;
   color: #8b0404;
+}
+.book__running-title--prayers {
+  margin-top: 0;
 }
 .book__verse-number {
   margin-right: 10px;
@@ -1122,22 +1169,32 @@ p {
 }
 .book__verse-title {
   display: inline;
-  margin: 0;
-  padding: 0;
 
-  font-size: 16px;
+  font-size: 1em;
 }
-.book__comment-items {
+.book__chapter-title {
+  margin-bottom: 10px;
+
+  font-weight: normal;
+  font-size: 1.2em;
+  font-family: "PT Sans", Arial, sans-serif;
+  color: #65687b;
+}
+.book__emph {
+  font-weight: bold;
+  color: #8b0404;
+}
+.book__comment-block {
   position: relative;
 
   margin: 0;
   margin-top: 20px;
   padding: 0;
-  padding-top: 10px;
+  padding-top: 15px;
 
   list-style: none;
 }
-.book__comment-items::after {
+.book__comment-block::after {
   content: "";
   position: absolute;
   top: 0;
@@ -1149,11 +1206,31 @@ p {
 
   background: -webkit-linear-gradient(left, transparent, #86899c 50%, transparent 100%);
   background:         linear-gradient(to right, transparent, #86899c 50%, transparent 100%);
+  opacity: 0.3;
 }
-.book__comment-item {
+.book__comment {
   font-size: 0.8em;
-  color: #86899c;
+  color: #65687b;
   font-style: italic;
+}
+.book__comment--large {
+  font-size: 1.2em;
+}
+.book__description {
+  font-size: 0.8em;
+  font-family: "PT Sans", Arial, sans-serif;
+}
+.book__link {
+  color: #65687b;
+  text-decoration: none;
+
+  border-bottom: 1px dotted #65687b;
+  cursor: default;
+}
+.book__link:active {
+  color: #1d2244;
+
+  border-bottom: 1px dotted #1d2244;
 }
 .popup-screen {
   position: fixed;
@@ -1283,19 +1360,25 @@ p {
           transition-property: transform, opacity, -webkit-transform;
 }
 @media (min-width: 501px) {
-  .overall-wrapper {
-    background: #86899c url("../img/bg-tablet.png") no-repeat scroll top;
-    background-size: contain;
-  }
   .overall-wrapper--firstpage {
-    background: #86899c url("../img/bg-firstpage-mobile.png") no-repeat scroll top;
+    background: #86899c url("../img/bg-firstpage.png") no-repeat scroll center 15px;
     background-size: auto;
   }
-  .overall-wrapper--main {
-    background: none;
+  .overall-wrapper--prayers {
+    background: #86899c url("../img/bg-prayers.png") no-repeat scroll top;
+    background-size: auto;
+  }
+  .overall-wrapper--gospel {
+    background: #86899c url("../img/bg-gospel-tablet.png") no-repeat scroll top;
+    background-size: contain;
   }
   .page-header {
     height: 60px;
+  }
+  .page-main__title {
+    margin-top: -75px;
+
+    font-size: 30px;
   }
   .mobile-nav--top-main {
     padding-top: 12px;
@@ -1303,23 +1386,8 @@ p {
   .mobile-nav--top-popup {
     padding-top: 12px;
   }
-  .book-list__title {
-    margin-top: -70px;
-
-    font-size: 30px;
-  }
-  .book-list__items--firstpage {
-    bottom: 15%;
-  }
-  .book__title {
-    margin-top: -70px;
-
-    font-size: 30px;
-  }
-  .book__contents-item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .book {
+    padding: 0 10px;
   }
   .settings {
     display: -webkit-box;

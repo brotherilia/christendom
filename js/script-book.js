@@ -5,7 +5,6 @@ $(document).ready(function(){
   var lnkMenuOpen = $("#lnk-menu-open");
   var itmBack = $("#itm-back");
   var lnkBackToText = $("#lnk-back-to-text");
-  var itmHome = $("#itm-home");
 
   var popupMenu = $("#popup-menu");
   var lnkPopupMenuClose = $("#lnk-popup-menu-close");
@@ -30,15 +29,18 @@ $(document).ready(function(){
   var lnkColorScheme2 = $("#lnk-color-scheme-2");
   var lnkColorScheme3 = $("#lnk-color-scheme-3");
   var stylesheet = $("#stylesheet");
+  var currentStylesheet = $("#stylesheet").attr("href");
 
   var lnkPrevChapter = $("#lnk-prev-chapter");
   var lnkNextChapter = $("#lnk-next-chapter");
   var lnkToTop = $("#lnk-to-top");
 
-  var contents = $(".book__contents");
+  var contents = $(".book__contents-items");
+  var pageMainTitle = $(".page-main__title");
   var bookTitle = $(".book__title");
+  var bookSubTitle = $(".book__subtitle");
   var chapterLink = $(".book__contents-link");
-  var runningTitle = $("#running-title");
+  var runningTitle = $(".book__running-title");
   var chapter = $(".book__chapter");
   var firstChapter = chapter.first();
   var lastChapter = chapter.last();
@@ -47,6 +49,7 @@ $(document).ready(function(){
   var chapterIdx;
   var currentChapter;
   var currentChapterNumberMark = $("#current-chapter-number");
+  var curentPage = document.location.pathname;
 
   var setupChapter = function() {
     chapter.hide();
@@ -106,7 +109,7 @@ $(document).ready(function(){
   lnkMenuOpen.click(function(){
     event.preventDefault();
     itmMenu.hide();
-    bookTitle.css({"opacity": "0"});
+    pageMainTitle.animate({"opacity": "0"},600);
     if (contents.css("display") != "none"){
       itmContents.hide();
     }
@@ -120,7 +123,7 @@ $(document).ready(function(){
     event.preventDefault();
     popupMenu.fadeOut(600);
     itmMenu.show();
-    bookTitle.css({"opacity": "1"});
+    pageMainTitle.animate({"opacity": "1"},600);
   });
 
   chapter.hide();
@@ -130,24 +133,48 @@ $(document).ready(function(){
   itmMenu.show();
   lnkFontSerif.css({"opacity": "1"});
   lnkFontSans.css({"opacity": "0.5"});
-  lnkLangRu.css({"opacity": "1"});
+  if (currentStylesheet == "css/style-blue.min.css"){
+    lnkColorScheme1.css({"opacity": "1"});
+    lnkColorScheme2.css({"opacity": "0.5"});
+    lnkColorScheme3.css({"opacity": "0.5"});
+  }
+  else if (currentStylesheet == "css/style-red.min.css"){
+    lnkColorScheme1.css({"opacity": "0.5"});
+    lnkColorScheme2.css({"opacity": "1"});
+    lnkColorScheme3.css({"opacity": "0.5"});
+  }
+  else if (currentStylesheet == "css/style-green.min.css"){
+    lnkColorScheme1.css({"opacity": "0.5"});
+    lnkColorScheme2.css({"opacity": "0.5"});
+    lnkColorScheme3.css({"opacity": "1"});
+  }
+/*
+  if (curentPage == "/xxx.html"){
+    lnkLangRu.css({"opacity": "1"});
+    lnkLangEn.css({"opacity": "0.5"});
+    lnkLangSl.css({"opacity": "0.5"});
+    langEn.hide();
+    langSl.hide();
+    langRu.show();
+  }
+*/
+  lnkLangRu.css({"opacity": "0.5"});
   lnkLangEn.css({"opacity": "0.5"});
-  lnkLangSl.css({"opacity": "0.5"});
-  lnkColorScheme1.css({"opacity": "1"});
-  lnkColorScheme2.css({"opacity": "0.5"});
-  lnkColorScheme3.css({"opacity": "0.5"});
+  lnkLangSl.css({"opacity": "1"});
   langEn.hide();
-  langSl.hide();
-  langRu.show();
+  langRu.hide();
+  langSl.show();
+
 
   // Переходы между главами
 
   $(chapterLink).click(function(event){
     event.preventDefault();
     chapterIdx = chapterLink.index(this);
-    itmHome.hide();
     itmBack.hide();
     contents.hide();
+    bookTitle.hide();
+    bookSubTitle.hide();
     $(showBottomMenu);
     itmMenu.show();
     $(setupChapter);
@@ -168,6 +195,22 @@ $(document).ready(function(){
     $(showChapter);
   });
 
+  $(window).on("swipeleft",function(event){
+    if (chapterIdx < lastChapterIdx) {
+      chapterIdx++;
+      $(setupChapter);
+      $(showChapter);
+    }
+  });
+
+  $(window).on("swiperight",function(event){
+    if (chapterIdx > firstChapterIdx) {
+      chapterIdx--;
+      $(setupChapter);
+      $(showChapter);
+    }
+  });
+
   lnkContents.click(function(){
     event.preventDefault();
     chapter.hide();
@@ -175,14 +218,19 @@ $(document).ready(function(){
     lnkPrevChapter.hide();
     lnkNextChapter.hide();
     runningTitle.hide();
+    bookTitle.show();
+    bookSubTitle.show();
     itmBack.show();
     contents.fadeIn(600);
+    pageMainTitle.animate({"opacity": "1"},600);
   });
 
   lnkBackToText.click(function(){
     event.preventDefault();
     itmBack.hide();
     contents.hide();
+    bookTitle.hide();
+    bookSubTitle.hide();
     $(showBottomMenu);
     runningTitle.show();
     itmMenu.show();
@@ -201,7 +249,7 @@ $(document).ready(function(){
     event.preventDefault();
     popupSettings.fadeOut(600);
     itmMenu.show();
-    bookTitle.css({"opacity": "1"});
+    pageMainTitle.css({"opacity": "1"});
   });
 
   // Изменение шрифта
