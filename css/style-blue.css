@@ -555,12 +555,16 @@ h3 {
   -webkit-box-orient: vertical;
 }
 .overall-wrapper--firstpage {
-  background: #86899c url("../img/bg-firstpage.png") no-repeat scroll top;
+  background: #86899c url("../img/bg-firstpage.png") no-repeat scroll center 10px;
   background-size: auto;
 }
 .overall-wrapper--main {
   background: #86899c url("../img/bg-main.png") no-repeat scroll top;
   background-size: contain;
+}
+.overall-wrapper--genesis {
+  background: #86899c url("../img/bg-genesis.png") no-repeat scroll center -15px;
+  background-size: auto;
 }
 .overall-wrapper--prayers {
   background: #86899c url("../img/bg-prayers.png") no-repeat scroll center -15px;
@@ -979,7 +983,7 @@ h3 {
           transform: translate(-50%, -50%);
 }
 .book-list--firstpage {
-  top: 330px;
+  top: 340px;
   left: 50%;
 
   -webkit-transform: translate(-50%, 0);
@@ -1000,7 +1004,7 @@ h3 {
   padding: 0;
 }
 .book-list__item--prayers {
-  width: 200px;
+  width: 220px;
 }
 .book-list__link {
   display: block;
@@ -1111,13 +1115,13 @@ h3 {
           transition-property: transform, opacity;
           transition-property: transform, opacity, -webkit-transform;
 }
-.book__contents-title {
+.book__contents-chapter-title {
   display: block;
 
   font-family: "PT Sans", Arial, sans-serif;
   color: #65687b;
 }
-.book__contents-text {
+.book__contents-chapter-intro {
   display: block;
 
   font-size: 0.8em;
@@ -1129,16 +1133,8 @@ h3 {
       -ms-user-select: auto;
           user-select: auto;
 }
-.book__title {
-  margin-bottom: 20px;
-
-  font-weight: normal;
-  font-size: 1.2em;
-  font-family: "PT Sans", Arial, sans-serif;
-  text-align: center;
-  color: #65687b;
-}
-.book__subtitle {
+.book__contents-subtitle {
+  display: block;
   margin-bottom: 15px;
   margin-left: 10px;
 
@@ -1161,16 +1157,14 @@ h3 {
 .book__running-title--prayers {
   margin-top: 0;
 }
-.book__verse-number {
-  margin-right: 10px;
+.book__title {
+  margin-bottom: 20px;
 
-  font-size: 0.8em;
-  color: #8b0404;
-}
-.book__verse-title {
-  display: inline;
-
-  font-size: 1em;
+  font-weight: normal;
+  font-size: 1.2em;
+  font-family: "PT Sans", Arial, sans-serif;
+  text-align: center;
+  color: #65687b;
 }
 .book__chapter-title {
   margin-bottom: 10px;
@@ -1179,6 +1173,17 @@ h3 {
   font-size: 1.2em;
   font-family: "PT Sans", Arial, sans-serif;
   color: #65687b;
+}
+.book__verse-title {
+  display: inline;
+
+  font-size: 1em;
+}
+.book__verse-number {
+  margin-right: 10px;
+
+  font-size: 0.8em;
+  color: #8b0404;
 }
 .book__emph {
   font-weight: bold;
@@ -1194,10 +1199,28 @@ h3 {
 
   list-style: none;
 }
-.book__comment-block::after {
+.book__comment-block::before {
   content: "";
   position: absolute;
   top: 0;
+  left: 0;
+
+  display: block;
+  width: 100%;
+  height: 1px;
+
+  background: -webkit-linear-gradient(left, transparent, #86899c 50%, transparent 100%);
+  background:         linear-gradient(to right, transparent, #86899c 50%, transparent 100%);
+  opacity: 0.3;
+}
+.book__comment-block--inner {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+}
+.book__comment-block--inner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
   left: 0;
 
   display: block;
@@ -1216,9 +1239,13 @@ h3 {
 .book__comment--large {
   font-size: 1.2em;
 }
+.book__text-block {
+  margin-bottom: 20px;
+}
 .book__description {
   font-size: 0.8em;
   font-family: "PT Sans", Arial, sans-serif;
+  text-align: justify;
 }
 .book__link {
   color: #65687b;
@@ -1361,7 +1388,11 @@ h3 {
 }
 @media (min-width: 501px) {
   .overall-wrapper--firstpage {
-    background: #86899c url("../img/bg-firstpage.png") no-repeat scroll center 15px;
+    background: #86899c url("../img/bg-firstpage.png") no-repeat scroll center 25px;
+    background-size: auto;
+  }
+  .overall-wrapper--genesis {
+    background: #86899c url("../img/bg-genesis.png") no-repeat scroll top;
     background-size: auto;
   }
   .overall-wrapper--prayers {

@@ -38,7 +38,7 @@ $(document).ready(function(){
   var contents = $(".book__contents-items");
   var pageMainTitle = $(".page-main__title");
   var bookTitle = $(".book__title");
-  var bookSubTitle = $(".book__subtitle");
+  var bookContentsSubTitle = $(".book__contents-subtitle");
   var chapterLink = $(".book__contents-link");
   var runningTitle = $(".book__running-title");
   var chapter = $(".book__chapter");
@@ -174,7 +174,7 @@ $(document).ready(function(){
     itmBack.hide();
     contents.hide();
     bookTitle.hide();
-    bookSubTitle.hide();
+    bookContentsSubTitle.hide();
     $(showBottomMenu);
     itmMenu.show();
     $(setupChapter);
@@ -219,7 +219,7 @@ $(document).ready(function(){
     lnkNextChapter.hide();
     runningTitle.hide();
     bookTitle.show();
-    bookSubTitle.show();
+    bookContentsSubTitle.show();
     itmBack.show();
     contents.fadeIn(600);
     pageMainTitle.animate({"opacity": "1"},600);
@@ -230,7 +230,7 @@ $(document).ready(function(){
     itmBack.hide();
     contents.hide();
     bookTitle.hide();
-    bookSubTitle.hide();
+    bookContentsSubTitle.hide();
     $(showBottomMenu);
     runningTitle.show();
     itmMenu.show();
